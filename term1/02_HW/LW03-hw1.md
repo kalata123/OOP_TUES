@@ -1,4 +1,5 @@
 # Mini Java Sokoban Homework LW03
+09.10.2025: Пояснение: не може играч да е върху поле, което има кутия, но може да е върху поле, което е цел.
 
 ## Learning Objectives
 - Practice 2D array manipulation

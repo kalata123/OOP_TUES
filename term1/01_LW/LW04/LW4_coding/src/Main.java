@@ -23,17 +23,17 @@ public class Main {
 //        return a + b;
 //    }
 
-//    public double add(double a, int b) { // WORKS: param order differs
-//        return a + b;
-//    }
+    public double add(double a, int b) { // WORKS: param order differs
+        return a + b;
+    }
 
     static void main() {
-        Main calc = new Main();
-        System.out.println(calc.add(2, 3));         // uses first
-        System.out.println(calc.add(1, 2, 3));      // uses second
+        Main calc = new Main();      // uses second
         System.out.println(calc.add(2.5, 4.5));      // uses third
         System.out.println(calc.add(2, 4.5));      // uses forth
-        System.out.println(calc.add(2.5, 4));      // uses forth
+        System.out.println(calc.add(2.5, 4));
+        System.out.println(calc.add(2, 3));         // uses first
+        System.out.println(calc.add(1, 2, 3));     // uses forth
     }
 
 
