@@ -14,7 +14,6 @@ It protects the internal state of an object by **controlling how data is accesse
 - Allows **validation logic** in setters (e.g., disallow negative age).
 - Makes the system **flexible** — internal structure can change without affecting external code.
 - Encourages **modular**, **maintainable**, and **safe** design.
-
 ---
 
 

@@ -34,6 +34,7 @@ public class Main {
         System.out.println(calc.add(2.5, 4));
         System.out.println(calc.add(2, 3));         // uses first
         System.out.println(calc.add(1, 2, 3));     // uses forth
+
     }
 
 
