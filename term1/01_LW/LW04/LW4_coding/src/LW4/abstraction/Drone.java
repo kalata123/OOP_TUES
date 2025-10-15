@@ -1,0 +1,7 @@
+package LW4.abstraction;
+
+public class Drone implements Flyable {
+    public void fly() {
+        System.out.println("Drone uses propellers to fly.");
+    }
+}
