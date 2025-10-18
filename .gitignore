@@ -7,11 +7,8 @@
 .DS_Store
 
 *.class
-term1/03_EXAM/LW6_exam.md
+term1/03_EXAM/*
 
-term1/03_EXAM/LW10_exam.md
-
-term1/03_EXAM/LW16_exam.md
 bin/
 .settings/
 
