@@ -33,29 +33,25 @@ Packages can be viewed as folders that contain Java classes with similar functio
 # 2. Examples
 
 ### Exercise 1: Simple Package
-File 1 `LW4.animals/LW4.Dog.java`
+File 1 `animals/Dog.java`
 
 ```java
-package LW4.animals;
+package animals;
 
-public class LW4.
-
-Dog {
+public class Dog {
     public void bark () {
         System.out.println("Woof! The dog is barking.");
     }
 }
 ```
-File 2 `LW4.Main.java`
+File 2 `Main.java`
 
 ```java
-import LW4.animals.LW4.Dog;
+import animals.Dog;
 
-public class LW4.
-
-Main {
+public class Main {
     public static void main (String[]args){
-        LW4.Dog dog = new LW4.Dog();
+        Dog dog = new Dog();
         dog.bark();
     }
 }
@@ -63,11 +59,11 @@ Main {
 
 ### Exercise 2: Multi-level Packages
 
-File 1: `school/staff/LW4.Teacher.java`
+File 1: `school/staff/Teacher.java`
 ```java
 package school.staff;
 
-public class LW4.Teacher {
+public class Teacher {
     public void teach() {
         System.out.println("Teaching students in class.");
     }
@@ -87,19 +83,19 @@ public class Student {
 
 ```
 
-File 3 `LW4.Main.java`
+File 3 `Main.java`
 
 ```java
-import school.staff.LW4.Teacher;
+import school.staff.Teacher;
 import school.students.Student;
 
-public class LW4.Main {
+public class Main {
     public static void main(String[] args) {
-        LW4.Teacher LW4.teacher = new LW4.Teacher();
-        Student LW4.student = new Student();
+        Teacher teacher = new Teacher();
+        Student student = new Student();
 
-        LW4.teacher.teach();
-        LW4.student.study();
+        teacher.teach();
+        student.study();
     }
 }
 ```
@@ -128,18 +124,18 @@ This allows related classes to cooperate internally while remaining hidden from 
 # 4. Classroom Exercises
 
 ### Exercise 1: Simple Package
-Create package `LW4.animals` and define class `LW4.Dog` with method `bark()`.  
-Create another file that imports `LW4.animals.LW4.Dog` and calls `bark()` from `main()`.
+Create package `animals` and define class `Dog` with method `bark()`.  
+Create another file that imports `animals.Dog` and calls `bark()` from `main()`.
 
 ### Exercise 2: Multi-level Packages
 Create packages `school.staff` and `school.students`.  
-In `school.staff`, define class `LW4.Teacher` with method `teach()`.  
+In `school.staff`, define class `Teacher` with method `teach()`.  
 In `school.students`, define class `Student` with method `study()`.  
-Import both into a `LW4.Main` class and call their methods.
+Import both into a `Main` class and call their methods.
 
 ### Exercise 3 (Challenge)
 Create package `devices` containing `Phone` and `Laptop` classes with simple methods.  
-In `LW4.Main.java`, import both classes and call their methods.  
+In `Main.java`, import both classes and call their methods.  
 Then repeat without `import` by using their fully qualified names.
 
 ---
@@ -161,19 +157,19 @@ Then repeat without `import` by using their fully qualified names.
 ### Task 1: Create Package Hierarchy
 Create folders `school/students` and `school/teachers`.
 - In `students`, define `Student` class with `study()` method.
-- In `teachers`, define `LW4.Teacher` class with `teach()` method.
-- In `LW4.Main`, import both and call their methods.
+- In `teachers`, define `Teacher` class with `teach()` method.
+- In `Main`, import both and call their methods.
 
 ### Task 2: Access Control Across Packages
 Create a `bank` package with class `Account` that has a private field `balance` and public methods `deposit()` and `getBalance()`.  
-Create `LW4.Main` in a different package that imports and uses `Account`.  
+Create `Main` in a different package that imports and uses `Account`.  
 Demonstrate that the private field cannot be accessed directly.
 
 ### Task 3 (Advanced)
 Create a `library` package with:
 - `Book` class (fields `title`, `author`, method `printInfo()`)
 - `Librarian` class (method `issueBook(Book)`)  
-  Import both in `LW4.Main` and simulate issuing a book.
+  Import both in `Main` and simulate issuing a book.
 
 ---
 
