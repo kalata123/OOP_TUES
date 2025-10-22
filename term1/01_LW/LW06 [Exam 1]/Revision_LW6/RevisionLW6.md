@@ -26,7 +26,7 @@ gym/
 
 ---
 
-## **Part A: Core Abstraction & Encapsulation (40 min)**
+## **Part A: Core Abstraction & Encapsulation**
 
 ### **A1) Abstract Person Class (`gym.core.Person`)**
 
@@ -79,7 +79,7 @@ Extends `Person` with:
 
 ---
 
-## **Part B: Modifiers & Static Context (30 min)**
+## **Part B: Modifiers & Static Context**
 
 ### **B1) Settings Utility (`gym.util.Settings`)**
 
@@ -104,7 +104,7 @@ Create a class demonstrating static usage:
 
 ---
 
-## **Part C: Method Overloading & Array Management (40 min)**
+## **Part C: Method Overloading & Array Management**
 
 ### **C1) Enhanced Charge Management in Member**
 
@@ -138,7 +138,7 @@ Create a `public final` class with static utility methods:
 
 ---
 
-## **Part D: Exception Handling (40 min)**
+## **Part D: Exception Handling**
 
 ### **D1) Custom Exceptions (`gym.billing`)**
 
@@ -173,7 +173,7 @@ In `Main` class demonstrate:
 
 ---
 
-## **Part E: Main Demonstration (20 min)**
+## **Part E: Main Demonstration**
 
 ### **Comprehensive Test Scenario**
 
