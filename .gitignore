@@ -8,6 +8,7 @@
 
 *.class
 term1/03_EXAM/*
+term1/02_HW/*/Submission
 
 bin/
 .settings/
