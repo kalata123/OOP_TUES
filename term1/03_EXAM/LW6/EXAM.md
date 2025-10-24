@@ -275,3 +275,41 @@ Add to `BorrowingSystem`:
 
 - `double getUsagePercentage()` — returns `(currentCount / maxLimit) * 100`
 - `String getBorrowingStatus()` — returns `"Light/Medium/Heavy"` usage based on percentage
+
+## Grading
+
+Based on Class performance. Tentative points for each part:
+
+# ***Tentative* Grading Breakdown — Library Management System Exam**
+# ***Условна* Разбивка на точкуване — Library Management System Exam**
+
+</br> </br>
+Подлежи на промяна. Общ брой точки е 31 + 4 за бонус задачите. 
+
+| **Component**                    | **Sub-Component**          | **Points** |
+|----------------------------------|----------------------------|-----------|
+| **Part A: Foundation Classes**   | **Total**                  | **8**     |
+|                                  | A1: LibraryItem (abstract) | 3         |
+|                                  | A2: Book class             | 3         |
+|                                  | A3: Member class           | 2         |
+|                                  |                            |            |
+| **Part B: Utilities & Settings** | **Total**                  | **6**     |
+|                                  | B1: LibrarySettings        | 3         |
+|                                  | B2: SimpleDateUtils        | 3         |
+|                                  |                            |            |
+| **Part C: Borrowing Management** | **Total**                  | **9**     |
+|                                  | C1: BorrowingSystem        | 5         |
+|                                  | C2: LibraryException       | 2         |
+|                                  | C3: Integration            | 2         |
+|                                  |                            |            |
+| **Part D: Error Handling**       | **Total**                  | **4**     |
+|                                  |                            |            |
+| **Main.java Demonstration**      | **Total**                  | **2**     |
+|                                  | Functionality Showcase     | 2         |
+|                                  |                            |            |
+| **Program Compilation**          | **Total**                  | **4**     | 
+|                                  |                            |            |
+| **BONUS FEATURES**               | **Total**                  | **+4**    |
+|                                  | Bonus 1: Search            | +2        |
+|                                  | Bonus 2: Statistics        | +2        |
+
