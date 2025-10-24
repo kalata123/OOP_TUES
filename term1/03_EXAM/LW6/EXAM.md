@@ -15,11 +15,11 @@ Create this exact package structure in your `src` folder:
 ```
 src/
 └── library/
-├── core/
-├── users/
-├── materials/
-├── transactions/
-└── util/
+    ├── core/
+    ├── users/
+    ├── materials/
+    ├── transactions/
+    └── util/
 ```
 
 
