@@ -1,4 +1,4 @@
-# git config --global core.excludesfile ~/.gitignore_global
+ii# git config --global core.excludesfile ~/.gitignore_global
 
 # Some common .gitignore configurations: https://gist.github.com/octocat/9257657
 
@@ -9,6 +9,8 @@
 *.class
 term1/03_EXAM/*
 term1/02_HW/*/Submission
+*/*/*/Submissions
+*/*/*/reports
 
 bin/
 .settings/
