@@ -9,8 +9,10 @@ ii# git config --global core.excludesfile ~/.gitignore_global
 *.class
 term1/03_EXAM/*
 term1/02_HW/*/Submission
+term1/02_HW/LW12
 */*/*/Submissions
 */*/*/reports
+
 
 bin/
 .settings/
