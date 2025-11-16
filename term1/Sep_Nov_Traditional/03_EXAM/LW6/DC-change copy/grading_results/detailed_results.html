@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html><head><meta charset='UTF-8'>
+<title>Detailed Grading Results</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+h1 { color: #333; }
+.search-box { margin: 20px 0; padding: 15px; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.search-box input { width: 300px; padding: 10px; font-size: 16px; border: 2px solid #ddd; border-radius: 4px; }
+.student-card { background: white; margin: 15px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.student-header { padding: 15px 20px; background: #4CAF50; color: white; cursor: pointer; display: flex; justify-content: space-between; }
+.student-content { padding: 20px; display: none; }
+.student-content.expanded { display: block; }
+.score-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 20px; }
+.score-item { padding: 10px; background: #f9f9f9; border-left: 4px solid #4CAF50; }
+.feedback-section { margin-top: 20px; padding: 15px; background: #f9f9f9; }
+.feedback-item.success { color: #4CAF50; }
+.feedback-item.error { color: #f44336; }
+.compilation-details { background: #fff3cd; padding: 15px; margin-top: 15px; border-left: 4px solid #ffc107; }
+</style>
+<script>
+function toggleStudent(id) {
+  document.getElementById('content-' + id).classList.toggle('expanded');
+}
+</script>
+</head><body>
+<h1>📋 Detailed Grading Results</h1>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_01")'>
+<h3>S_01</h3>
+<span>0/33</span>
+</div>
+<div class='student-content' id='content-S_01'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>0/4</div></div>
+<div class='score-item'><label>Part A</label><div>0/8</div></div>
+<div class='score-item'><label>Part B</label><div>0/6</div></div>
+<div class='score-item'><label>Part C</label><div>0/9</div></div>
+<div class='score-item'><label>Part D</label><div>0/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item error'>✗ No core class files found (only Main.java?)</div>
+<div class='feedback-item error'>Compilation Summary: 0/8 files compiled</div>
+<div class='feedback-item error'>✗ Cannot test LibraryItem - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test Book - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test Member - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test LibrarySettings - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test SimpleDateUtils - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test BorrowingSystem - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test LibraryException - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test integration - required classes didn't compile</div>
+<div class='feedback-item error'>✗ Cannot test error handling - LibraryException didn't compile</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_02")'>
+<h3>S_02</h3>
+<span>30/33</span>
+</div>
+<div class='student-content' id='content-S_02'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>3/4</div></div>
+<div class='score-item'><label>Part A</label><div>8/8</div></div>
+<div class='score-item'><label>Part B</label><div>6/6</div></div>
+<div class='score-item'><label>Part C</label><div>9/9</div></div>
+<div class='score-item'><label>Part D</label><div>4/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item success'>✓ All core classes compile successfully</div>
+<div class='feedback-item error'>✗ Main.java has compilation errors</div>
+<div class='feedback-item error'>Compilation Summary: 7/8 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item success'>✓ Book extends LibraryItem</div>
+<div class='feedback-item success'>✓ Book has multiple constructors (overloading)</div>
+<div class='feedback-item success'>✓ Book has private author field</div>
+<div class='feedback-item success'>✓ Member has required fields (3+)</div>
+<div class='feedback-item success'>✓ Member has canBorrow() method</div>
+<div class='feedback-item success'>✓ LibrarySettings has private constructor</div>
+<div class='feedback-item success'>✓ Has required static final constants (3+)</div>
+<div class='feedback-item success'>✓ Has static method</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has private constructor</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has method overloading (3+ versions)</div>
+<div class='feedback-item success'>✓ BorrowingSystem uses arrays (2+)</div>
+<div class='feedback-item success'>✓ BorrowingSystem has all required methods</div>
+<div class='feedback-item success'>✓ LibraryException extends RuntimeException</div>
+<div class='feedback-item success'>✓ Integration methods present (increment/decrement)</div>
+<div class='feedback-item success'>✓ Custom exception implemented</div>
+<div class='feedback-item success'>✓ Validation methods present</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+<div class='compilation-details'>
+<h4>⚙️ Compilation Details</h4>
+<p><strong>Compiled:</strong> BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java</p>
+<p><strong>Failed:</strong></p><ul>
+<li>Main.java: package library.materials does not exist</li>
+</ul></div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_03")'>
+<h3>S_03</h3>
+<span>14/33</span>
+</div>
+<div class='student-content' id='content-S_03'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>4/4</div></div>
+<div class='score-item'><label>Part A</label><div>8/8</div></div>
+<div class='score-item'><label>Part B</label><div>0/6</div></div>
+<div class='score-item'><label>Part C</label><div>2/9</div></div>
+<div class='score-item'><label>Part D</label><div>0/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item success'>✓ All core classes compile successfully</div>
+<div class='feedback-item success'>✓ Main.java also compiles successfully</div>
+<div class='feedback-item error'>Compilation Summary: 7/8 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item success'>✓ Book extends LibraryItem</div>
+<div class='feedback-item success'>✓ Book has multiple constructors (overloading)</div>
+<div class='feedback-item success'>✓ Book has private author field</div>
+<div class='feedback-item success'>✓ Member has required fields (3+)</div>
+<div class='feedback-item success'>✓ Member has canBorrow() method</div>
+<div class='feedback-item error'>✗ Cannot test LibrarySettings - class loading issue</div>
+<div class='feedback-item error'>✗ Cannot test SimpleDateUtils - class loading issue</div>
+<div class='feedback-item error'>✗ BorrowingSystem should use arrays (found 1)</div>
+<div class='feedback-item error'>✗ BorrowingSystem missing most methods</div>
+<div class='feedback-item error'>✗ Cannot test LibraryException - did not compile</div>
+<div class='feedback-item success'>✓ Integration methods present (increment/decrement)</div>
+<div class='feedback-item error'>✗ Cannot test error handling - LibraryException didn't compile</div>
+<div class='feedback-item error'>✗ Main.java compiled but Main.class not found (check package)</div>
+</div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_04")'>
+<h3>S_04</h3>
+<span>0/33</span>
+</div>
+<div class='student-content' id='content-S_04'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>0/4</div></div>
+<div class='score-item'><label>Part A</label><div>0/8</div></div>
+<div class='score-item'><label>Part B</label><div>0/6</div></div>
+<div class='score-item'><label>Part C</label><div>0/9</div></div>
+<div class='score-item'><label>Part D</label><div>0/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item error'>✗ Core classes have compilation errors - trying individual compilation...</div>
+<div class='feedback-item error'>  ✗ Book.java failed</div>
+<div class='feedback-item error'>  ✗ LibraryItem.java failed</div>
+<div class='feedback-item error'>  ✗ SimpleDateUtils.java failed</div>
+<div class='feedback-item error'>  ✗ LibrarySettings.java failed</div>
+<div class='feedback-item error'>  ✗ Member.java failed</div>
+<div class='feedback-item error'>✗ Very few or no classes compiled</div>
+<div class='feedback-item error'>Compilation Summary: 0/8 files compiled</div>
+<div class='feedback-item error'>✗ Cannot test LibraryItem - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test Book - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test Member - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test LibrarySettings - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test SimpleDateUtils - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test BorrowingSystem - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test LibraryException - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test integration - required classes didn't compile</div>
+<div class='feedback-item error'>✗ Cannot test error handling - LibraryException didn't compile</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+<div class='compilation-details'>
+<h4>⚙️ Compilation Details</h4>
+<p><strong>Compiled:</strong> </p>
+<p><strong>Failed:</strong></p><ul>
+<li>Book.java: package library.core does not exist</li>
+<li>LibraryItem.java: class, interface, enum, or record expected</li>
+<li>SimpleDateUtils.java: ';' expected</li>
+<li>LibrarySettings.java: bad operand types for binary operator '-'</li>
+<li>Member.java: missing return statement</li>
+</ul></div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_05")'>
+<h3>S_05</h3>
+<span>30/33</span>
+</div>
+<div class='student-content' id='content-S_05'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>3/4</div></div>
+<div class='score-item'><label>Part A</label><div>8/8</div></div>
+<div class='score-item'><label>Part B</label><div>6/6</div></div>
+<div class='score-item'><label>Part C</label><div>9/9</div></div>
+<div class='score-item'><label>Part D</label><div>4/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item success'>✓ All core classes compile successfully</div>
+<div class='feedback-item error'>✗ Main.java has compilation errors</div>
+<div class='feedback-item error'>Compilation Summary: 7/8 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item success'>✓ Book extends LibraryItem</div>
+<div class='feedback-item success'>✓ Book has multiple constructors (overloading)</div>
+<div class='feedback-item success'>✓ Book has private author field</div>
+<div class='feedback-item success'>✓ Member has required fields (3+)</div>
+<div class='feedback-item success'>✓ Member has canBorrow() method</div>
+<div class='feedback-item success'>✓ LibrarySettings has private constructor</div>
+<div class='feedback-item success'>✓ Has required static final constants (3+)</div>
+<div class='feedback-item success'>✓ Has static method</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has private constructor</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has method overloading (3+ versions)</div>
+<div class='feedback-item success'>✓ BorrowingSystem uses arrays (2+)</div>
+<div class='feedback-item success'>✓ BorrowingSystem has all required methods</div>
+<div class='feedback-item success'>✓ LibraryException extends RuntimeException</div>
+<div class='feedback-item success'>✓ Integration methods present (increment/decrement)</div>
+<div class='feedback-item success'>✓ Custom exception implemented</div>
+<div class='feedback-item success'>✓ Validation methods present</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+<div class='compilation-details'>
+<h4>⚙️ Compilation Details</h4>
+<p><strong>Compiled:</strong> BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java</p>
+<p><strong>Failed:</strong></p><ul>
+<li>Main.java: package library.materials does not exist</li>
+</ul></div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_06")'>
+<h3>S_06</h3>
+<span>28/33</span>
+</div>
+<div class='student-content' id='content-S_06'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>4/4</div></div>
+<div class='score-item'><label>Part A</label><div>7/8</div></div>
+<div class='score-item'><label>Part B</label><div>5/6</div></div>
+<div class='score-item'><label>Part C</label><div>7/9</div></div>
+<div class='score-item'><label>Part D</label><div>4/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>1/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item success'>✓ All core classes compile successfully</div>
+<div class='feedback-item success'>✓ Main.java also compiles successfully</div>
+<div class='feedback-item error'>Compilation Summary: 8/8 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item success'>✓ Book extends LibraryItem</div>
+<div class='feedback-item success'>✓ Book has multiple constructors (overloading)</div>
+<div class='feedback-item success'>✓ Book has private author field</div>
+<div class='feedback-item success'>✓ Member has required fields (3+)</div>
+<div class='feedback-item error'>✗ Member missing canBorrow() method</div>
+<div class='feedback-item success'>✓ LibrarySettings has private constructor</div>
+<div class='feedback-item error'>✗ Missing constants (found 0, need 3)</div>
+<div class='feedback-item success'>✓ Has static method</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has private constructor</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has method overloading (3+ versions)</div>
+<div class='feedback-item success'>✓ BorrowingSystem uses arrays (2+)</div>
+<div class='feedback-item success'>✓ BorrowingSystem has all required methods</div>
+<div class='feedback-item success'>✓ LibraryException extends RuntimeException</div>
+<div class='feedback-item error'>✗ Missing integration methods in Member</div>
+<div class='feedback-item success'>✓ Custom exception implemented</div>
+<div class='feedback-item success'>✓ Validation methods present</div>
+<div class='feedback-item success'>✓ Main.java runs and produces output</div>
+</div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_07")'>
+<h3>S_07</h3>
+<span>30/33</span>
+</div>
+<div class='student-content' id='content-S_07'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>3/4</div></div>
+<div class='score-item'><label>Part A</label><div>8/8</div></div>
+<div class='score-item'><label>Part B</label><div>6/6</div></div>
+<div class='score-item'><label>Part C</label><div>9/9</div></div>
+<div class='score-item'><label>Part D</label><div>4/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item success'>✓ All core classes compile successfully</div>
+<div class='feedback-item error'>✗ Main.java has compilation errors</div>
+<div class='feedback-item error'>Compilation Summary: 7/8 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item success'>✓ Book extends LibraryItem</div>
+<div class='feedback-item success'>✓ Book has multiple constructors (overloading)</div>
+<div class='feedback-item success'>✓ Book has private author field</div>
+<div class='feedback-item success'>✓ Member has required fields (3+)</div>
+<div class='feedback-item success'>✓ Member has canBorrow() method</div>
+<div class='feedback-item success'>✓ LibrarySettings has private constructor</div>
+<div class='feedback-item success'>✓ Has required static final constants (3+)</div>
+<div class='feedback-item success'>✓ Has static method</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has private constructor</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has method overloading (3+ versions)</div>
+<div class='feedback-item success'>✓ BorrowingSystem uses arrays (2+)</div>
+<div class='feedback-item success'>✓ BorrowingSystem has all required methods</div>
+<div class='feedback-item success'>✓ LibraryException extends RuntimeException</div>
+<div class='feedback-item success'>✓ Integration methods present (increment/decrement)</div>
+<div class='feedback-item success'>✓ Custom exception implemented</div>
+<div class='feedback-item success'>✓ Validation methods present</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+<div class='compilation-details'>
+<h4>⚙️ Compilation Details</h4>
+<p><strong>Compiled:</strong> BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java</p>
+<p><strong>Failed:</strong></p><ul>
+<li>Main.java: package library.core does not exist</li>
+</ul></div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_08")'>
+<h3>S_08</h3>
+<span>25/33</span>
+</div>
+<div class='student-content' id='content-S_08'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>3/4</div></div>
+<div class='score-item'><label>Part A</label><div>8/8</div></div>
+<div class='score-item'><label>Part B</label><div>3/6</div></div>
+<div class='score-item'><label>Part C</label><div>7/9</div></div>
+<div class='score-item'><label>Part D</label><div>4/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item success'>✓ All core classes compile successfully</div>
+<div class='feedback-item error'>✗ Main.java has compilation errors</div>
+<div class='feedback-item error'>Compilation Summary: 7/8 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item success'>✓ Book extends LibraryItem</div>
+<div class='feedback-item success'>✓ Book has multiple constructors (overloading)</div>
+<div class='feedback-item success'>✓ Book has private author field</div>
+<div class='feedback-item success'>✓ Member has required fields (3+)</div>
+<div class='feedback-item success'>✓ Member has canBorrow() method</div>
+<div class='feedback-item success'>✓ LibrarySettings has private constructor</div>
+<div class='feedback-item success'>✓ Has required static final constants (3+)</div>
+<div class='feedback-item error'>✗ Missing static method</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has private constructor</div>
+<div class='feedback-item error'>✗ SimpleDateUtils missing method overloading</div>
+<div class='feedback-item error'>✗ BorrowingSystem should use arrays (found 1)</div>
+<div class='feedback-item success'>✓ BorrowingSystem has all required methods</div>
+<div class='feedback-item success'>✓ LibraryException extends RuntimeException</div>
+<div class='feedback-item success'>✓ Integration methods present (increment/decrement)</div>
+<div class='feedback-item success'>✓ Custom exception implemented</div>
+<div class='feedback-item success'>✓ Validation methods present</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+<div class='compilation-details'>
+<h4>⚙️ Compilation Details</h4>
+<p><strong>Compiled:</strong> BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java</p>
+<p><strong>Failed:</strong></p><ul>
+<li>Main.java: package library.core does not exist</li>
+</ul></div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_09")'>
+<h3>S_09</h3>
+<span>5/33</span>
+</div>
+<div class='student-content' id='content-S_09'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>0/4</div></div>
+<div class='score-item'><label>Part A</label><div>0/8</div></div>
+<div class='score-item'><label>Part B</label><div>0/6</div></div>
+<div class='score-item'><label>Part C</label><div>2/9</div></div>
+<div class='score-item'><label>Part D</label><div>3/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item error'>✗ Core classes have compilation errors - trying individual compilation...</div>
+<div class='feedback-item error'>  ✗ Book.java failed</div>
+<div class='feedback-item error'>  ✗ LibraryItem.java failed</div>
+<div class='feedback-item error'>  ✗ SimpleDateUtils.java failed</div>
+<div class='feedback-item error'>  ✗ LibrarySettings.java failed</div>
+<div class='feedback-item error'>  ✗ BorrowingSystem.java failed</div>
+<div class='feedback-item error'>  ✓ LibraryException.java compiles</div>
+<div class='feedback-item error'>  ✗ Member.java failed</div>
+<div class='feedback-item error'>✗ Very few or no classes compiled</div>
+<div class='feedback-item error'>  ✗ Main.java failed</div>
+<div class='feedback-item error'>Compilation Summary: 1/8 files compiled</div>
+<div class='feedback-item error'>✗ Cannot test LibraryItem - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test Book - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test Member - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test LibrarySettings - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test SimpleDateUtils - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test BorrowingSystem - did not compile</div>
+<div class='feedback-item success'>✓ LibraryException extends RuntimeException</div>
+<div class='feedback-item error'>✗ Cannot test integration - required classes didn't compile</div>
+<div class='feedback-item success'>✓ Custom exception implemented</div>
+<div class='feedback-item success'>✓ Basic error handling structure present</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+<div class='compilation-details'>
+<h4>⚙️ Compilation Details</h4>
+<p><strong>Compiled:</strong> LibraryException.java</p>
+<p><strong>Failed:</strong></p><ul>
+<li>Book.java: package library.core does not exist</li>
+<li>LibraryItem.java: not a statement</li>
+<li>SimpleDateUtils.java: invalid method declaration; return type required</li>
+<li>LibrarySettings.java: class LibrabrySettings is public, should be declared in a file named Librabry...</li>
+<li>BorrowingSystem.java: ']' expected</li>
+<li>Member.java: package library.core does not exist</li>
+<li>Main.java: package library.materials does not exist</li>
+</ul></div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_10")'>
+<h3>S_10</h3>
+<span>29/33</span>
+</div>
+<div class='student-content' id='content-S_10'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>3/4</div></div>
+<div class='score-item'><label>Part A</label><div>8/8</div></div>
+<div class='score-item'><label>Part B</label><div>6/6</div></div>
+<div class='score-item'><label>Part C</label><div>8/9</div></div>
+<div class='score-item'><label>Part D</label><div>4/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item success'>✓ All core classes compile successfully</div>
+<div class='feedback-item error'>✗ Main.java has compilation errors</div>
+<div class='feedback-item error'>Compilation Summary: 7/8 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item success'>✓ Book extends LibraryItem</div>
+<div class='feedback-item success'>✓ Book has multiple constructors (overloading)</div>
+<div class='feedback-item success'>✓ Book has private author field</div>
+<div class='feedback-item success'>✓ Member has required fields (3+)</div>
+<div class='feedback-item success'>✓ Member has canBorrow() method</div>
+<div class='feedback-item success'>✓ LibrarySettings has private constructor</div>
+<div class='feedback-item success'>✓ Has required static final constants (3+)</div>
+<div class='feedback-item success'>✓ Has static method</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has private constructor</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has method overloading (3+ versions)</div>
+<div class='feedback-item success'>✓ BorrowingSystem uses arrays (2+)</div>
+<div class='feedback-item error'>✗ BorrowingSystem missing some methods (3/4)</div>
+<div class='feedback-item success'>✓ LibraryException extends RuntimeException</div>
+<div class='feedback-item success'>✓ Integration methods present (increment/decrement)</div>
+<div class='feedback-item success'>✓ Custom exception implemented</div>
+<div class='feedback-item success'>✓ Validation methods present</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+<div class='compilation-details'>
+<h4>⚙️ Compilation Details</h4>
+<p><strong>Compiled:</strong> BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java</p>
+<p><strong>Failed:</strong></p><ul>
+<li>Main.java: package library.materials does not exist</li>
+</ul></div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_11")'>
+<h3>S_11</h3>
+<span>27/33</span>
+</div>
+<div class='student-content' id='content-S_11'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>3/4</div></div>
+<div class='score-item'><label>Part A</label><div>7/8</div></div>
+<div class='score-item'><label>Part B</label><div>6/6</div></div>
+<div class='score-item'><label>Part C</label><div>7/9</div></div>
+<div class='score-item'><label>Part D</label><div>4/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item success'>✓ All core classes compile successfully</div>
+<div class='feedback-item error'>✗ Main.java has compilation errors</div>
+<div class='feedback-item error'>Compilation Summary: 7/8 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item success'>✓ Book extends LibraryItem</div>
+<div class='feedback-item success'>✓ Book has multiple constructors (overloading)</div>
+<div class='feedback-item success'>✓ Book has private author field</div>
+<div class='feedback-item success'>✓ Member has required fields (3+)</div>
+<div class='feedback-item error'>✗ Member missing canBorrow() method</div>
+<div class='feedback-item success'>✓ LibrarySettings has private constructor</div>
+<div class='feedback-item success'>✓ Has required static final constants (3+)</div>
+<div class='feedback-item success'>✓ Has static method</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has private constructor</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has method overloading (3+ versions)</div>
+<div class='feedback-item success'>✓ BorrowingSystem uses arrays (2+)</div>
+<div class='feedback-item success'>✓ BorrowingSystem has all required methods</div>
+<div class='feedback-item success'>✓ LibraryException extends RuntimeException</div>
+<div class='feedback-item error'>✗ Missing integration methods in Member</div>
+<div class='feedback-item success'>✓ Custom exception implemented</div>
+<div class='feedback-item success'>✓ Validation methods present</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+<div class='compilation-details'>
+<h4>⚙️ Compilation Details</h4>
+<p><strong>Compiled:</strong> BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java</p>
+<p><strong>Failed:</strong></p><ul>
+<li>Main.java: package library.materials does not exist</li>
+</ul></div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_12")'>
+<h3>S_12</h3>
+<span>0/33</span>
+</div>
+<div class='student-content' id='content-S_12'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>0/4</div></div>
+<div class='score-item'><label>Part A</label><div>0/8</div></div>
+<div class='score-item'><label>Part B</label><div>0/6</div></div>
+<div class='score-item'><label>Part C</label><div>0/9</div></div>
+<div class='score-item'><label>Part D</label><div>0/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item error'>✗ No Java files found</div>
+<div class='feedback-item error'>✗ Cannot test Part A - no compiled classes</div>
+<div class='feedback-item error'>✗ Cannot test Part B - no compiled classes</div>
+<div class='feedback-item error'>✗ Cannot test Part C - no compiled classes</div>
+<div class='feedback-item error'>✗ Cannot test Part D - no compiled classes</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_13")'>
+<h3>S_13</h3>
+<span>11/33</span>
+</div>
+<div class='student-content' id='content-S_13'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>3/4</div></div>
+<div class='score-item'><label>Part A</label><div>1/8</div></div>
+<div class='score-item'><label>Part B</label><div>0/6</div></div>
+<div class='score-item'><label>Part C</label><div>2/9</div></div>
+<div class='score-item'><label>Part D</label><div>4/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>1/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item error'>✗ Core classes have compilation errors - trying individual compilation...</div>
+<div class='feedback-item error'>  ✓ LibraryItem.java compiles</div>
+<div class='feedback-item error'>  ✗ Book.java failed</div>
+<div class='feedback-item error'>  ✗ Member.java failed</div>
+<div class='feedback-item error'>  ✓ LibrabrySettings.java compiles</div>
+<div class='feedback-item error'>  ✓ SimpleDataUtils.java compiles</div>
+<div class='feedback-item error'>  ✓ LibraryItem.java compiles</div>
+<div class='feedback-item error'>  ✗ Book.java failed</div>
+<div class='feedback-item error'>  ✗ Member.java failed</div>
+<div class='feedback-item error'>  ✓ LibrabrySettings.java compiles</div>
+<div class='feedback-item error'>  ✓ SimpleDataUtils.java compiles</div>
+<div class='feedback-item error'>  ✗ BorrowingSystem.java failed</div>
+<div class='feedback-item error'>  ✓ LibraryException.java compiles</div>
+<div class='feedback-item error'>  ✗ BorrowingSystem.java failed</div>
+<div class='feedback-item error'>  ✓ LibraryException.java compiles</div>
+<div class='feedback-item success'>✓ Most core classes compiled (8/7)</div>
+<div class='feedback-item error'>  ✓ Main.java compiles</div>
+<div class='feedback-item error'>Compilation Summary: 5/8 files compiled</div>
+<div class='feedback-item error'>✗ LibraryItem should be abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item error'>✗ Missing abstract getItemType()</div>
+<div class='feedback-item error'>✗ Cannot test Book - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test Member - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test LibrarySettings - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test SimpleDateUtils - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test BorrowingSystem - did not compile</div>
+<div class='feedback-item success'>✓ LibraryException extends RuntimeException</div>
+<div class='feedback-item error'>✗ Cannot test integration - required classes didn't compile</div>
+<div class='feedback-item success'>✓ Custom exception implemented</div>
+<div class='feedback-item success'>✓ Validation methods present</div>
+<div class='feedback-item success'>✓ Main.java runs and produces output</div>
+</div>
+<div class='compilation-details'>
+<h4>⚙️ Compilation Details</h4>
+<p><strong>Compiled:</strong> Main.java, LibrabrySettings.java, LibraryItem.java, SimpleDataUtils.java, LibraryException.java</p>
+<p><strong>Failed:</strong></p><ul>
+<li>Book.java: package library.util does not exist</li>
+<li>Member.java: package library.util does not exist</li>
+<li>BorrowingSystem.java: cannot find symbol</li>
+</ul></div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_14")'>
+<h3>S_14</h3>
+<span>27/33</span>
+</div>
+<div class='student-content' id='content-S_14'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>4/4</div></div>
+<div class='score-item'><label>Part A</label><div>8/8</div></div>
+<div class='score-item'><label>Part B</label><div>4/6</div></div>
+<div class='score-item'><label>Part C</label><div>7/9</div></div>
+<div class='score-item'><label>Part D</label><div>4/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item success'>✓ All core classes compile successfully</div>
+<div class='feedback-item error'>⚠ Main.java not found (not required, no penalty)</div>
+<div class='feedback-item error'>Compilation Summary: 7/7 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item success'>✓ Book extends LibraryItem</div>
+<div class='feedback-item success'>✓ Book has multiple constructors (overloading)</div>
+<div class='feedback-item success'>✓ Book has private author field</div>
+<div class='feedback-item success'>✓ Member has required fields (3+)</div>
+<div class='feedback-item success'>✓ Member has canBorrow() method</div>
+<div class='feedback-item success'>✓ LibrarySettings has private constructor</div>
+<div class='feedback-item success'>✓ Has required static final constants (3+)</div>
+<div class='feedback-item success'>✓ Has static method</div>
+<div class='feedback-item error'>✗ SimpleDateUtils has partial overloading (need 3 versions)</div>
+<div class='feedback-item error'>✗ BorrowingSystem should use arrays (found 0)</div>
+<div class='feedback-item success'>✓ BorrowingSystem has all required methods</div>
+<div class='feedback-item success'>✓ LibraryException extends RuntimeException</div>
+<div class='feedback-item success'>✓ Integration methods present (increment/decrement)</div>
+<div class='feedback-item success'>✓ Custom exception implemented</div>
+<div class='feedback-item success'>✓ Validation methods present</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_15")'>
+<h3>S_15</h3>
+<span>31/33</span>
+</div>
+<div class='student-content' id='content-S_15'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>3/4</div></div>
+<div class='score-item'><label>Part A</label><div>8/8</div></div>
+<div class='score-item'><label>Part B</label><div>3/6</div></div>
+<div class='score-item'><label>Part C</label><div>9/9</div></div>
+<div class='score-item'><label>Part D</label><div>4/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item success'>✓ All core classes compile successfully</div>
+<div class='feedback-item error'>✗ Main.java has compilation errors</div>
+<div class='feedback-item error'>Compilation Summary: 7/8 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item success'>✓ Book extends LibraryItem</div>
+<div class='feedback-item success'>✓ Book has multiple constructors (overloading)</div>
+<div class='feedback-item success'>✓ Book has private author field</div>
+<div class='feedback-item success'>✓ Member has required fields (3+)</div>
+<div class='feedback-item success'>✓ Member has canBorrow() method</div>
+<div class='feedback-item success'>✓ LibrarySettings has private constructor</div>
+<div class='feedback-item success'>✓ Has required static final constants (3+)</div>
+<div class='feedback-item error'>✗ Missing static method</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has private constructor</div>
+<div class='feedback-item error'>✗ SimpleDateUtils missing method overloading</div>
+<div class='feedback-item success'>✓ BorrowingSystem uses arrays (2+)</div>
+<div class='feedback-item success'>✓ BorrowingSystem has all required methods</div>
+<div class='feedback-item success'>✓ LibraryException extends RuntimeException</div>
+<div class='feedback-item success'>✓ Integration methods present (increment/decrement)</div>
+<div class='feedback-item success'>✓ Custom exception implemented</div>
+<div class='feedback-item success'>✓ Validation methods present</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+<div class='feedback-item success'>✓ BONUS: Search capability implemented</div>
+<div class='feedback-item success'>✓ BONUS: Statistics implemented</div>
+</div>
+<div class='compilation-details'>
+<h4>⚙️ Compilation Details</h4>
+<p><strong>Compiled:</strong> BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java</p>
+<p><strong>Failed:</strong></p><ul>
+<li>Main.java: package library.materials does not exist</li>
+</ul></div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_16")'>
+<h3>S_16</h3>
+<span>16/33</span>
+</div>
+<div class='student-content' id='content-S_16'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>2/4</div></div>
+<div class='score-item'><label>Part A</label><div>5/8</div></div>
+<div class='score-item'><label>Part B</label><div>3/6</div></div>
+<div class='score-item'><label>Part C</label><div>2/9</div></div>
+<div class='score-item'><label>Part D</label><div>4/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item error'>✗ Core classes have compilation errors - trying individual compilation...</div>
+<div class='feedback-item error'>  ✗ Book.java failed</div>
+<div class='feedback-item error'>  ✓ LibraryItem.java compiles</div>
+<div class='feedback-item error'>  ✓ SimpleDateUtils.java compiles</div>
+<div class='feedback-item error'>  ✓ LibrarySettings.java compiles</div>
+<div class='feedback-item error'>  ✗ BorrowingSystem.java failed</div>
+<div class='feedback-item error'>  ✓ LibraryException.java compiles</div>
+<div class='feedback-item error'>  ✓ Member.java compiles</div>
+<div class='feedback-item success'>✓ Several core classes compiled (5/7)</div>
+<div class='feedback-item error'>Compilation Summary: 5/7 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item error'>✗ Cannot test Book - did not compile</div>
+<div class='feedback-item success'>✓ Member has required fields (3+)</div>
+<div class='feedback-item success'>✓ Member has canBorrow() method</div>
+<div class='feedback-item error'>✗ LibrarySettings needs private constructor (utility class)</div>
+<div class='feedback-item error'>✗ Missing constants (found 0, need 3)</div>
+<div class='feedback-item success'>✓ Has static method</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has method overloading (3+ versions)</div>
+<div class='feedback-item error'>✗ Cannot test BorrowingSystem - did not compile</div>
+<div class='feedback-item success'>✓ LibraryException extends RuntimeException</div>
+<div class='feedback-item error'>✗ Cannot test integration - required classes didn't compile</div>
+<div class='feedback-item success'>✓ Custom exception implemented</div>
+<div class='feedback-item success'>✓ Validation methods present</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+<div class='compilation-details'>
+<h4>⚙️ Compilation Details</h4>
+<p><strong>Compiled:</strong> LibraryItem.java, Member.java, SimpleDateUtils.java, LibrarySettings.java, LibraryException.java</p>
+<p><strong>Failed:</strong></p><ul>
+<li>Book.java: package library.core does not exist</li>
+<li>BorrowingSystem.java: package library.core does not exist</li>
+</ul></div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_17")'>
+<h3>S_17</h3>
+<span>0/33</span>
+</div>
+<div class='student-content' id='content-S_17'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>0/4</div></div>
+<div class='score-item'><label>Part A</label><div>0/8</div></div>
+<div class='score-item'><label>Part B</label><div>0/6</div></div>
+<div class='score-item'><label>Part C</label><div>0/9</div></div>
+<div class='score-item'><label>Part D</label><div>0/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item error'>✗ Core classes have compilation errors - trying individual compilation...</div>
+<div class='feedback-item error'>  ✗ Book.java failed</div>
+<div class='feedback-item error'>  ✗ LibraryItem.java failed</div>
+<div class='feedback-item error'>  ✗ SimpleDateUtils.java failed</div>
+<div class='feedback-item error'>  ✗ LibrarySettings.java failed</div>
+<div class='feedback-item error'>  ✗ BorrowingSystem.java failed</div>
+<div class='feedback-item error'>  ✓ LibraryException.java compiles</div>
+<div class='feedback-item error'>  ✗ Member.java failed</div>
+<div class='feedback-item error'>✗ Very few or no classes compiled</div>
+<div class='feedback-item error'>  ✗ Main.java failed</div>
+<div class='feedback-item error'>Compilation Summary: 1/8 files compiled</div>
+<div class='feedback-item error'>✗ Cannot test LibraryItem - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test Book - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test Member - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test LibrarySettings - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test SimpleDateUtils - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test BorrowingSystem - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test LibraryException - class loading issue</div>
+<div class='feedback-item error'>✗ Cannot test integration - required classes didn't compile</div>
+<div class='feedback-item error'>✗ Cannot test error handling - class loading issue</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+<div class='compilation-details'>
+<h4>⚙️ Compilation Details</h4>
+<p><strong>Compiled:</strong> LibraryException.java</p>
+<p><strong>Failed:</strong></p><ul>
+<li>Book.java: invalid method declaration; return type required</li>
+<li>LibraryItem.java: missing method body, or declare abstract</li>
+<li>SimpleDateUtils.java: incompatible types: boolean cannot be converted to String</li>
+<li>LibrarySettings.java: illegal start of type</li>
+<li>BorrowingSystem.java: class, interface, annotation type, enum, record, method or field expected</li>
+<li>Member.java: illegal start of expression</li>
+<li>Main.java: illegal start of type</li>
+</ul></div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_18")'>
+<h3>S_18</h3>
+<span>28/33</span>
+</div>
+<div class='student-content' id='content-S_18'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>3/4</div></div>
+<div class='score-item'><label>Part A</label><div>8/8</div></div>
+<div class='score-item'><label>Part B</label><div>5/6</div></div>
+<div class='score-item'><label>Part C</label><div>8/9</div></div>
+<div class='score-item'><label>Part D</label><div>4/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item success'>✓ All core classes compile successfully</div>
+<div class='feedback-item error'>✗ Main.java has compilation errors</div>
+<div class='feedback-item error'>Compilation Summary: 7/8 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item success'>✓ Book extends LibraryItem</div>
+<div class='feedback-item success'>✓ Book has multiple constructors (overloading)</div>
+<div class='feedback-item success'>✓ Book has private author field</div>
+<div class='feedback-item success'>✓ Member has required fields (3+)</div>
+<div class='feedback-item success'>✓ Member has canBorrow() method</div>
+<div class='feedback-item success'>✓ LibrarySettings has private constructor</div>
+<div class='feedback-item success'>✓ Has required static final constants (3+)</div>
+<div class='feedback-item success'>✓ Has static method</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has method overloading (3+ versions)</div>
+<div class='feedback-item success'>✓ BorrowingSystem uses arrays (2+)</div>
+<div class='feedback-item error'>✗ BorrowingSystem missing some methods (3/4)</div>
+<div class='feedback-item success'>✓ LibraryException extends RuntimeException</div>
+<div class='feedback-item success'>✓ Integration methods present (increment/decrement)</div>
+<div class='feedback-item success'>✓ Custom exception implemented</div>
+<div class='feedback-item success'>✓ Validation methods present</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+<div class='compilation-details'>
+<h4>⚙️ Compilation Details</h4>
+<p><strong>Compiled:</strong> BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java</p>
+<p><strong>Failed:</strong></p><ul>
+<li>Main.java: package library.materials does not exist</li>
+</ul></div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_19")'>
+<h3>S_19</h3>
+<span>18/33</span>
+</div>
+<div class='student-content' id='content-S_19'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>3/4</div></div>
+<div class='score-item'><label>Part A</label><div>8/8</div></div>
+<div class='score-item'><label>Part B</label><div>0/6</div></div>
+<div class='score-item'><label>Part C</label><div>7/9</div></div>
+<div class='score-item'><label>Part D</label><div>0/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item success'>✓ All core classes compile successfully</div>
+<div class='feedback-item error'>✗ Main.java has compilation errors</div>
+<div class='feedback-item error'>Compilation Summary: 7/8 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item success'>✓ Book extends LibraryItem</div>
+<div class='feedback-item success'>✓ Book has multiple constructors (overloading)</div>
+<div class='feedback-item success'>✓ Book has private author field</div>
+<div class='feedback-item success'>✓ Member has required fields (3+)</div>
+<div class='feedback-item success'>✓ Member has canBorrow() method</div>
+<div class='feedback-item error'>✗ Cannot test LibrarySettings - class loading issue</div>
+<div class='feedback-item error'>✗ Cannot test SimpleDateUtils - class loading issue</div>
+<div class='feedback-item success'>✓ BorrowingSystem uses arrays (2+)</div>
+<div class='feedback-item success'>✓ BorrowingSystem has all required methods</div>
+<div class='feedback-item error'>✗ Cannot test LibraryException - class loading issue</div>
+<div class='feedback-item success'>✓ Integration methods present (increment/decrement)</div>
+<div class='feedback-item error'>✗ Cannot test error handling - class loading issue</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+<div class='compilation-details'>
+<h4>⚙️ Compilation Details</h4>
+<p><strong>Compiled:</strong> BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java</p>
+<p><strong>Failed:</strong></p><ul>
+<li>Main.java: package library.materials does not exist</li>
+</ul></div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_20")'>
+<h3>S_20</h3>
+<span>24/33</span>
+</div>
+<div class='student-content' id='content-S_20'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>4/4</div></div>
+<div class='score-item'><label>Part A</label><div>7/8</div></div>
+<div class='score-item'><label>Part B</label><div>6/6</div></div>
+<div class='score-item'><label>Part C</label><div>7/9</div></div>
+<div class='score-item'><label>Part D</label><div>0/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item success'>✓ All core classes compile successfully</div>
+<div class='feedback-item error'>⚠ Main.java not found (not required, no penalty)</div>
+<div class='feedback-item error'>Compilation Summary: 7/7 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item success'>✓ Book extends LibraryItem</div>
+<div class='feedback-item success'>✓ Book has multiple constructors (overloading)</div>
+<div class='feedback-item success'>✓ Book has private author field</div>
+<div class='feedback-item success'>✓ Member has required fields (3+)</div>
+<div class='feedback-item error'>✗ Member missing canBorrow() method</div>
+<div class='feedback-item success'>✓ LibrarySettings has private constructor</div>
+<div class='feedback-item success'>✓ Has required static final constants (3+)</div>
+<div class='feedback-item success'>✓ Has static method</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has private constructor</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has method overloading (3+ versions)</div>
+<div class='feedback-item success'>✓ BorrowingSystem uses arrays (2+)</div>
+<div class='feedback-item success'>✓ BorrowingSystem has all required methods</div>
+<div class='feedback-item error'>✗ Cannot test LibraryException - did not compile</div>
+<div class='feedback-item success'>✓ Integration methods present (increment/decrement)</div>
+<div class='feedback-item error'>✗ Cannot test error handling - LibraryException didn't compile</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_21")'>
+<h3>S_21</h3>
+<span>27/33</span>
+</div>
+<div class='student-content' id='content-S_21'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>3/4</div></div>
+<div class='score-item'><label>Part A</label><div>8/8</div></div>
+<div class='score-item'><label>Part B</label><div>4/6</div></div>
+<div class='score-item'><label>Part C</label><div>9/9</div></div>
+<div class='score-item'><label>Part D</label><div>3/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item success'>✓ All core classes compile successfully</div>
+<div class='feedback-item error'>✗ Main.java has compilation errors</div>
+<div class='feedback-item error'>Compilation Summary: 7/8 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item success'>✓ Book extends LibraryItem</div>
+<div class='feedback-item success'>✓ Book has multiple constructors (overloading)</div>
+<div class='feedback-item success'>✓ Book has private author field</div>
+<div class='feedback-item success'>✓ Member has required fields (3+)</div>
+<div class='feedback-item success'>✓ Member has canBorrow() method</div>
+<div class='feedback-item success'>✓ LibrarySettings has private constructor</div>
+<div class='feedback-item success'>✓ Has required static final constants (3+)</div>
+<div class='feedback-item success'>✓ Has static method</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has private constructor</div>
+<div class='feedback-item error'>✗ SimpleDateUtils missing method overloading</div>
+<div class='feedback-item success'>✓ BorrowingSystem uses arrays (2+)</div>
+<div class='feedback-item success'>✓ BorrowingSystem has all required methods</div>
+<div class='feedback-item success'>✓ LibraryException extends RuntimeException</div>
+<div class='feedback-item success'>✓ Integration methods present (increment/decrement)</div>
+<div class='feedback-item success'>✓ Custom exception implemented</div>
+<div class='feedback-item error'>✗ Limited validation implementation</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+<div class='compilation-details'>
+<h4>⚙️ Compilation Details</h4>
+<p><strong>Compiled:</strong> BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java</p>
+<p><strong>Failed:</strong></p><ul>
+<li>Main.java: package library.materials does not exist</li>
+</ul></div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_22")'>
+<h3>S_22</h3>
+<span>13/33</span>
+</div>
+<div class='student-content' id='content-S_22'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>1/4</div></div>
+<div class='score-item'><label>Part A</label><div>3/8</div></div>
+<div class='score-item'><label>Part B</label><div>3/6</div></div>
+<div class='score-item'><label>Part C</label><div>2/9</div></div>
+<div class='score-item'><label>Part D</label><div>4/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item error'>✗ Core classes have compilation errors - trying individual compilation...</div>
+<div class='feedback-item error'>  ✗ book.java failed</div>
+<div class='feedback-item error'>  ✓ LibraryItem.java compiles</div>
+<div class='feedback-item error'>  ✗ SimpleDateUtils.java failed</div>
+<div class='feedback-item error'>  ✓ LibrarySettings.java compiles</div>
+<div class='feedback-item error'>  ✗ BorrowingSystem.java failed</div>
+<div class='feedback-item error'>  ✓ LibraryException.java compiles</div>
+<div class='feedback-item error'>  ✗ member.java failed</div>
+<div class='feedback-item success'>✓ Some core classes compiled (3/7)</div>
+<div class='feedback-item error'>Compilation Summary: 3/7 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item error'>✗ Cannot test Book - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test Member - did not compile</div>
+<div class='feedback-item success'>✓ LibrarySettings has private constructor</div>
+<div class='feedback-item success'>✓ Has required static final constants (3+)</div>
+<div class='feedback-item success'>✓ Has static method</div>
+<div class='feedback-item error'>✗ Cannot test SimpleDateUtils - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test BorrowingSystem - did not compile</div>
+<div class='feedback-item success'>✓ LibraryException extends RuntimeException</div>
+<div class='feedback-item error'>✗ Cannot test integration - required classes didn't compile</div>
+<div class='feedback-item success'>✓ Custom exception implemented</div>
+<div class='feedback-item success'>✓ Validation methods present</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+<div class='compilation-details'>
+<h4>⚙️ Compilation Details</h4>
+<p><strong>Compiled:</strong> LibraryItem.java, LibrarySettings.java, LibraryException.java</p>
+<p><strong>Failed:</strong></p><ul>
+<li>book.java: class Book is public, should be declared in a file named Book.java</li>
+<li>SimpleDateUtils.java: reached end of file while parsing</li>
+<li>BorrowingSystem.java: package library.core does not exist</li>
+<li>member.java: class Member is public, should be declared in a file named Member.java</li>
+</ul></div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_23")'>
+<h3>S_23</h3>
+<span>30/33</span>
+</div>
+<div class='student-content' id='content-S_23'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>4/4</div></div>
+<div class='score-item'><label>Part A</label><div>8/8</div></div>
+<div class='score-item'><label>Part B</label><div>5/6</div></div>
+<div class='score-item'><label>Part C</label><div>9/9</div></div>
+<div class='score-item'><label>Part D</label><div>4/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item success'>✓ All core classes compile successfully</div>
+<div class='feedback-item error'>⚠ Main.java not found (not required, no penalty)</div>
+<div class='feedback-item error'>Compilation Summary: 7/7 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item success'>✓ Has required private fields</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item success'>✓ Book extends LibraryItem</div>
+<div class='feedback-item success'>✓ Book has multiple constructors (overloading)</div>
+<div class='feedback-item success'>✓ Book has private author field</div>
+<div class='feedback-item success'>✓ Member has required fields (3+)</div>
+<div class='feedback-item success'>✓ Member has canBorrow() method</div>
+<div class='feedback-item success'>✓ LibrarySettings has private constructor</div>
+<div class='feedback-item error'>✗ Missing constants (found 0, need 3)</div>
+<div class='feedback-item success'>✓ Has static method</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has private constructor</div>
+<div class='feedback-item success'>✓ SimpleDateUtils has method overloading (3+ versions)</div>
+<div class='feedback-item success'>✓ BorrowingSystem uses arrays (2+)</div>
+<div class='feedback-item success'>✓ BorrowingSystem has all required methods</div>
+<div class='feedback-item success'>✓ LibraryException extends RuntimeException</div>
+<div class='feedback-item success'>✓ Integration methods present (increment/decrement)</div>
+<div class='feedback-item success'>✓ Custom exception implemented</div>
+<div class='feedback-item success'>✓ Validation methods present</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_24")'>
+<h3>S_24</h3>
+<span>10/33</span>
+</div>
+<div class='student-content' id='content-S_24'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>1/4</div></div>
+<div class='score-item'><label>Part A</label><div>2/8</div></div>
+<div class='score-item'><label>Part B</label><div>1/6</div></div>
+<div class='score-item'><label>Part C</label><div>2/9</div></div>
+<div class='score-item'><label>Part D</label><div>4/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item error'>✗ Core classes have compilation errors - trying individual compilation...</div>
+<div class='feedback-item error'>  ✗ Book.java failed</div>
+<div class='feedback-item error'>  ✓ LibraryItem.java compiles</div>
+<div class='feedback-item error'>  ✗ SImpleDateUtils.java failed</div>
+<div class='feedback-item error'>  ✓ LibrarySettings.java compiles</div>
+<div class='feedback-item error'>  ✗ BorrowingSystem.java failed</div>
+<div class='feedback-item error'>  ✓ LibraryException.java compiles</div>
+<div class='feedback-item error'>  ✗ Member.java failed</div>
+<div class='feedback-item success'>✓ Some core classes compiled (3/7)</div>
+<div class='feedback-item error'>  ✓ Main.java compiles</div>
+<div class='feedback-item error'>Compilation Summary: 4/8 files compiled</div>
+<div class='feedback-item success'>✓ LibraryItem is abstract</div>
+<div class='feedback-item error'>✗ Missing required private fields (found 1, need 2)</div>
+<div class='feedback-item success'>✓ Has abstract getItemType()</div>
+<div class='feedback-item error'>✗ Cannot test Book - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test Member - did not compile</div>
+<div class='feedback-item success'>✓ LibrarySettings has private constructor</div>
+<div class='feedback-item error'>✗ Missing constants (found 0, need 3)</div>
+<div class='feedback-item error'>✗ Missing static method</div>
+<div class='feedback-item error'>✗ Cannot test SimpleDateUtils - did not compile</div>
+<div class='feedback-item error'>✗ Cannot test BorrowingSystem - did not compile</div>
+<div class='feedback-item success'>✓ LibraryException extends RuntimeException</div>
+<div class='feedback-item error'>✗ Cannot test integration - required classes didn't compile</div>
+<div class='feedback-item success'>✓ Custom exception implemented</div>
+<div class='feedback-item success'>✓ Validation methods present</div>
+<div class='feedback-item error'>✗ Main.java has runtime errors</div>
+</div>
+<div class='compilation-details'>
+<h4>⚙️ Compilation Details</h4>
+<p><strong>Compiled:</strong> Main.java, LibraryItem.java, LibrarySettings.java, LibraryException.java</p>
+<p><strong>Failed:</strong></p><ul>
+<li>Book.java: package library.core does not exist</li>
+<li>SImpleDateUtils.java: class SimpleDateUtils is public, should be declared in a file named SimpleDat...</li>
+<li>BorrowingSystem.java: package library.core does not exist</li>
+<li>Member.java: package library.util does not exist</li>
+</ul></div>
+</div></div>
+<div class='student-card'>
+<div class='student-header' onclick='toggleStudent("S_25")'>
+<h3>S_25</h3>
+<span>0/33</span>
+</div>
+<div class='student-content' id='content-S_25'>
+<div class='score-grid'>
+<div class='score-item'><label>Compilation</label><div>0/4</div></div>
+<div class='score-item'><label>Part A</label><div>0/8</div></div>
+<div class='score-item'><label>Part B</label><div>0/6</div></div>
+<div class='score-item'><label>Part C</label><div>0/9</div></div>
+<div class='score-item'><label>Part D</label><div>0/4</div></div>
+<div class='score-item'><label>Main Demo</label><div>0/2</div></div>
+</div>
+<div class='feedback-section'><h4>Feedback</h4>
+<div class='feedback-item error'>✗ No Java files found</div>
+<div class='feedback-item error'>✗ Cannot test Part A - no compiled classes</div>
+<div class='feedback-item error'>✗ Cannot test Part B - no compiled classes</div>
+<div class='feedback-item error'>✗ Cannot test Part C - no compiled classes</div>
+<div class='feedback-item error'>✗ Cannot test Part D - no compiled classes</div>
+<div class='feedback-item error'>✗ Main.java not found or didn't compile</div>
+</div>
+</div></div>
+</body></html>

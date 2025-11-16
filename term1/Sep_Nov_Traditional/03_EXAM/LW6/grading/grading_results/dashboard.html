@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html><head><meta charset='UTF-8'>
+<title>Grading Dashboard</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+h1 { color: #333; }
+table { border-collapse: collapse; width: 100%; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+th { background: #4CAF50; color: white; cursor: pointer; user-select: none; position: relative; }
+th:hover { background: #45a049; }
+th.sortable:after { content: ' ⇅'; opacity: 0.3; }
+th.asc:after { content: ' ↑'; opacity: 1; }
+th.desc:after { content: ' ↓'; opacity: 1; }
+tr:hover { background: #f5f5f5; }
+.score { font-weight: bold; }
+.high { color: #4CAF50; }
+.medium { color: #FF9800; }
+.low { color: #f44336; }
+.stats { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; }
+</style>
+<script>
+function sortTable(columnIndex, isNumeric) {
+  const table = document.querySelector('table');
+  const tbody = table.querySelector('tbody');
+  const rows = Array.from(tbody.querySelectorAll('tr'));
+  const headers = table.querySelectorAll('th');
+  const currentHeader = headers[columnIndex];
+  const isAsc = currentHeader.classList.contains('asc');
+  
+  headers.forEach(h => h.classList.remove('asc', 'desc'));
+  currentHeader.classList.add(isAsc ? 'desc' : 'asc');
+  
+  rows.sort((a, b) => {
+    let aVal = a.cells[columnIndex].textContent.trim();
+    let bVal = b.cells[columnIndex].textContent.trim();
+    
+    if (isNumeric) {
+      // Handle bonus format (+2, +4, -) and regular numbers
+      if (aVal === '-') aVal = '0';
+      if (bVal === '-') bVal = '0';
+      aVal = parseFloat(aVal.replace(/[^0-9.-]/g, '')) || 0;
+      bVal = parseFloat(bVal.replace(/[^0-9.-]/g, '')) || 0;
+    }
+    
+    if (aVal < bVal) return isAsc ? 1 : -1;
+    if (aVal > bVal) return isAsc ? -1 : 1;
+    return 0;
+  });
+  
+  rows.forEach(row => tbody.appendChild(row));
+}
+</script>
+</head><body>
+<h1>📊 Library Exam Grading Dashboard</h1>
+<div class='stats'>
+<h2>Class Statistics</h2>
+<p>Base Average: <strong>21.73/33</strong> (65.8%) | Total Average: <strong>21.91/37</strong></p>
+<p>Highest: <strong>37</strong> | Lowest: <strong>0</strong></p>
+<p>Total Students: <strong>22</strong></p>
+<p style='color: #666; font-size: 0.9em;'>💡 Click any column header to sort | Percentage = (Total/33)×100, can exceed 100% with bonus</p>
+</div>
+<table>
+<thead><tr>
+<th class='sortable' onclick='sortTable(0, false)'>Student</th>
+<th class='sortable' onclick='sortTable(1, true)'>Comp</th>
+<th class='sortable' onclick='sortTable(2, true)'>Part A</th>
+<th class='sortable' onclick='sortTable(3, true)'>Part B</th>
+<th class='sortable' onclick='sortTable(4, true)'>Part C</th>
+<th class='sortable' onclick='sortTable(5, true)'>Part D</th>
+<th class='sortable' onclick='sortTable(6, true)'>Main</th>
+<th class='sortable' onclick='sortTable(7, true)'>Base</th>
+<th class='sortable' onclick='sortTable(8, true)'>Bonus</th>
+<th class='sortable' onclick='sortTable(9, true)'>Total</th>
+<th class='sortable' onclick='sortTable(10, true)'>%</th>
+</tr></thead><tbody>
+<tr>
+<td>S0008</td><td>4/4</td><td>8/8</td><td>6/6</td><td>9/9</td><td>4/4</td><td>2/2</td><td>33/33</td><td>-</td><td class='score'>33</td><td class='high'>100.0%</td>
+</tr>
+<tr>
+<td>S0001</td><td>4/4</td><td>0/8</td><td>0/6</td><td>0/9</td><td>0/4</td><td>2/2</td><td>6/33</td><td>-</td><td class='score'>6</td><td class='low'>18.2%</td>
+</tr>
+<tr>
+<td>S0006</td><td>4/4</td><td>7/8</td><td>5/6</td><td>9/9</td><td>4/4</td><td>2/2</td><td>31/33</td><td>-</td><td class='score'>31</td><td class='high'>93.9%</td>
+</tr>
+<tr>
+<td>S0007</td><td>0/4</td><td>8/8</td><td>6/6</td><td>9/9</td><td>4/4</td><td>2/2</td><td>29/33</td><td>-</td><td class='score'>29</td><td class='high'>87.9%</td>
+</tr>
+<tr>
+<td>S0009</td><td>0/4</td><td>0/8</td><td>0/6</td><td>0/9</td><td>0/4</td><td>2/2</td><td>2/33</td><td>-</td><td class='score'>2</td><td class='low'>6.1%</td>
+</tr>
+<tr>
+<td>S0013</td><td>0/4</td><td>0/8</td><td>0/6</td><td>0/9</td><td>0/4</td><td>0/2</td><td>0/33</td><td>-</td><td class='score'>0</td><td class='low'>0.0%</td>
+</tr>
+<tr>
+<td>S0014</td><td>4/4</td><td>8/8</td><td>6/6</td><td>7/9</td><td>4/4</td><td>0/2</td><td>29/33</td><td>-</td><td class='score'>29</td><td class='high'>87.9%</td>
+</tr>
+<tr>
+<td>S0022</td><td>0/4</td><td>0/8</td><td>0/6</td><td>0/9</td><td>0/4</td><td>0/2</td><td>0/33</td><td>-</td><td class='score'>0</td><td class='low'>0.0%</td>
+</tr>
+<tr>
+<td>S0023</td><td>4/4</td><td>8/8</td><td>5/6</td><td>9/9</td><td>4/4</td><td>0/2</td><td>30/33</td><td>-</td><td class='score'>30</td><td class='high'>90.9%</td>
+</tr>
+<tr>
+<td>S0015</td><td>4/4</td><td>8/8</td><td>6/6</td><td>9/9</td><td>4/4</td><td>2/2</td><td>33/33</td><td>+4</td><td class='score'>37</td><td class='high'>112.1%</td>
+</tr>
+<tr>
+<td>S0005</td><td>4/4</td><td>8/8</td><td>6/6</td><td>9/9</td><td>4/4</td><td>2/2</td><td>33/33</td><td>-</td><td class='score'>33</td><td class='high'>100.0%</td>
+</tr>
+<tr>
+<td>S0002</td><td>4/4</td><td>8/8</td><td>6/6</td><td>9/9</td><td>4/4</td><td>2/2</td><td>33/33</td><td>-</td><td class='score'>33</td><td class='high'>100.0%</td>
+</tr>
+<tr>
+<td>S0003</td><td>4/4</td><td>8/8</td><td>4/6</td><td>4/9</td><td>2/4</td><td>0/2</td><td>22/33</td><td>-</td><td class='score'>22</td><td class='medium'>66.7%</td>
+</tr>
+<tr>
+<td>S0004</td><td>0/4</td><td>0/8</td><td>0/6</td><td>0/9</td><td>0/4</td><td>2/2</td><td>2/33</td><td>-</td><td class='score'>2</td><td class='low'>6.1%</td>
+</tr>
+<tr>
+<td>S0017</td><td>0/4</td><td>0/8</td><td>0/6</td><td>0/9</td><td>0/4</td><td>2/2</td><td>2/33</td><td>-</td><td class='score'>2</td><td class='low'>6.1%</td>
+</tr>
+<tr>
+<td>S0010</td><td>4/4</td><td>8/8</td><td>6/6</td><td>9/9</td><td>4/4</td><td>2/2</td><td>33/33</td><td>-</td><td class='score'>33</td><td class='high'>100.0%</td>
+</tr>
+<tr>
+<td>S0019</td><td>4/4</td><td>8/8</td><td>0/6</td><td>7/9</td><td>2/4</td><td>2/2</td><td>23/33</td><td>-</td><td class='score'>23</td><td class='medium'>69.7%</td>
+</tr>
+<tr>
+<td>S0021</td><td>4/4</td><td>8/8</td><td>6/6</td><td>9/9</td><td>4/4</td><td>2/2</td><td>33/33</td><td>-</td><td class='score'>33</td><td class='high'>100.0%</td>
+</tr>
+<tr>
+<td>S0020</td><td>4/4</td><td>7/8</td><td>6/6</td><td>7/9</td><td>2/4</td><td>0/2</td><td>26/33</td><td>-</td><td class='score'>26</td><td class='medium'>78.8%</td>
+</tr>
+<tr>
+<td>S0018</td><td>4/4</td><td>8/8</td><td>6/6</td><td>9/9</td><td>4/4</td><td>2/2</td><td>33/33</td><td>-</td><td class='score'>33</td><td class='high'>100.0%</td>
+</tr>
+<tr>
+<td>S0011</td><td>4/4</td><td>7/8</td><td>6/6</td><td>9/9</td><td>4/4</td><td>2/2</td><td>32/33</td><td>-</td><td class='score'>32</td><td class='high'>97.0%</td>
+</tr>
+<tr>
+<td>S0016</td><td>0/4</td><td>5/8</td><td>4/6</td><td>2/9</td><td>2/4</td><td>0/2</td><td>13/33</td><td>-</td><td class='score'>13</td><td class='low'>39.4%</td>
+</tr>
+</tbody></table>
+</body></html>

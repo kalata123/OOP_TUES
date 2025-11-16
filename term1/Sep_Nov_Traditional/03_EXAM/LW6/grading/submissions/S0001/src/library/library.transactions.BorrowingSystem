@@ -1,0 +1,47 @@
+package library.transactions;
+
+import library.core.LibraryItem;
+
+public class BorrowingSystem {
+    private static final int MAX_ITEMS = 5;
+    private LibraryItem[] borrowedItems = new LibraryItem[MAX_ITEMS];
+    private String[] dueDates = new String[MAX_ITEMS];
+    private int itemCount = 0;
+
+    public void borrowItem(LibraryItem item, String dueDate) {
+        if (itemCount >= MAX_ITEMS) {
+            throw new IllegalStateException("Cannot borrow more than " + MAX_ITEMS + " items.");
+        }
+        borrowedItems[itemCount] = item;
+        dueDates[itemCount] = dueDate;
+        itemCount++;
+    }
+
+    public boolean returnItem(String itemId) {
+        for (int i = 0; i < itemCount; i++) {
+            if (borrowedItems[i].getItemId().equals(itemId)) {
+                for (int j = i; j < itemCount - 1; j++) {
+                    borrowedItems[j] = borrowedItems[j + 1];
+                    dueDates[j] = dueDates[j + 1];
+                }
+                borrowedItems[itemCount - 1] = null;
+                dueDates[itemCount - 1] = null;
+                itemCount--;
+                return true;
+            }
+        }
+        return false; 
+    }
+
+    public LibraryItem[] getBorrowedItems() {
+        return borrowedItems;
+    }
+
+    public String[] getDueDates() {
+        return dueDates;
+    }
+
+    public int getItemCount() {
+        return itemCount;
+    }
+}

@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LW03 Sokoban - Detailed Reports</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .student-report {
+            background: white;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            page-break-inside: avoid;
+        }
+        .student-header {
+            background: #4CAF50;
+            color: white;
+            padding: 15px;
+            margin: -20px -20px 20px -20px;
+            border-radius: 5px 5px 0 0;
+        }
+        .student-header h2 {
+            margin: 0;
+        }
+        .score-summary {
+            background: #e3f2fd;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border-left: 4px solid #2196F3;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h3 {
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        .issue {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .critical {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+        }
+        .good {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+        .missing {
+            background: #f5f5f5;
+            border-left: 4px solid #6c757d;
+        }
+        ul {
+            margin: 10px 0;
+            padding-left: 30px;
+        }
+        .not-submitted {
+            text-align: center;
+            padding: 40px;
+            background: #e0e0e0;
+            border-radius: 5px;
+            font-style: italic;
+            color: #666;
+        }
+        .nav-links {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .nav-links h3 {
+            margin-top: 0;
+        }
+        .nav-links a {
+            display: block;
+            padding: 5px;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .nav-links a:hover {
+            background: #f5f5f5;
+        }
+        @media print {
+            .nav-links {
+                display: none;
+            }
+            .student-report {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>LW03 Sokoban - Detailed Student Reports</h1>
+
+    <div class="nav-links">
+        <h3>Quick Navigation</h3>
+        <a href="#student1">Student 1</a>
+        <a href="#student2">Student 2</a>
+        <a href="#student3">Student 3</a>
+        <a href="#student4">Student 4</a>
+        <a href="#student5">Student 5</a>
+        <a href="#student6">Student 6</a>
+        <a href="#student7">Student 7</a>
+        <a href="#student8">Student 8</a>
+        <a href="#student9">Student 9</a>
+        <a href="#student10">Student 10</a>
+        <a href="#student11">Student 11</a>
+        <a href="#student13">Student 13</a>
+        <a href="#student14">Student 14</a>
+        <a href="#student17">Student 17</a>
+        <a href="#student18">Student 18</a>
+        <a href="#student19">Student 19</a>
+        <a href="#student20">Student 20</a>
+        <a href="#student21">Student 21</a>
+        <a href="#student22">Student 22</a>
+        <a href="#student23">Student 23</a>
+        <a href="#student24">Student 24</a>
+    </div>
+
+    <!-- STUDENT 1 -->
+    <div class="student-report" id="student1">
+        <div class="student-header">
+            <h2>Student #1</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 15/40 (Base: 15/20, Bonus: 0/20)
+        </div>
+
+        <div class="section">
+            <h3>Critical Issues</h3>
+            <div class="issue critical">
+                <strong>No Input Handling (0/2):</strong> main does not read W, H, K nor validate; it calls a hard-coded test setup (initializeTestBoard). This violates the input requirement.
+            </div>
+            <div class="issue critical">
+                <strong>No R3 Implementation (0/2):</strong> No implementation to compare boxes vs targets along walls.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What Works</h3>
+            <div class="good">
+                <ul>
+                    <li>Movement with w/a/s/d and words; walls blocked; invalid command feedback</li>
+                    <li>Push allowed only if the next cell is a box and the cell beyond is inside, not wall, and free</li>
+                    <li>Correctly updates boxesOnTargets when moving on/off targets</li>
+                    <li>Boxes not on player, not on targets, not on other boxes</li>
+                    <li>Avoids four interior corners (simple R2)</li>
+                    <li>Rendering is correct (updateDisplay builds borders, targets, boxes, player; printBoard outputs)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What's Missing</h3>
+            <div class="missing">
+                <ul>
+                    <li>Input reading & validation</li>
+                    <li>R3 wall capacity constraint</li>
+                    <li>Using random initializer in main (exists but unused)</li>
+                    <li>All bonuses (undo, move counter, etc.)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Actionable Next Steps</h3>
+            <ul>
+                <li>Wire input + initializeGame</li>
+                <li>Implement R3</li>
+                <li>Print move counter</li>
+                <li>Consider undo feature</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 2 -->
+    <div class="student-report" id="student2">
+        <div class="student-header">
+            <h2>Student #2</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 31/40 (Base: 20/20, Bonus: 11/20)
+        </div>
+
+        <div class="section">
+            <h3>Strengths</h3>
+            <div class="good">
+                <ul>
+                    <li>Perfect base implementation - all requirements met</li>
+                    <li>Robust initializer with retries</li>
+                    <li>Thorough deadlock safeguards</li>
+                    <li>Clear separation of state vs. display</li>
+                    <li>Working undo system</li>
+                    <li>2×2 solid block prevention</li>
+                    <li>Corner-adjacency trap prevention</li>
+                    <li>Wall-line capacity checks</li>
+                    <li>Smart auto-restart on deadlock</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Minor Issues (non-deducting)</h3>
+            <div class="issue">
+                <ul>
+                    <li>Lowercase public class name</li>
+                    <li>Stray TODO comments</li>
+                    <li>No custom exceptions (advanced bonus not attempted)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Undo system (+1)</li>
+                <li>✓ Move counter (+1)</li>
+                <li>✓ 2×2 solid block prevention (+2)</li>
+                <li>✓ Corner-adjacency trap (+2)</li>
+                <li>✓ Wall-line capacity (+2)</li>
+                <li>✓ Smart auto-restart (+3)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 3 -->
+    <div class="student-report" id="student3">
+        <div class="student-header">
+            <h2>Student #3</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 29/40 (Base: 18/20, Bonus: 11/20)
+        </div>
+
+        <div class="section">
+            <h3>Issues</h3>
+            <div class="issue">
+                <strong>R2 Implementation Limited (2/3):</strong> R2 implemented only for the four map-corner cells (no general interior-corner deadlock detection beyond these).
+            </div>
+            <div class="issue">
+                <strong>Restart Bug:</strong> restart() resets boxesOnTargets to 0 even for preloaded 'O' tiles—minor counter bug on restart of file levels.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What Works</h3>
+            <div class="good">
+                <ul>
+                    <li>Input validation with correct formulas</li>
+                    <li>Movement & collisions properly implemented</li>
+                    <li>Box pushing and target counting works</li>
+                    <li>R3 wall capacity correctly implemented</li>
+                    <li>Board initialization and rendering correct</li>
+                    <li>Level system with file loading</li>
+                    <li>Board parser for .txt files</li>
+                    <li>Custom exceptions</li>
+                    <li>Undo system</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Improvements Needed</h3>
+            <ul>
+                <li>Extend R2 to disallow any interior dead-corner (two perpendicular walls) unless it's a target</li>
+                <li>Fix restart() to correctly count preloaded O cells</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Undo system (+1)</li>
+                <li>✓ Move counter (+1)</li>
+                <li>✓ Level system (+3)</li>
+                <li>✓ Board parser (+3)</li>
+                <li>✓ Exception handling (+3)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 4 -->
+    <div class="student-report" id="student4">
+        <div class="student-header">
+            <h2>Student #4</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 31/40 (Base: 19/20, Bonus: 12/20)
+        </div>
+
+        <div class="section">
+            <h3>Critical Issue</h3>
+            <div class="issue critical">
+                <strong>R1 Violation (2/3):</strong> Boxes may be placed on target cells during initialization (isValidBoxPlacement doesn't forbid isTarget[y][x]), which contradicts R1 ("Box cannot be placed on a target cell").
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What Works Well</h3>
+            <div class="good">
+                <ul>
+                    <li>Clear code structure and separation</li>
+                    <li>Input validation (slightly stricter than spec, but valid)</li>
+                    <li>Movement and collision detection</li>
+                    <li>Box pushing mechanics</li>
+                    <li>R2 corner rules enforced</li>
+                    <li>R3 wall capacity checks</li>
+                    <li>Good extras: BFS check (boxCanReachTarget), robust undo</li>
+                    <li>2×2 solid block prevention</li>
+                    <li>Corner adjacency trap prevention</li>
+                    <li>Level system with multiple prebuilt levels</li>
+                    <li>Custom exception handling</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fix Needed</h3>
+            <ul>
+                <li><strong>R1 Compliance:</strong> Modify isValidBoxPlacement(...) so boxes are never placed on targets at initialization, while keeping corner logic intact</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>What's Missing</h3>
+            <ul>
+                <li>File-based board parser (levels are embedded arrays, not parsed from text files)</li>
+                <li>Smart auto-restart</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Undo system (+1)</li>
+                <li>✓ Move counter (+1)</li>
+                <li>✓ 2×2 solid block prevention (+2)</li>
+                <li>✓ Corner adjacency trap (+2)</li>
+                <li>✓ Level system (+3)</li>
+                <li>✓ Exception handling (+3)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 5 -->
+    <div class="student-report" id="student5">
+        <div class="student-header">
+            <h2>Student #5</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 21/40 (Base: 20/20, Bonus: 1/20)
+        </div>
+
+        <div class="section">
+            <h3>Strengths</h3>
+            <div class="good">
+                <ul>
+                    <li>Perfect base implementation - all core requirements met</li>
+                    <li>Good adherence to LW03 task spec</li>
+                    <li>Random generation working correctly</li>
+                    <li>Rules R1–R3 properly enforced</li>
+                    <li>Clear rendering</li>
+                    <li>Robust input validation</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Minor Issues (non-critical)</h3>
+            <div class="issue">
+                <ul>
+                    <li>Duplicate printBoard() call in the main loop (harmless)</li>
+                    <li>Could unify command aliases (up/down/left/right) for full parity with spec examples</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What's Missing (Bonus Opportunities)</h3>
+            <div class="missing">
+                <ul>
+                    <li>Undo system</li>
+                    <li>2×2 solid block prevention</li>
+                    <li>Corner adjacency trap</li>
+                    <li>Level system</li>
+                    <li>Board parser</li>
+                    <li>Custom exceptions</li>
+                    <li>Smart auto-restart</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Move counter (+1)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 6 -->
+    <div class="student-report" id="student6">
+        <div class="student-header">
+            <h2>Student #6</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 27/40 (Base: 15/20, Bonus: 12/20)
+        </div>
+
+        <div class="section">
+            <h3>Critical Issues</h3>
+            <div class="issue critical">
+                <strong>No Input Handling (0/2):</strong> Does not read W, H, K; plays prebuilt levels only. LW03 requires reading + validating input.
+            </div>
+            <div class="issue critical">
+                <strong>No Placement Rules Implementation (0/3):</strong> No generator; boards are hard-coded → R1/R2 not implemented at placement time.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What Works</h3>
+            <div class="good">
+                <ul>
+                    <li>WASD/word commands working</li>
+                    <li>Wall collision via WallException</li>
+                    <li>Box pushing mechanics correct</li>
+                    <li>Target counting updates properly</li>
+                    <li>R3 wall capacity implemented</li>
+                    <li>Parser initializes arrays from level strings</li>
+                    <li>Renderer prints board + move count</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Important Notes</h3>
+            <div class="issue">
+                <strong>Java 25 main model:</strong> Uses instance void main() without String[] args. This is valid in Java 25 compact source files. The file hw.java compiles and runs correctly.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Move counter (+1)</li>
+                <li>✓ 2×2 solid block prevention (+2)</li>
+                <li>✓ Level system (+3)</li>
+                <li>✓ Exception handling (+3)</li>
+                <li>✓ Smart auto-restart (+3)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 7 -->
+    <div class="student-report" id="student7">
+        <div class="student-header">
+            <h2>Student #7</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 18/40 (Base: 14/20, Bonus: 4/20)
+        </div>
+
+        <div class="section">
+            <h3>Critical Issues</h3>
+            <div class="issue critical">
+                <strong>Structure Issues (2/3):</strong> 
+                <ul>
+                    <li>getPointAt returns the first point when not found (latent bug and poor API design)</li>
+                    <li>Nested ad-hoc class BoxRules inside a long method</li>
+                    <li>Leftover debug/placeholder code</li>
+                    <li>Vague exception handling</li>
+                </ul>
+            </div>
+            <div class="issue critical">
+                <strong>Movement Bug (2/3):</strong> Border checks are undermined by getPointAt's fallback, allowing illegal moves at edges.
+            </div>
+            <div class="issue critical">
+                <strong>Target Counting Bug (2/3):</strong> Initial boxes placed on targets are not counted, so a solved start won't be detected.
+            </div>
+            <div class="issue critical">
+                <strong>R1 Violation (1/3):</strong> Boxes can be placed on targets during initialization.
+            </div>
+            <div class="issue critical">
+                <strong>Rendering Issue (3/4):</strong> Win message omits the move count required by the brief; initial boxesOnTargets not tallied.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Parser Validation Flaw</h3>
+            <div class="issue">
+                Validation condition is flawed: Throws only when width&lt;5 && height&lt;5 && boxes &lt;= max (bad condition).
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What Works</h3>
+            <div class="good">
+                <ul>
+                    <li>Input validation enforces W ≥ 5, H ≥ 5, K ≤ formula</li>
+                    <li>R2 corner restriction enforced</li>
+                    <li>R3 wall capacity checks in BoxRules.canPlaceBox</li>
+                    <li>Push logic updates boxesOnTargets when boxes move on/off targets</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fixes Needed</h3>
+            <ul>
+                <li>Fix getPointAt to properly handle missing elements</li>
+                <li>Modify canPlaceBox to forbid placing boxes on targets (R1)</li>
+                <li>Compute initial boxesOnTargets after placeBoxes</li>
+                <li>Include move count in win message</li>
+                <li>Fix parser validation boolean condition</li>
+                <li>Extract BoxRules, remove debug code</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Undo (+1)</li>
+                <li>✓ Board parser (+3)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 8 -->
+    <div class="student-report" id="student8">
+        <div class="student-header">
+            <h2>Student #8</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 24/40 (Base: 19/20, Bonus: 5/20)
+        </div>
+
+        <div class="section">
+            <h3>Issues</h3>
+            <div class="issue">
+                <strong>Input Validation (1/2):</strong> 
+                <ul>
+                    <li>Does not enforce W ≥ 5, H ≥ 5 at input time (only prints an error inside initializeGame and continues)</li>
+                    <li>Capacity check rejects equality (should allow K ≤, not K &lt;)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What Works</h3>
+            <div class="good">
+                <ul>
+                    <li>Clear organization: state fields, init, movement, rendering, undo, level loader</li>
+                    <li>Validates negatives and capacity (mostly correct)</li>
+                    <li>Movement handles w/a/s/d, blocks border steps</li>
+                    <li>Box pushing mechanics correct</li>
+                    <li>R1, R2, R3 all implemented correctly</li>
+                    <li>Board initialization and rendering correct</li>
+                    <li>Supports 3 preset levels</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fixes Needed for Full Base Score</h3>
+            <ul>
+                <li>Enforce W ≥ 5, H ≥ 5 during input and re-ask only the invalid value(s)</li>
+                <li>Change capacity check to K ≤ ((W-2)*(H-2)-2)/2 (allow equality)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Undo system (+1)</li>
+                <li>✓ Move counter (+1)</li>
+                <li>✓ Level system (+3)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 9 -->
+    <div class="student-report" id="student9">
+        <div class="student-header">
+            <h2>Student #9</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 28/40 (Base: 17/20, Bonus: 11/20)
+        </div>
+
+        <div class="section">
+            <h3>Critical Issues</h3>
+            <div class="issue critical">
+                <strong>Input Validation Not Confirmable (0/2):</strong> The visible Main.java section is truncated; validation of W ≥ 5, H ≥ 5, K upper bound per LW03 cannot be verified.
+            </div>
+            <div class="issue critical">
+                <strong>R1 Partially Violated (2/3):</strong> Logic allows spawning a box on a target if the cell is an interior corner; LW03 forbids placing boxes on targets during initialization.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What Works</h3>
+            <div class="good">
+                <ul>
+                    <li>Clear separation Main/SokobanGame, cohesive methods</li>
+                    <li>Movement maps directions correctly, blocks walls</li>
+                    <li>Box pushing mechanics correct</li>
+                    <li>R2 implemented: interior-corner check forbids non-target corner spawns</li>
+                    <li>R3 tracks targets per wall correctly</li>
+                    <li>Board initialization and rendering correct</li>
+                    <li>Four built-in levels with file-based loader</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fixes Needed</h3>
+            <ul>
+                <li>Ensure input validation is properly implemented for W, H, K</li>
+                <li>Adjust box-placement to satisfy R1: no box on any target during initialization (corner targets should only be reached by pushing)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Undo system (+1)</li>
+                <li>✓ Move counter (+1)</li>
+                <li>✓ Level system (+3)</li>
+                <li>✓ Board parser (+3)</li>
+                <li>✓ Exception handling (+3)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 10 -->
+    <div class="student-report" id="student10">
+        <div class="student-header">
+            <h2>Student #10</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 24/40 (Base: 19/20, Bonus: 5/20)
+        </div>
+
+        <div class="section">
+            <h3>Issue</h3>
+            <div class="issue">
+                <strong>Input Validation (1/2):</strong> Rejects the equal boundary: if (boxesCount >= maximum_boxes) throw … should allow K ≤ max per spec.
+            </div>
+            <div class="issue">
+                <strong>Move Counter Bonus (0):</strong> Moves shown on win, but not displayed during gameplay as required for this bonus.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What Works</h3>
+            <div class="good">
+                <ul>
+                    <li>Clear separation of concerns (initializeGame, placement, movement, rendering)</li>
+                    <li>Uses Point, arrays, and helper methods effectively</li>
+                    <li>Validates W,H ≥ 5, K ≥ 1 (formula mostly correct)</li>
+                    <li>WASD handled correctly; walls block</li>
+                    <li>Recursive tryMoveBox supports pushing chains</li>
+                    <li>Correctly adjusts boxesOnTargets</li>
+                    <li>R1, R2, R3 all properly implemented</li>
+                    <li>Board initialization and rendering correct</li>
+                    <li>History stack for undo</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fixes Needed</h3>
+            <ul>
+                <li>Allow K == maximum (use &gt; instead of &gt;=)</li>
+                <li>Print current move count in the game HUD (printBoard) to satisfy the bonus</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Undo system (+1)</li>
+                <li>✓ 2×2 solid block prevention (+2)</li>
+                <li>✓ R5 wall capacity (lines) (+2)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 11 -->
+    <div class="student-report" id="student11">
+        <div class="student-header">
+            <h2>Student #11</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 30/40 (Base: 20/20, Bonus: 10/20)
+        </div>
+
+        <div class="section">
+            <h3>Minor Note</h3>
+            <div class="issue">
+                <strong>Box Cap Formula:</strong> More restrictive: …-4)/2 instead of spec's …-2)/2, but validation and re-asking behavior are correct; gameplay unaffected.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Strengths</h3>
+            <div class="good">
+                <ul>
+                    <li>Perfect base implementation - all requirements met</li>
+                    <li>Clear helpers (setUpBoard, placePlayer, generateBoard, movePlayer, moveBox, checkWin)</li>
+                    <li>Custom exceptions defined and used</li>
+                    <li>Input validation with proper loops</li>
+                    <li>Movement and collisions handled correctly</li>
+                    <li>Box pushing with BOX vs BOX_ON_TARGET handling</li>
+                    <li>R1, R2, R3 all properly enforced</li>
+                    <li>Clean board initialization and rendering</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What's Missing (Potential Bonuses)</h3>
+            <div class="missing">
+                <ul>
+                    <li>Undo system</li>
+                    <li>Level system</li>
+                    <li>Board parser</li>
+                    <li>Smart auto-restart</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Move counter (+1)</li>
+                <li>✓ 2×2 solid block prevention (+2)</li>
+                <li>✓ Corner-adjacency trap (+2)</li>
+                <li>✓ Wall capacity per interior wall line (+2)</li>
+                <li>✓ Exception handling (+3)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 12 -->
+    <div class="student-report" id="student12">
+        <div class="student-header">
+            <h2>Student #12</h2>
+        </div>
+        <div class="not-submitted">
+            No submission received
+        </div>
+    </div>
+
+    <!-- STUDENT 13 -->
+    <div class="student-report" id="student13">
+        <div class="student-header">
+            <h2>Student #13</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 24/40 (Base: 18/20, Bonus: 6/20)
+        </div>
+
+        <div class="section">
+            <h3>Critical Issue</h3>
+            <div class="issue critical">
+                <strong>No R3 Implementation (0/2):</strong> No implementation to enforce "boxes along a wall ≤ targets along that wall" during placement.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What Works</h3>
+            <div class="good">
+                <ul>
+                    <li>Three classes (Main, SokobanGame, GameState) with clear separation</li>
+                    <li>Input validation enforces all requirements correctly</li>
+                    <li>Movement and collision detection proper</li>
+                    <li>Box pushing mechanics correct</li>
+                    <li>R1 and R2 fully enforced</li>
+                    <li>Board initialization and rendering correct</li>
+                    <li>Target counting recomputed reliably in GameState.updateDisplay()</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fix Needed</h3>
+            <ul>
+                <li>Implement R3: count boxes vs. targets along each wall segment at placement time and add check to positionBox to enforce it</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Undo system (+1)</li>
+                <li>✓ Move counter (+1)</li>
+                <li>✓ 2×2 solid block prevention (+2)</li>
+                <li>✓ Corner adjacency trap (+2)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 14 -->
+    <div class="student-report" id="student14">
+        <div class="student-header">
+            <h2>Student #14</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 28/40 (Base: 20/20, Bonus: 8/20)
+        </div>
+
+        <div class="section">
+            <h3>Issue to Flag</h3>
+            <div class="issue">
+                <strong>Over-strict R3 validation in parser:</strong> isBoardValid rejects levels where targets on a wall exceed boxes (allowed by spec) and prints "must be equal". Should only reject when boxes would exceed targets. This may incorrectly invalidate some external levels.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Strengths</h3>
+            <div class="good">
+                <ul>
+                    <li>Perfect base implementation - all requirements met</li>
+                    <li>Clear separation: Main, GameState, GridReader</li>
+                    <li>Input validation correct with proper error handling</li>
+                    <li>Movement and collision handling proper</li>
+                    <li>moveBox supports chained pushes via recursion</li>
+                    <li>R1, R2, R3 all enforced correctly during generation</li>
+                    <li>Board initialization with retries works well</li>
+                    <li>Level system with menu paths</li>
+                    <li>Board parser loads multi-level text file</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fix Needed</h3>
+            <ul>
+                <li>Adjust parser validation: R3 should only reject when boxes would exceed targets, not when they're equal or when targets exceed boxes</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Undo system (+1)</li>
+                <li>✓ Move counter (+1)</li>
+                <li>✓ Level system (+3)</li>
+                <li>✓ Board parser (+3)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 15 -->
+    <div class="student-report" id="student15">
+        <div class="student-header">
+            <h2>Student #15</h2>
+        </div>
+        <div class="not-submitted">
+            No submission received
+        </div>
+    </div>
+
+    <!-- STUDENT 16 -->
+    <div class="student-report" id="student16">
+        <div class="student-header">
+            <h2>Student #16</h2>
+        </div>
+        <div class="not-submitted">
+            No submission received
+        </div>
+    </div>
+
+    <!-- STUDENT 17 -->
+    <div class="student-report" id="student17">
+        <div class="student-header">
+            <h2>Student #17</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 17/40 (Base: 16/20, Bonus: 1/20)
+        </div>
+
+        <div class="section">
+            <h3>Critical Issues</h3>
+            <div class="issue critical">
+                <strong>R2 Missing (1/3):</strong> Boxes can be randomly placed in interior non-target corners; no prevention code present.
+            </div>
+            <div class="issue critical">
+                <strong>No R3 Implementation (0/2):</strong> No logic to ensure wall-adjacent box counts don't exceed targets on that wall.
+            </div>
+            <div class="issue critical">
+                <strong>Undo Bug (0 bonus):</strong> Present but incorrect: history stores and restores only a copy of display_board plus player/move counters, not the is_box/is_target arrays; after an undo, the next update_display() will rebuild from is_box and discard the undone board.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What Works</h3>
+            <div class="good">
+                <ul>
+                    <li>Input validation with correct formula</li>
+                    <li>Movement supports WASD, words, quit</li>
+                    <li>Wall check and out-of-bounds protected by border walls</li>
+                    <li>Box pushing with blocking on wall/box beyond</li>
+                    <li>Target counting updates correctly</li>
+                    <li>R1 enforced (not on player/target/box)</li>
+                    <li>Rendering and win with move count</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fixes Needed</h3>
+            <ul>
+                <li>Extend place_boxes() to forbid placing boxes in the four interior non-target corners</li>
+                <li>Implement R3: data pass to count boxes vs. targets along each interior wall segment</li>
+                <li>Fix undo: save/restore is_box, is_target arrays (not just display_board)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Move counter (+1)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 18 -->
+    <div class="student-report" id="student18">
+        <div class="student-header">
+            <h2>Student #18</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 28/40 (Base: 20/20, Bonus: 8/20)
+        </div>
+
+        <div class="section">
+            <h3>Issue to Flag</h3>
+            <div class="issue">
+                <strong>Undo Incomplete (0 bonus):</strong> Only displayBoard is saved/restored; hasBox, isTarget, and boxesOnTargets are not restored → inconsistent state after undo.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Strengths</h3>
+            <div class="good">
+                <ul>
+                    <li>Perfect base implementation - all requirements met</li>
+                    <li>Clear fields/methods with Java 25-compatible main</li>
+                    <li>Input validation with correct formula</li>
+                    <li>Movement supports w/a/s/d & words</li>
+                    <li>Box pushing mechanics correct</li>
+                    <li>R1, R2, R3 all properly enforced</li>
+                    <li>Board initialization with retry loop</li>
+                    <li>creates2x2Block() detects 2×2 walls/boxes</li>
+                    <li>createsDeadlock() flags corner deadlocks</li>
+                    <li>Smart auto-restart on deadlock/2×2</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fix Needed</h3>
+            <ul>
+                <li>Redesign undo() to snapshot/restore playerX/Y, hasBox, isTarget, boxesOnTargets (and possibly RNG-seed), then call updateDisplay()</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Move counter (+1)</li>
+                <li>✓ 2×2 solid block prevention (+2)</li>
+                <li>✓ Corner adjacency trap (+2)</li>
+                <li>✓ Smart auto-restart (+3)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 19 -->
+    <div class="student-report" id="student19">
+        <div class="student-header">
+            <h2>Student #19</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 33/40 (Base: 20/20, Bonus: 13/20)
+        </div>
+
+        <div class="section">
+            <h3>Strengths - Excellent Implementation</h3>
+            <div class="good">
+                <ul>
+                    <li>Perfect base implementation - all requirements met</li>
+                    <li>Clear class design with SokobanGame, helpers, inner Level class</li>
+                    <li>Two custom exception classes</li>
+                    <li>Supports preset, file, and random boards</li>
+                    <li>Menu choice validated</li>
+                    <li>Input validation correct with proper re-asking</li>
+                    <li>Movement and collision handling excellent</li>
+                    <li>Box pushing and target counting correct</li>
+                    <li>R1, R2, R3 all properly enforced</li>
+                    <li>Board initialization and rendering perfect</li>
+                    <li>Working undo system</li>
+                    <li>Move counter in UI and win message</li>
+                    <li>2×2 solid block prevention</li>
+                    <li>Level system with metadata</li>
+                    <li>Board parser with validation (validates shape, symbols, single player, boxes==targets)</li>
+                    <li>Exception handling with custom exceptions</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What's Missing (Minor)</h3>
+            <div class="missing">
+                <ul>
+                    <li>Corner-adjacency trap (intermediate bonus)</li>
+                    <li>Smart auto-restart (advanced bonus)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Undo system (+1)</li>
+                <li>✓ Move counter (+1)</li>
+                <li>✓ 2×2 solid block prevention (+2)</li>
+                <li>✓ Level system (+3)</li>
+                <li>✓ Board parser (+3)</li>
+                <li>✓ Exception handling (+3)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 20 -->
+    <div class="student-report" id="student20">
+        <div class="student-header">
+            <h2>Student #20</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 25/40 (Base: 20/20, Bonus: 5/20)
+        </div>
+
+        <div class="section">
+            <h3>Minor Issue</h3>
+            <div class="issue">
+                <strong>Commands UI vs. logic:</strong> printBoard() advertises w/up, s/down, a/left, d/right, but movement accepts only w/a/s/d; "up/down/left/right" will trigger INVALID_DIRECTION (acceptable but slightly misleading).
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Strengths</h3>
+            <div class="good">
+                <ul>
+                    <li>Perfect base implementation - all requirements met</li>
+                    <li>Single-class solution with clear fields/methods</li>
+                    <li>No hard-coded boards; uses inner exception types</li>
+                    <li>Input validation with proper re-prompting and InputMismatchException guard</li>
+                    <li>Movement: bounds and wall checks, directional input handled</li>
+                    <li>Box pushing mechanics correct</li>
+                    <li>R1, R2, R3 all properly enforced</li>
+                    <li>Board initialization perfect: border walls, center player, random targets/boxes</li>
+                    <li>State stack & undo() with restore</li>
+                    <li>Move counter shows each turn and in win message</li>
+                    <li>Custom InvalidMoveException/InvalidGameStateException with structured try/catch</li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What's Missing (Potential Bonuses)</h3>
+            <div class="missing">
+                <ul>
+                    <li>2×2 block prevention</li>
+                    <li>Corner-adjacency trap</li>
+                    <li>Level system</li>
+                    <li>Board parser</li>
+                    <li>Smart auto-restart</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Undo system (+1)</li>
+                <li>✓ Move counter (+1)</li>
+                <li>✓ Exception handling (+3)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 21 -->
+    <div class="student-report" id="student21">
+        <div class="student-header">
+            <h2>Student #21</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 36/40 (Base: 19/20, Bonus: 17/20) - HIGHEST SCORE
+        </div>
+
+        <div class="section">
+            <h3>Issue</h3>
+            <div class="issue">
+                <strong>Input Validation (1/2):</strong> K validation uses strict &lt; instead of the rubric's ≤ to ((W-2)*(H-2)-2)/2.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Strengths - Excellent Implementation</h3>
+            <div class="good">
+                <ul>
+                    <li>Cohesive class split (SokobanGame, ReadLevel, GameState)</li>
+                    <li>Layered state (board, isTarget, isBox, isBoxOnTarget, isWall)</li>
+                    <li>Java 25–compliant static void main</li>
+                    <li>Width/height loops with try/catch correct</li>
+                    <li>Movement and collision detection excellent</li>
+                    <li>Box pushing with proper B→O and O→B/T transitions</li>
+                    <li>R1, R2, R3 all properly enforced</li>
+                    <li>Borders as walls; player centered; updateDisplay refreshes correctly</li>
+                    <li>Working undo with full state restore</li>
+                    <li>Move counter printed each turn and in win message</li>
+                    <li>isPossible(...) guards formations creating 2×2 blocks</li>
+                    <li>cornerStuck(...) and diagonal deadlock checks</li>
+                    <li>Wall-capacity reinforcement beyond base</li>
+                    <li>Level system (multi-difficulty, random pick)</li>
+                    <li>Board parser (load from text files)</li>
+                    <li>Exception handling (invalid maps/moves/layouts)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fix for Full Score</h3>
+            <ul>
+                <li>Adjust K validation to allow K ≤ max (not just K &lt; max)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Undo system (+1)</li>
+                <li>✓ Move counter (+1)</li>
+                <li>✓ 2×2 solid block prevention (+2)</li>
+                <li>✓ Corner adjacency trap (+2)</li>
+                <li>✓ Wall-capacity reinforcement (+2)</li>
+                <li>✓ Level system (+3)</li>
+                <li>✓ Board parser (+3)</li>
+                <li>✓ Exception handling (+3)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 22 -->
+    <div class="student-report" id="student22">
+        <div class="student-header">
+            <h2>Student #22</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 22/40 (Base: 20/20, Bonus: 2/20)
+        </div>
+
+        <div class="section">
+            <h3>Important Note</h3>
+            <div class="issue">
+                <strong>Filename vs. main class:</strong> No public top-level class; file hw.java declares package-private classes SokobanGame and Main. This compiles and runs with: javac hw.java; java Main
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Strengths</h3>
+            <div class="good">
+                <ul>
+                    <li>Perfect base implementation - all requirements met</li>
+                    <li>Two cohesive classes with clear fields and helpers</li>
+                    <li>No hard-coded boards</li>
+                    <li>Input validation correct: W,H≥5 and K ≤ formula</li>
+                    <li>Movement with w/a/s/d (aliases supported)</li>
+                    <li>Box pushing mechanics correct</li>
+                    <li>R1, R2, R3 all properly enforced</li>
+                    <li>Player centered; random targets/boxes under rules</li>
+                    <li>Correct renderer including BOX_ON_TARGET</li>
+                    <li>Undo system with state stacks</li>
+                    <li>Move counter printed during play and in win message</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What's Missing (Potential Bonuses)</h3>
+            <div class="missing">
+                <ul>
+                    <li>2×2 solid-block detection</li>
+                    <li>Corner-adjacency trap</li>
+                    <li>Level system</li>
+                    <li>Board parser</li>
+                    <li>Custom exceptions</li>
+                    <li>Smart auto-restart</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Undo system (+1)</li>
+                <li>✓ Move counter (+1)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 23 -->
+    <div class="student-report" id="student23">
+        <div class="student-header">
+            <h2>Student #23</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 24/40 (Base: 18/20, Bonus: 6/20)
+        </div>
+
+        <div class="section">
+            <h3>Critical Issues</h3>
+            <div class="issue critical">
+                <strong>Target Counting Bug (2/3):</strong> Initial boxesOnTargets is incorrectly set to 1 (except when K==1), which can mis-report win state. Should start at 0 and/or be derived from board.
+            </div>
+            <div class="issue critical">
+                <strong>R2 Over-Restrictive (2/3):</strong> Corner rule disallows all four interior corners, even when the corner is a target (the rubric allows corners that are targets).
+            </div>
+            <div class="issue">
+                <strong>Undo Incomplete:</strong> Restores only displayBoard; doesn't restore hasBox/isTarget/counters, so state can desync—good start but incomplete.
+            </div>
+            <div class="issue">
+                <strong>Move Counter Not Visible:</strong> Counter exists but win message and live display are commented out; not user-visible.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What Works</h3>
+            <div class="good">
+                <ul>
+                    <li>Multi-class project compiles (Main, SokobanGame, CheckRule, S)</li>
+                    <li>Input validation with do-while (≥5) and correct formula</li>
+                    <li>Movement via a/s/d/w; invalid moves reported</li>
+                    <li>Push logic works with hasBox/displayBoard</li>
+                    <li>R1 enforced—no box on player/target/box/wall</li>
+                    <li>R3 implemented by counting boxes vs targets along walls</li>
+                    <li>Board initialization and rendering OK</li>
+                    <li>checkFourBoxOrWall detects 2×2 box/wall blocks</li>
+                    <li>Custom CommandException and BoardException</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fixes Needed</h3>
+            <ul>
+                <li>Initialize boxesOnTargets correctly (start at 0, or compute after placement)</li>
+                <li>Adjust R2 to allow box placement into a target corner (at least by pushing)</li>
+                <li>Undo completeness — also restore playerX/Y, hasBox, isTarget, boxesOnTargets</li>
+                <li>Expose move counter — print current moves and final "You win in X moves!"</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Undo (incomplete) (+1)</li>
+                <li>✓ 2×2 solid block detection (+2)</li>
+                <li>✓ Exception handling (+3)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 24 -->
+    <div class="student-report" id="student24">
+        <div class="student-header">
+            <h2>Student #24</h2>
+        </div>
+        <div class="score-summary">
+            <strong>Final Score:</strong> 21/40 (Base: 18/20, Bonus: 3/20)
+        </div>
+
+        <div class="section">
+            <h3>Issues</h3>
+            <div class="issue">
+                <strong>Structure (2/3):</strong> Uses Java 25-style void main() and minimal imports; overall structure is readable, but there are top-level globals and some confusing naming/order that reduce cleanliness.
+            </div>
+            <div class="issue">
+                <strong>Input Validation (1/2):</strong> 
+                <ul>
+                    <li>Max-boxes formula is stricter than spec: uses ((W-2)*(H-2)-4)/2 instead of …-2)/2</li>
+                    <li>Prompt labels for width/height are swapped in main</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>What Works</h3>
+            <div class="good">
+                <ul>
+                    <li>Re-asks invalid values as allowed</li>
+                    <li>Movement in four directions with walls/invalid move handling</li>
+                    <li>Push logic for BOX and BOX_ON_TARGET works</li>
+                    <li>Win detection via scanning for remaining BOX is acceptable</li>
+                    <li>R1: Boxes not on player/box/targets</li>
+                    <li>R2: Interior-corner prevention enforced</li>
+                    <li>R3: Targets distributed along walls to match boxes</li>
+                    <li>Borders as walls, player centered, board prints clearly</li>
+                    <li>Move counter counts and reports moves</li>
+                    <li>Corner adjacency trap checks to avoid two-box deadlocks</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fixes for Full Base Score</h3>
+            <ul>
+                <li>Correct the max-boxes formula to ((W-2)*(H-2)-2)/2</li>
+                <li>Align prompts and variables: ensure "Enter width" feeds W and "Enter height" feeds H</li>
+                <li>Optional: move globals into a single class and unify naming</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Implemented Bonuses</h3>
+            <ul>
+                <li>✓ Move counter (+1)</li>
+                <li>✓ Corner adjacency trap (+2)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- STUDENT 25 -->
+    <div class="student-report" id="student25">
+        <div class="student-header">
+            <h2>Student #25</h2>
+        </div>
+        <div class="not-submitted">
+            No submission received
+        </div>
+    </div>
+
+</body>
+</html>

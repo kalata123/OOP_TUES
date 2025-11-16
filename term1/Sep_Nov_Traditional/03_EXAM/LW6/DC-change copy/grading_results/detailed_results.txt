@@ -1,0 +1,1094 @@
+DETAILED GRADING RESULTS
+========================
+
+STUDENT: S_01
+──────────────────────────────────────────────────
+Compilation:    0/4
+Part A:         0/8
+Part B:         0/6
+Part C:         0/9
+Part D:         0/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     0/33
+FINAL TOTAL:    0/33
+
+Feedback:
+✗ No core class files found (only Main.java?)
+Compilation Summary: 0/8 files compiled
+✗ Cannot test LibraryItem - did not compile
+✗ Cannot test Book - did not compile
+✗ Cannot test Member - did not compile
+✗ Cannot test LibrarySettings - did not compile
+✗ Cannot test SimpleDateUtils - did not compile
+✗ Cannot test BorrowingSystem - did not compile
+✗ Cannot test LibraryException - did not compile
+✗ Cannot test integration - required classes didn't compile
+✗ Cannot test error handling - LibraryException didn't compile
+✗ Main.java not found or didn't compile
+
+==================================================
+
+STUDENT: S_02
+──────────────────────────────────────────────────
+Compilation:    3/4
+Part A:         8/8
+Part B:         6/6
+Part C:         9/9
+Part D:         4/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     30/33
+FINAL TOTAL:    30/33
+
+Feedback:
+✓ All core classes compile successfully
+✗ Main.java has compilation errors
+Compilation Summary: 7/8 files compiled
+✓ LibraryItem is abstract
+✓ Has required private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors (overloading)
+✓ Book has private author field
+✓ Member has required fields (3+)
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has required static final constants (3+)
+✓ Has static method
+✓ SimpleDateUtils has private constructor
+✓ SimpleDateUtils has method overloading (3+ versions)
+✓ BorrowingSystem uses arrays (2+)
+✓ BorrowingSystem has all required methods
+✓ LibraryException extends RuntimeException
+✓ Integration methods present (increment/decrement)
+✓ Custom exception implemented
+✓ Validation methods present
+✗ Main.java not found or didn't compile
+
+==================================================
+COMPILATION DETAILS:
+==================================================
+Compiled Successfully: BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java
+
+Failed to Compile:
+  • Main.java: package library.materials does not exist
+
+==================================================
+
+STUDENT: S_03
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         8/8
+Part B:         0/6
+Part C:         2/9
+Part D:         0/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     14/33
+FINAL TOTAL:    14/33
+
+Feedback:
+✓ All core classes compile successfully
+✓ Main.java also compiles successfully
+Compilation Summary: 7/8 files compiled
+✓ LibraryItem is abstract
+✓ Has required private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors (overloading)
+✓ Book has private author field
+✓ Member has required fields (3+)
+✓ Member has canBorrow() method
+✗ Cannot test LibrarySettings - class loading issue
+✗ Cannot test SimpleDateUtils - class loading issue
+✗ BorrowingSystem should use arrays (found 1)
+✗ BorrowingSystem missing most methods
+✗ Cannot test LibraryException - did not compile
+✓ Integration methods present (increment/decrement)
+✗ Cannot test error handling - LibraryException didn't compile
+✗ Main.java compiled but Main.class not found (check package)
+
+==================================================
+
+STUDENT: S_04
+──────────────────────────────────────────────────
+Compilation:    0/4
+Part A:         0/8
+Part B:         0/6
+Part C:         0/9
+Part D:         0/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     0/33
+FINAL TOTAL:    0/33
+
+Feedback:
+✗ Core classes have compilation errors - trying individual compilation...
+  ✗ Book.java failed
+  ✗ LibraryItem.java failed
+  ✗ SimpleDateUtils.java failed
+  ✗ LibrarySettings.java failed
+  ✗ Member.java failed
+✗ Very few or no classes compiled
+Compilation Summary: 0/8 files compiled
+✗ Cannot test LibraryItem - did not compile
+✗ Cannot test Book - did not compile
+✗ Cannot test Member - did not compile
+✗ Cannot test LibrarySettings - did not compile
+✗ Cannot test SimpleDateUtils - did not compile
+✗ Cannot test BorrowingSystem - did not compile
+✗ Cannot test LibraryException - did not compile
+✗ Cannot test integration - required classes didn't compile
+✗ Cannot test error handling - LibraryException didn't compile
+✗ Main.java not found or didn't compile
+
+==================================================
+COMPILATION DETAILS:
+==================================================
+Compiled Successfully: 
+
+Failed to Compile:
+  • Book.java: package library.core does not exist
+  • LibraryItem.java: class, interface, enum, or record expected
+  • SimpleDateUtils.java: ';' expected
+  • LibrarySettings.java: bad operand types for binary operator '-'
+  • Member.java: missing return statement
+
+==================================================
+
+STUDENT: S_05
+──────────────────────────────────────────────────
+Compilation:    3/4
+Part A:         8/8
+Part B:         6/6
+Part C:         9/9
+Part D:         4/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     30/33
+FINAL TOTAL:    30/33
+
+Feedback:
+✓ All core classes compile successfully
+✗ Main.java has compilation errors
+Compilation Summary: 7/8 files compiled
+✓ LibraryItem is abstract
+✓ Has required private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors (overloading)
+✓ Book has private author field
+✓ Member has required fields (3+)
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has required static final constants (3+)
+✓ Has static method
+✓ SimpleDateUtils has private constructor
+✓ SimpleDateUtils has method overloading (3+ versions)
+✓ BorrowingSystem uses arrays (2+)
+✓ BorrowingSystem has all required methods
+✓ LibraryException extends RuntimeException
+✓ Integration methods present (increment/decrement)
+✓ Custom exception implemented
+✓ Validation methods present
+✗ Main.java not found or didn't compile
+
+==================================================
+COMPILATION DETAILS:
+==================================================
+Compiled Successfully: BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java
+
+Failed to Compile:
+  • Main.java: package library.materials does not exist
+
+==================================================
+
+STUDENT: S_06
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         7/8
+Part B:         5/6
+Part C:         7/9
+Part D:         4/4
+Main Demo:      1/2
+──────────────────────────────────────────────────
+BASE TOTAL:     28/33
+FINAL TOTAL:    28/33
+
+Feedback:
+✓ All core classes compile successfully
+✓ Main.java also compiles successfully
+Compilation Summary: 8/8 files compiled
+✓ LibraryItem is abstract
+✓ Has required private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors (overloading)
+✓ Book has private author field
+✓ Member has required fields (3+)
+✗ Member missing canBorrow() method
+✓ LibrarySettings has private constructor
+✗ Missing constants (found 0, need 3)
+✓ Has static method
+✓ SimpleDateUtils has private constructor
+✓ SimpleDateUtils has method overloading (3+ versions)
+✓ BorrowingSystem uses arrays (2+)
+✓ BorrowingSystem has all required methods
+✓ LibraryException extends RuntimeException
+✗ Missing integration methods in Member
+✓ Custom exception implemented
+✓ Validation methods present
+✓ Main.java runs and produces output
+
+==================================================
+
+STUDENT: S_07
+──────────────────────────────────────────────────
+Compilation:    3/4
+Part A:         8/8
+Part B:         6/6
+Part C:         9/9
+Part D:         4/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     30/33
+FINAL TOTAL:    30/33
+
+Feedback:
+✓ All core classes compile successfully
+✗ Main.java has compilation errors
+Compilation Summary: 7/8 files compiled
+✓ LibraryItem is abstract
+✓ Has required private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors (overloading)
+✓ Book has private author field
+✓ Member has required fields (3+)
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has required static final constants (3+)
+✓ Has static method
+✓ SimpleDateUtils has private constructor
+✓ SimpleDateUtils has method overloading (3+ versions)
+✓ BorrowingSystem uses arrays (2+)
+✓ BorrowingSystem has all required methods
+✓ LibraryException extends RuntimeException
+✓ Integration methods present (increment/decrement)
+✓ Custom exception implemented
+✓ Validation methods present
+✗ Main.java not found or didn't compile
+
+==================================================
+COMPILATION DETAILS:
+==================================================
+Compiled Successfully: BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java
+
+Failed to Compile:
+  • Main.java: package library.core does not exist
+
+==================================================
+
+STUDENT: S_08
+──────────────────────────────────────────────────
+Compilation:    3/4
+Part A:         8/8
+Part B:         3/6
+Part C:         7/9
+Part D:         4/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     25/33
+FINAL TOTAL:    25/33
+
+Feedback:
+✓ All core classes compile successfully
+✗ Main.java has compilation errors
+Compilation Summary: 7/8 files compiled
+✓ LibraryItem is abstract
+✓ Has required private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors (overloading)
+✓ Book has private author field
+✓ Member has required fields (3+)
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has required static final constants (3+)
+✗ Missing static method
+✓ SimpleDateUtils has private constructor
+✗ SimpleDateUtils missing method overloading
+✗ BorrowingSystem should use arrays (found 1)
+✓ BorrowingSystem has all required methods
+✓ LibraryException extends RuntimeException
+✓ Integration methods present (increment/decrement)
+✓ Custom exception implemented
+✓ Validation methods present
+✗ Main.java not found or didn't compile
+
+==================================================
+COMPILATION DETAILS:
+==================================================
+Compiled Successfully: BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java
+
+Failed to Compile:
+  • Main.java: package library.core does not exist
+
+==================================================
+
+STUDENT: S_09
+──────────────────────────────────────────────────
+Compilation:    0/4
+Part A:         0/8
+Part B:         0/6
+Part C:         2/9
+Part D:         3/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     5/33
+FINAL TOTAL:    5/33
+
+Feedback:
+✗ Core classes have compilation errors - trying individual compilation...
+  ✗ Book.java failed
+  ✗ LibraryItem.java failed
+  ✗ SimpleDateUtils.java failed
+  ✗ LibrarySettings.java failed
+  ✗ BorrowingSystem.java failed
+  ✓ LibraryException.java compiles
+  ✗ Member.java failed
+✗ Very few or no classes compiled
+  ✗ Main.java failed
+Compilation Summary: 1/8 files compiled
+✗ Cannot test LibraryItem - did not compile
+✗ Cannot test Book - did not compile
+✗ Cannot test Member - did not compile
+✗ Cannot test LibrarySettings - did not compile
+✗ Cannot test SimpleDateUtils - did not compile
+✗ Cannot test BorrowingSystem - did not compile
+✓ LibraryException extends RuntimeException
+✗ Cannot test integration - required classes didn't compile
+✓ Custom exception implemented
+✓ Basic error handling structure present
+✗ Main.java not found or didn't compile
+
+==================================================
+COMPILATION DETAILS:
+==================================================
+Compiled Successfully: LibraryException.java
+
+Failed to Compile:
+  • Book.java: package library.core does not exist
+  • LibraryItem.java: not a statement
+  • SimpleDateUtils.java: invalid method declaration; return type required
+  • LibrarySettings.java: class LibrabrySettings is public, should be declared in a file named Librabry...
+  • BorrowingSystem.java: ']' expected
+  • Member.java: package library.core does not exist
+  • Main.java: package library.materials does not exist
+
+==================================================
+
+STUDENT: S_10
+──────────────────────────────────────────────────
+Compilation:    3/4
+Part A:         8/8
+Part B:         6/6
+Part C:         8/9
+Part D:         4/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     29/33
+FINAL TOTAL:    29/33
+
+Feedback:
+✓ All core classes compile successfully
+✗ Main.java has compilation errors
+Compilation Summary: 7/8 files compiled
+✓ LibraryItem is abstract
+✓ Has required private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors (overloading)
+✓ Book has private author field
+✓ Member has required fields (3+)
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has required static final constants (3+)
+✓ Has static method
+✓ SimpleDateUtils has private constructor
+✓ SimpleDateUtils has method overloading (3+ versions)
+✓ BorrowingSystem uses arrays (2+)
+✗ BorrowingSystem missing some methods (3/4)
+✓ LibraryException extends RuntimeException
+✓ Integration methods present (increment/decrement)
+✓ Custom exception implemented
+✓ Validation methods present
+✗ Main.java not found or didn't compile
+
+==================================================
+COMPILATION DETAILS:
+==================================================
+Compiled Successfully: BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java
+
+Failed to Compile:
+  • Main.java: package library.materials does not exist
+
+==================================================
+
+STUDENT: S_11
+──────────────────────────────────────────────────
+Compilation:    3/4
+Part A:         7/8
+Part B:         6/6
+Part C:         7/9
+Part D:         4/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     27/33
+FINAL TOTAL:    27/33
+
+Feedback:
+✓ All core classes compile successfully
+✗ Main.java has compilation errors
+Compilation Summary: 7/8 files compiled
+✓ LibraryItem is abstract
+✓ Has required private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors (overloading)
+✓ Book has private author field
+✓ Member has required fields (3+)
+✗ Member missing canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has required static final constants (3+)
+✓ Has static method
+✓ SimpleDateUtils has private constructor
+✓ SimpleDateUtils has method overloading (3+ versions)
+✓ BorrowingSystem uses arrays (2+)
+✓ BorrowingSystem has all required methods
+✓ LibraryException extends RuntimeException
+✗ Missing integration methods in Member
+✓ Custom exception implemented
+✓ Validation methods present
+✗ Main.java not found or didn't compile
+
+==================================================
+COMPILATION DETAILS:
+==================================================
+Compiled Successfully: BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java
+
+Failed to Compile:
+  • Main.java: package library.materials does not exist
+
+==================================================
+
+STUDENT: S_12
+──────────────────────────────────────────────────
+Compilation:    0/4
+Part A:         0/8
+Part B:         0/6
+Part C:         0/9
+Part D:         0/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     0/33
+FINAL TOTAL:    0/33
+
+Feedback:
+✗ No Java files found
+✗ Cannot test Part A - no compiled classes
+✗ Cannot test Part B - no compiled classes
+✗ Cannot test Part C - no compiled classes
+✗ Cannot test Part D - no compiled classes
+✗ Main.java not found or didn't compile
+
+==================================================
+
+STUDENT: S_13
+──────────────────────────────────────────────────
+Compilation:    3/4
+Part A:         1/8
+Part B:         0/6
+Part C:         2/9
+Part D:         4/4
+Main Demo:      1/2
+──────────────────────────────────────────────────
+BASE TOTAL:     11/33
+FINAL TOTAL:    11/33
+
+Feedback:
+✗ Core classes have compilation errors - trying individual compilation...
+  ✓ LibraryItem.java compiles
+  ✗ Book.java failed
+  ✗ Member.java failed
+  ✓ LibrabrySettings.java compiles
+  ✓ SimpleDataUtils.java compiles
+  ✓ LibraryItem.java compiles
+  ✗ Book.java failed
+  ✗ Member.java failed
+  ✓ LibrabrySettings.java compiles
+  ✓ SimpleDataUtils.java compiles
+  ✗ BorrowingSystem.java failed
+  ✓ LibraryException.java compiles
+  ✗ BorrowingSystem.java failed
+  ✓ LibraryException.java compiles
+✓ Most core classes compiled (8/7)
+  ✓ Main.java compiles
+Compilation Summary: 5/8 files compiled
+✗ LibraryItem should be abstract
+✓ Has required private fields
+✗ Missing abstract getItemType()
+✗ Cannot test Book - did not compile
+✗ Cannot test Member - did not compile
+✗ Cannot test LibrarySettings - did not compile
+✗ Cannot test SimpleDateUtils - did not compile
+✗ Cannot test BorrowingSystem - did not compile
+✓ LibraryException extends RuntimeException
+✗ Cannot test integration - required classes didn't compile
+✓ Custom exception implemented
+✓ Validation methods present
+✓ Main.java runs and produces output
+
+==================================================
+COMPILATION DETAILS:
+==================================================
+Compiled Successfully: Main.java, LibrabrySettings.java, LibraryItem.java, SimpleDataUtils.java, LibraryException.java
+
+Failed to Compile:
+  • Book.java: package library.util does not exist
+  • Member.java: package library.util does not exist
+  • BorrowingSystem.java: cannot find symbol
+
+==================================================
+
+STUDENT: S_14
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         8/8
+Part B:         4/6
+Part C:         7/9
+Part D:         4/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     27/33
+FINAL TOTAL:    27/33
+
+Feedback:
+✓ All core classes compile successfully
+⚠ Main.java not found (not required, no penalty)
+Compilation Summary: 7/7 files compiled
+✓ LibraryItem is abstract
+✓ Has required private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors (overloading)
+✓ Book has private author field
+✓ Member has required fields (3+)
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has required static final constants (3+)
+✓ Has static method
+✗ SimpleDateUtils has partial overloading (need 3 versions)
+✗ BorrowingSystem should use arrays (found 0)
+✓ BorrowingSystem has all required methods
+✓ LibraryException extends RuntimeException
+✓ Integration methods present (increment/decrement)
+✓ Custom exception implemented
+✓ Validation methods present
+✗ Main.java not found or didn't compile
+
+==================================================
+
+STUDENT: S_15
+──────────────────────────────────────────────────
+Compilation:    3/4
+Part A:         8/8
+Part B:         3/6
+Part C:         9/9
+Part D:         4/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     27/33
+BONUS:          +4
+FINAL TOTAL:    31/37
+
+Feedback:
+✓ All core classes compile successfully
+✗ Main.java has compilation errors
+Compilation Summary: 7/8 files compiled
+✓ LibraryItem is abstract
+✓ Has required private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors (overloading)
+✓ Book has private author field
+✓ Member has required fields (3+)
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has required static final constants (3+)
+✗ Missing static method
+✓ SimpleDateUtils has private constructor
+✗ SimpleDateUtils missing method overloading
+✓ BorrowingSystem uses arrays (2+)
+✓ BorrowingSystem has all required methods
+✓ LibraryException extends RuntimeException
+✓ Integration methods present (increment/decrement)
+✓ Custom exception implemented
+✓ Validation methods present
+✗ Main.java not found or didn't compile
+✓ BONUS: Search capability implemented
+✓ BONUS: Statistics implemented
+
+==================================================
+COMPILATION DETAILS:
+==================================================
+Compiled Successfully: BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java
+
+Failed to Compile:
+  • Main.java: package library.materials does not exist
+
+==================================================
+
+STUDENT: S_16
+──────────────────────────────────────────────────
+Compilation:    2/4
+Part A:         5/8
+Part B:         3/6
+Part C:         2/9
+Part D:         4/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     16/33
+FINAL TOTAL:    16/33
+
+Feedback:
+✗ Core classes have compilation errors - trying individual compilation...
+  ✗ Book.java failed
+  ✓ LibraryItem.java compiles
+  ✓ SimpleDateUtils.java compiles
+  ✓ LibrarySettings.java compiles
+  ✗ BorrowingSystem.java failed
+  ✓ LibraryException.java compiles
+  ✓ Member.java compiles
+✓ Several core classes compiled (5/7)
+Compilation Summary: 5/7 files compiled
+✓ LibraryItem is abstract
+✓ Has required private fields
+✓ Has abstract getItemType()
+✗ Cannot test Book - did not compile
+✓ Member has required fields (3+)
+✓ Member has canBorrow() method
+✗ LibrarySettings needs private constructor (utility class)
+✗ Missing constants (found 0, need 3)
+✓ Has static method
+✓ SimpleDateUtils has method overloading (3+ versions)
+✗ Cannot test BorrowingSystem - did not compile
+✓ LibraryException extends RuntimeException
+✗ Cannot test integration - required classes didn't compile
+✓ Custom exception implemented
+✓ Validation methods present
+✗ Main.java not found or didn't compile
+
+==================================================
+COMPILATION DETAILS:
+==================================================
+Compiled Successfully: LibraryItem.java, Member.java, SimpleDateUtils.java, LibrarySettings.java, LibraryException.java
+
+Failed to Compile:
+  • Book.java: package library.core does not exist
+  • BorrowingSystem.java: package library.core does not exist
+
+==================================================
+
+STUDENT: S_17
+──────────────────────────────────────────────────
+Compilation:    0/4
+Part A:         0/8
+Part B:         0/6
+Part C:         0/9
+Part D:         0/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     0/33
+FINAL TOTAL:    0/33
+
+Feedback:
+✗ Core classes have compilation errors - trying individual compilation...
+  ✗ Book.java failed
+  ✗ LibraryItem.java failed
+  ✗ SimpleDateUtils.java failed
+  ✗ LibrarySettings.java failed
+  ✗ BorrowingSystem.java failed
+  ✓ LibraryException.java compiles
+  ✗ Member.java failed
+✗ Very few or no classes compiled
+  ✗ Main.java failed
+Compilation Summary: 1/8 files compiled
+✗ Cannot test LibraryItem - did not compile
+✗ Cannot test Book - did not compile
+✗ Cannot test Member - did not compile
+✗ Cannot test LibrarySettings - did not compile
+✗ Cannot test SimpleDateUtils - did not compile
+✗ Cannot test BorrowingSystem - did not compile
+✗ Cannot test LibraryException - class loading issue
+✗ Cannot test integration - required classes didn't compile
+✗ Cannot test error handling - class loading issue
+✗ Main.java not found or didn't compile
+
+==================================================
+COMPILATION DETAILS:
+==================================================
+Compiled Successfully: LibraryException.java
+
+Failed to Compile:
+  • Book.java: invalid method declaration; return type required
+  • LibraryItem.java: missing method body, or declare abstract
+  • SimpleDateUtils.java: incompatible types: boolean cannot be converted to String
+  • LibrarySettings.java: illegal start of type
+  • BorrowingSystem.java: class, interface, annotation type, enum, record, method or field expected
+  • Member.java: illegal start of expression
+  • Main.java: illegal start of type
+
+==================================================
+
+STUDENT: S_18
+──────────────────────────────────────────────────
+Compilation:    3/4
+Part A:         8/8
+Part B:         5/6
+Part C:         8/9
+Part D:         4/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     28/33
+FINAL TOTAL:    28/33
+
+Feedback:
+✓ All core classes compile successfully
+✗ Main.java has compilation errors
+Compilation Summary: 7/8 files compiled
+✓ LibraryItem is abstract
+✓ Has required private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors (overloading)
+✓ Book has private author field
+✓ Member has required fields (3+)
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has required static final constants (3+)
+✓ Has static method
+✓ SimpleDateUtils has method overloading (3+ versions)
+✓ BorrowingSystem uses arrays (2+)
+✗ BorrowingSystem missing some methods (3/4)
+✓ LibraryException extends RuntimeException
+✓ Integration methods present (increment/decrement)
+✓ Custom exception implemented
+✓ Validation methods present
+✗ Main.java not found or didn't compile
+
+==================================================
+COMPILATION DETAILS:
+==================================================
+Compiled Successfully: BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java
+
+Failed to Compile:
+  • Main.java: package library.materials does not exist
+
+==================================================
+
+STUDENT: S_19
+──────────────────────────────────────────────────
+Compilation:    3/4
+Part A:         8/8
+Part B:         0/6
+Part C:         7/9
+Part D:         0/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     18/33
+FINAL TOTAL:    18/33
+
+Feedback:
+✓ All core classes compile successfully
+✗ Main.java has compilation errors
+Compilation Summary: 7/8 files compiled
+✓ LibraryItem is abstract
+✓ Has required private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors (overloading)
+✓ Book has private author field
+✓ Member has required fields (3+)
+✓ Member has canBorrow() method
+✗ Cannot test LibrarySettings - class loading issue
+✗ Cannot test SimpleDateUtils - class loading issue
+✓ BorrowingSystem uses arrays (2+)
+✓ BorrowingSystem has all required methods
+✗ Cannot test LibraryException - class loading issue
+✓ Integration methods present (increment/decrement)
+✗ Cannot test error handling - class loading issue
+✗ Main.java not found or didn't compile
+
+==================================================
+COMPILATION DETAILS:
+==================================================
+Compiled Successfully: BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java
+
+Failed to Compile:
+  • Main.java: package library.materials does not exist
+
+==================================================
+
+STUDENT: S_20
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         7/8
+Part B:         6/6
+Part C:         7/9
+Part D:         0/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     24/33
+FINAL TOTAL:    24/33
+
+Feedback:
+✓ All core classes compile successfully
+⚠ Main.java not found (not required, no penalty)
+Compilation Summary: 7/7 files compiled
+✓ LibraryItem is abstract
+✓ Has required private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors (overloading)
+✓ Book has private author field
+✓ Member has required fields (3+)
+✗ Member missing canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has required static final constants (3+)
+✓ Has static method
+✓ SimpleDateUtils has private constructor
+✓ SimpleDateUtils has method overloading (3+ versions)
+✓ BorrowingSystem uses arrays (2+)
+✓ BorrowingSystem has all required methods
+✗ Cannot test LibraryException - did not compile
+✓ Integration methods present (increment/decrement)
+✗ Cannot test error handling - LibraryException didn't compile
+✗ Main.java not found or didn't compile
+
+==================================================
+
+STUDENT: S_21
+──────────────────────────────────────────────────
+Compilation:    3/4
+Part A:         8/8
+Part B:         4/6
+Part C:         9/9
+Part D:         3/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     27/33
+FINAL TOTAL:    27/33
+
+Feedback:
+✓ All core classes compile successfully
+✗ Main.java has compilation errors
+Compilation Summary: 7/8 files compiled
+✓ LibraryItem is abstract
+✓ Has required private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors (overloading)
+✓ Book has private author field
+✓ Member has required fields (3+)
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has required static final constants (3+)
+✓ Has static method
+✓ SimpleDateUtils has private constructor
+✗ SimpleDateUtils missing method overloading
+✓ BorrowingSystem uses arrays (2+)
+✓ BorrowingSystem has all required methods
+✓ LibraryException extends RuntimeException
+✓ Integration methods present (increment/decrement)
+✓ Custom exception implemented
+✗ Limited validation implementation
+✗ Main.java not found or didn't compile
+
+==================================================
+COMPILATION DETAILS:
+==================================================
+Compiled Successfully: BorrowingSystem.java, LibraryItem.java, Member.java, SimpleDateUtils.java, Book.java, LibrarySettings.java, LibraryException.java
+
+Failed to Compile:
+  • Main.java: package library.materials does not exist
+
+==================================================
+
+STUDENT: S_22
+──────────────────────────────────────────────────
+Compilation:    1/4
+Part A:         3/8
+Part B:         3/6
+Part C:         2/9
+Part D:         4/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     13/33
+FINAL TOTAL:    13/33
+
+Feedback:
+✗ Core classes have compilation errors - trying individual compilation...
+  ✗ book.java failed
+  ✓ LibraryItem.java compiles
+  ✗ SimpleDateUtils.java failed
+  ✓ LibrarySettings.java compiles
+  ✗ BorrowingSystem.java failed
+  ✓ LibraryException.java compiles
+  ✗ member.java failed
+✓ Some core classes compiled (3/7)
+Compilation Summary: 3/7 files compiled
+✓ LibraryItem is abstract
+✓ Has required private fields
+✓ Has abstract getItemType()
+✗ Cannot test Book - did not compile
+✗ Cannot test Member - did not compile
+✓ LibrarySettings has private constructor
+✓ Has required static final constants (3+)
+✓ Has static method
+✗ Cannot test SimpleDateUtils - did not compile
+✗ Cannot test BorrowingSystem - did not compile
+✓ LibraryException extends RuntimeException
+✗ Cannot test integration - required classes didn't compile
+✓ Custom exception implemented
+✓ Validation methods present
+✗ Main.java not found or didn't compile
+
+==================================================
+COMPILATION DETAILS:
+==================================================
+Compiled Successfully: LibraryItem.java, LibrarySettings.java, LibraryException.java
+
+Failed to Compile:
+  • book.java: class Book is public, should be declared in a file named Book.java
+  • SimpleDateUtils.java: reached end of file while parsing
+  • BorrowingSystem.java: package library.core does not exist
+  • member.java: class Member is public, should be declared in a file named Member.java
+
+==================================================
+
+STUDENT: S_23
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         8/8
+Part B:         5/6
+Part C:         9/9
+Part D:         4/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     30/33
+FINAL TOTAL:    30/33
+
+Feedback:
+✓ All core classes compile successfully
+⚠ Main.java not found (not required, no penalty)
+Compilation Summary: 7/7 files compiled
+✓ LibraryItem is abstract
+✓ Has required private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors (overloading)
+✓ Book has private author field
+✓ Member has required fields (3+)
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✗ Missing constants (found 0, need 3)
+✓ Has static method
+✓ SimpleDateUtils has private constructor
+✓ SimpleDateUtils has method overloading (3+ versions)
+✓ BorrowingSystem uses arrays (2+)
+✓ BorrowingSystem has all required methods
+✓ LibraryException extends RuntimeException
+✓ Integration methods present (increment/decrement)
+✓ Custom exception implemented
+✓ Validation methods present
+✗ Main.java not found or didn't compile
+
+==================================================
+
+STUDENT: S_24
+──────────────────────────────────────────────────
+Compilation:    1/4
+Part A:         2/8
+Part B:         1/6
+Part C:         2/9
+Part D:         4/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     10/33
+FINAL TOTAL:    10/33
+
+Feedback:
+✗ Core classes have compilation errors - trying individual compilation...
+  ✗ Book.java failed
+  ✓ LibraryItem.java compiles
+  ✗ SImpleDateUtils.java failed
+  ✓ LibrarySettings.java compiles
+  ✗ BorrowingSystem.java failed
+  ✓ LibraryException.java compiles
+  ✗ Member.java failed
+✓ Some core classes compiled (3/7)
+  ✓ Main.java compiles
+Compilation Summary: 4/8 files compiled
+✓ LibraryItem is abstract
+✗ Missing required private fields (found 1, need 2)
+✓ Has abstract getItemType()
+✗ Cannot test Book - did not compile
+✗ Cannot test Member - did not compile
+✓ LibrarySettings has private constructor
+✗ Missing constants (found 0, need 3)
+✗ Missing static method
+✗ Cannot test SimpleDateUtils - did not compile
+✗ Cannot test BorrowingSystem - did not compile
+✓ LibraryException extends RuntimeException
+✗ Cannot test integration - required classes didn't compile
+✓ Custom exception implemented
+✓ Validation methods present
+✗ Main.java has runtime errors
+
+==================================================
+COMPILATION DETAILS:
+==================================================
+Compiled Successfully: Main.java, LibraryItem.java, LibrarySettings.java, LibraryException.java
+
+Failed to Compile:
+  • Book.java: package library.core does not exist
+  • SImpleDateUtils.java: class SimpleDateUtils is public, should be declared in a file named SimpleDat...
+  • BorrowingSystem.java: package library.core does not exist
+  • Member.java: package library.util does not exist
+
+==================================================
+
+STUDENT: S_25
+──────────────────────────────────────────────────
+Compilation:    0/4
+Part A:         0/8
+Part B:         0/6
+Part C:         0/9
+Part D:         0/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     0/33
+FINAL TOTAL:    0/33
+
+Feedback:
+✗ No Java files found
+✗ Cannot test Part A - no compiled classes
+✗ Cannot test Part B - no compiled classes
+✗ Cannot test Part C - no compiled classes
+✗ Cannot test Part D - no compiled classes
+✗ Main.java not found or didn't compile
+
+==================================================
+

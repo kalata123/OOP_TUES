@@ -1,0 +1,26 @@
+Assignment;Type;Student;Compilation;PartA;PartB;PartC;PartD;Main;BaseScore;MaxBaseScore;Bonus;TotalScore;Percentage;Comments
+Homework 1 - Sokoban;Homework;S_01;3;0;3;3;3;3;15;20;0;15;37.50;"Hard-coded board used at runtime; random initializer present but unused. Missing input reading & validation; R3 not implemented"
+Homework 1 - Sokoban;Homework;S_02;3;2;3;3;3;6;20;20;11;31;77.50;"Robust initializer with retries; thorough deadlock safeguards; undo works. Bonuses: Undo +1, Move counter +1, 2x2 block +2, Corner adjacency +2, Wall-line capacity +2, Smart auto-restart +3"
+Homework 1 - Sokoban;Homework;S_03;3;2;3;3;2;5;18;20;11;29;72.50;R2 implemented only for four map-corner cells. Restart counter bug on preloaded levels. Bonuses: Undo +1, Move counter +1, Level system +3, Board parser +3, Exception handling +3
+Homework 1 - Sokoban;Homework;S_04;3;2;3;3;2;6;19;20;12;31;77.50;R1 violation: boxes may be placed on targets during initialization. Bonuses: Undo +1, Move counter +1, 2x2 block +2, Corner adjacency +2, Level system +3, Exception handling +3
+Homework 1 - Sokoban;Homework;S_05;3;2;3;3;3;6;20;20;1;21;52.50;"Excellent base solution; clean and spec-compliant. Bonus: Move counter +1"
+Homework 1 - Sokoban;Homework;S_06;3;0;3;3;0;6;15;20;12;27;67.50;"No input reading; no random generator (hard-coded levels only). Bonuses: Move counter +1, 2x2 block +2, Level system +3, Exception handling +3, Smart auto-restart +3"
+Homework 1 - Sokoban;Homework;S_07;2;2;2;2;1;5;14;20;4;18;45.00;"Structure issues; border fallback bug; R1 violated (boxes can be placed on targets). Bonuses: Undo +1, Board parser +3"
+Homework 1 - Sokoban;Homework;S_08;3;1;3;3;3;6;19;20;5;24;60.00;"Missing W>=5, H>=5 enforcement at input; capacity check too strict. Bonuses: Undo +1, Move counter +1, Level system +3"
+Homework 1 - Sokoban;Homework;S_09;3;0;3;3;2;6;17;20;11;28;70.00;R1 partially violated (corner targets can have boxes at init). Bonuses: Undo +1, Move counter +1, Level system +3, Board parser +3, Exception handling +3
+Homework 1 - Sokoban;Homework;S_10;3;1;3;3;3;6;19;20;5;24;60.00;Max boxes boundary too strict (should allow equality). Bonuses: Undo +1, 2x2 block +2, Wall capacity lines +2
+Homework 1 - Sokoban;Homework;S_11;3;2;3;3;3;6;20;20;10;30;75.00;Box cap formula stricter than spec but functionally correct. Bonuses: Move counter +1, 2x2 block +2, Corner adjacency +2, Wall capacity +2, Exception handling +3
+Homework 1 - Sokoban;Homework;S_12;0;0;0;0;0;0;0;20;0;0;0.00;Not submitted
+Homework 1 - Sokoban;Homework;S_13;3;2;3;3;3;4;18;20;6;24;60.00;R3 not implemented. Bonuses: Undo +1, Move counter +1, 2x2 block +2, Corner adjacency +2
+Homework 1 - Sokoban;Homework;S_14;3;2;3;3;3;6;20;20;8;28;70.00;Parser R3 validation over-restrictive. Bonuses: Undo +1, Move counter +1, Level system +3, Board parser +3
+Homework 1 - Sokoban;Homework;S_15;3;2;3;3;3;6;20;20;18;38;95.00;"Professional-grade submission; full rubric compliance; excellent modularity. Bonuses: Level system +3, Board parser +3, Move counter +1, Undo +1, Exception handling +3, Smart auto-restart +3, 2x2 block +2, Corner adjacency +2"
+Homework 1 - Sokoban;Homework;S_16;3;1;3;3;3;6;19;20;10;29;72.50;Missing semantic input validation (W>=5, H>=5, K bounds). Bonuses: Undo +1, Move counter +1, Wall capacity +2, Level system +3, Board parser +3
+Homework 1 - Sokoban;Homework;S_17;3;2;3;3;1;4;16;20;1;17;42.50;"R2 missing; R3 not implemented; undo buggy. Bonus: Move counter +1"
+Homework 1 - Sokoban;Homework;S_18;3;2;3;3;3;6;20;20;8;28;70.00;Undo flawed (state desync). Bonuses: Move counter +1, 2x2 block +2, Corner trap +2, Smart auto-restart +3
+Homework 1 - Sokoban;Homework;S_19;3;2;3;3;3;6;20;20;13;33;82.50;Excellent implementation. Bonuses: Undo +1, Move counter +1, 2x2 block +2, Level system +3, Board parser +3, Exception handling +3
+Homework 1 - Sokoban;Homework;S_20;3;2;3;3;3;6;20;20;5;25;62.50;Bonuses: Undo +1, Move counter +1, Exception handling +3
+Homework 1 - Sokoban;Homework;S_21;3;1;3;3;3;6;19;20;17;36;90.00;K validation operator issue (< instead of <=). Bonuses: Undo +1, Move counter +1, 2x2 block +2, Corner adjacency +2, Wall capacity +2, Level system +3, Board parser +3, Exception handling +3
+Homework 1 - Sokoban;Homework;S_22;3;2;3;3;3;6;20;20;2;22;55.00;Bonuses: Undo +1, Move counter +1
+Homework 1 - Sokoban;Homework;S_23;3;2;3;2;2;6;18;20;6;24;60.00;"Initial boxesOnTargets incorrect; R2 over-restrictive. Bonuses: Undo +1 (incomplete), 2x2 detector +2, Exception handling +3"
+Homework 1 - Sokoban;Homework;S_24;2;1;3;3;3;6;18;20;3;21;52.50;"Max-boxes formula too strict; input prompts mismatched. Bonuses: Move counter +1, Corner adjacency +2"
+Homework 1 - Sokoban;Homework;S_25;0;0;0;0;0;0;0;20;0;0;0.00;Not submitted

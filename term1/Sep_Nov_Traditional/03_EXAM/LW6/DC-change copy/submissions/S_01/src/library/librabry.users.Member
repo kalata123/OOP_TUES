@@ -1,0 +1,27 @@
+package library.users;
+extends library.core.LibraryUser;
+import java.util.Random;
+
+public class Member {
+    private String name;
+    private String memberId;
+    private int borrowedCount;
+    public static final int MAX_BORROW_LIMIT = 5;
+}
+public Member(String name, String memberId) {
+    validateNotBlank(name, "Name");
+    validateNotBlank(memberId, "Member ID");
+    this.name = name;
+    this.memberId = memberId;
+    this.borrowedCount = 0;
+}
+public boolean canBorrow() {
+    return borrowedCount < MAX_BORROW_LIMIT;
+}
+
+public void incrementBorrowed() {
+    if (!canBorrow()) {
+        throw new IllegalStateException("limit reached");
+    }
+    borrowedCount++;
+}

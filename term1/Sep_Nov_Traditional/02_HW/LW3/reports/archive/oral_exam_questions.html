@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LW03 Sokoban - Oral Exam Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .student-section {
+            background: white;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            page-break-inside: avoid;
+        }
+        .student-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            margin: -20px -20px 20px -20px;
+            border-radius: 5px 5px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .student-header h2 {
+            margin: 0;
+        }
+        .score-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        .question {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .question-number {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        .question-text {
+            color: #333;
+            line-height: 1.6;
+        }
+        .focus-area {
+            background: #e8f4f8;
+            border-left: 4px solid #17a2b8;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .focus-area strong {
+            color: #17a2b8;
+        }
+        .not-submitted {
+            text-align: center;
+            padding: 40px;
+            background: #e0e0e0;
+            border-radius: 5px;
+            font-style: italic;
+            color: #666;
+        }
+        .nav-panel {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-height: 80vh;
+            overflow-y: auto;
+            max-width: 200px;
+        }
+        .nav-panel h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+        .nav-panel a {
+            display: block;
+            padding: 8px;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 3px;
+            margin: 2px 0;
+        }
+        .nav-panel a:hover {
+            background: #f5f5f5;
+        }
+        .priority-high {
+            border-left-color: #dc3545;
+        }
+        .priority-high .question-number {
+            color: #dc3545;
+        }
+        .tips {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        .tips strong {
+            color: #856404;
+        }
+        @media print {
+            .nav-panel {
+                display: none;
+            }
+            .student-section {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>LW03 Sokoban - Oral Exam Questions</h1>
+    <p style="text-align: center; color: #666;">Pick 3-5 questions per student based on their implementation and issues</p>
+
+    <div class="nav-panel">
+        <h3>Students</h3>
+        <a href="#student1">Student 1 (15/40)</a>
+        <a href="#student2">Student 2 (31/40)</a>
+        <a href="#student3">Student 3 (29/40)</a>
+        <a href="#student4">Student 4 (31/40)</a>
+        <a href="#student5">Student 5 (21/40)</a>
+        <a href="#student6">Student 6 (27/40)</a>
+        <a href="#student7">Student 7 (18/40)</a>
+        <a href="#student8">Student 8 (24/40)</a>
+        <a href="#student9">Student 9 (28/40)</a>
+        <a href="#student10">Student 10 (24/40)</a>
+        <a href="#student11">Student 11 (30/40)</a>
+        <a href="#student13">Student 13 (24/40)</a>
+        <a href="#student14">Student 14 (28/40)</a>
+        <a href="#student17">Student 17 (17/40)</a>
+        <a href="#student18">Student 18 (28/40)</a>
+        <a href="#student19">Student 19 (33/40)</a>
+        <a href="#student20">Student 20 (25/40)</a>
+        <a href="#student21">Student 21 (36/40)</a>
+        <a href="#student22">Student 22 (22/40)</a>
+        <a href="#student23">Student 23 (24/40)</a>
+        <a href="#student24">Student 24 (21/40)</a>
+    </div>
+
+    <!-- STUDENT 1 -->
+    <div class="student-section" id="student1">
+        <div class="student-header">
+            <h2>Student #1</h2>
+            <div class="score-badge">Score: 15/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Missing input handling, R3 implementation, unused random initializer
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 1: Input & Initialization</div>
+            <div class="question-text">
+                How would you modify main to read W, H, K with the rubric's validation rules and then call initializeGame(W, H, K) instead of initializeTestBoard()? Please outline the checks you'd add.
+            </div>
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 2: R3 Implementation</div>
+            <div class="question-text">
+                Describe a concrete algorithm to enforce the wall capacity constraint during placeBoxes() (count boxes vs targets along each interior wall line before placing). Where would you store these counts?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 3: Collision & Pushing</div>
+            <div class="question-text">
+                In move, why is it necessary to check both displayBoard[by][bx] != WALL and !hasBox[by][bx] before pushing? Could relying only on hasBox or only on displayBoard cause bugs?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: Rendering Invariants</div>
+            <div class="question-text">
+                updateDisplay() rewrites borders each call. Explain why that's important for correctness, and what could go wrong if walls were only set once in initializeTestBoard.
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Extensibility</div>
+            <div class="question-text">
+                If you were to add an undo feature, what minimal state would you snapshot per move to guarantee perfect reversal (player pos, pushed box pos, and boxesOnTargets), and how would you integrate it into the current design?
+            </div>
+        </div>
+
+        <div class="tips">
+            <strong>Tip:</strong> Focus on Questions 1 and 2 as they address the critical missing functionality. Save Q5 for if there's time.
+        </div>
+    </div>
+
+    <!-- STUDENT 2 -->
+    <div class="student-section" id="student2">
+        <div class="student-header">
+            <h2>Student #2</h2>
+            <div class="score-badge">Score: 31/40 (Excellent)</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Strong implementation with advanced features - test depth of understanding
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 1: Undo Design</div>
+            <div class="question-text">
+                Why do you push the saved state after updateDisplay() in move()? What would break if you pushed it earlier/later?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 2: Deadlock Logic</div>
+            <div class="question-text">
+                Your isDeadlock() looks for two-wall corner locks. Which solvable pattern could be falsely flagged, and how would you refine it?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 3: R3 vs. Wall-Line Capacity</div>
+            <div class="question-text">
+                Explain the difference between checkWallCapacityConstraint and checkWallLineCapacity. Why are both needed?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: 2×2 Block Rule</div>
+            <div class="question-text">
+                Walk through a case where a box placement is rejected by check2x2Block() although there is a target in the 2×2—why is that allowed or disallowed by your code?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Input Validation Boundaries</div>
+            <div class="question-text">
+                You re-ask on W&lt;5, H&lt;5, K&gt;max. How would you extend this to handle non-integer input or negative K using exceptions (advanced bonus)?
+            </div>
+        </div>
+
+        <div class="tips">
+            <strong>Tip:</strong> This is a strong student. Use questions to verify deep understanding and discuss edge cases.
+        </div>
+    </div>
+
+    <!-- STUDENT 3 -->
+    <div class="student-section" id="student3">
+        <div class="student-header">
+            <h2>Student #3</h2>
+            <div class="score-badge">Score: 29/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Limited R2 scope, restart bug with preloaded levels
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 1: R2 Scope</div>
+            <div class="question-text">
+                Your R2 check covers only the four map corners. How would you extend it to disallow any interior dead-corner (two perpendicular walls) unless it's a target? Point to the method you'd change.
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 2: Wall Capacity (R3)</div>
+            <div class="question-text">
+                Explain how checkWallCapacity ensures the box-to-target balance per wall line and why you include the hypothetical placement in the counts. Could this be generalized to inner walls?
+            </div>
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 3: State & Counters</div>
+            <div class="question-text">
+                Show how boxesOnTargets stays consistent during moves and why undo restores it correctly. Also, why does restart() miscount for preloaded O cells, and how would you fix it?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: Parsing & Robustness</div>
+            <div class="question-text">
+                Walk through loadLevelFromFile: what validations would you add (rectangularity, single @, equal B and *)? How would you signal malformed input using exceptions?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Design Choice</div>
+            <div class="question-text">
+                Why center the player initially, and how would you modify generation to reduce early deadlocks (targets/boxes spacing, retries, max attempts rationale)?
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT 4 -->
+    <div class="student-section" id="student4">
+        <div class="student-header">
+            <h2>Student #4</h2>
+            <div class="score-badge">Score: 31/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> R1 violation (boxes on targets at init), otherwise excellent
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 1: R1 Compliance</div>
+            <div class="question-text">
+                How would you modify isValidBoxPlacement(...) so boxes are never placed on targets at initialization, while keeping your corner logic intact? Show the exact condition you'd add.
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 2: Wall Capacity Logic</div>
+            <div class="question-text">
+                Walk me through your per-wall counting. In a 7×7 board, what happens if we attempt to place a third box along the top wall with only two targets on that wall?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 3: Move & Push Correctness</div>
+            <div class="question-text">
+                In your move(...), explain how you compute the destination of a pushed box and why double pushes (two boxes in a row) are rejected.
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: 2×2 Deadlock Prevention</div>
+            <div class="question-text">
+                Explain your 2×2 detection loop. Why do you scan (dx, dy) ∈ {0,−1} windows, and how does that catch all 2×2 blocks?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Exception Design</div>
+            <div class="question-text">
+                Justify the use of custom exceptions here. What states throw InvalidMoveException vs. when would GameStateException be appropriate, and how does Main recover?
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT 5 -->
+    <div class="student-section" id="student5">
+        <div class="student-header">
+            <h2>Student #5</h2>
+            <div class="score-badge">Score: 21/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Perfect base implementation, minimal bonuses - explore potential improvements
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 1: R3 Accounting</div>
+            <div class="question-text">
+                Explain how your targetsOnWall / boxesOnWall logic prevents over-capacity at walls during both placement and moves. What edge case would break if you forgot to update counts on pushes? Show the exact update path.
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 2: Corner Rule (R2)</div>
+            <div class="question-text">
+                Why do you allow boxes in interior corners only when they're targets? Walk me through the condition you wrote and why it's sufficient.
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 3: Push Validation</div>
+            <div class="question-text">
+                In move, how do you guarantee the push never goes out of bounds? Justify using border walls instead of explicit bounds checks.
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: State Consistency</div>
+            <div class="question-text">
+                You update boxesOnTargets in both move and recompute it in updateDisplay. Why does that not drift out of sync? If you removed one, which would you keep and why?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Initialization Robustness</div>
+            <div class="question-text">
+                Under what conditions does target/box placement fail and throw? Propose a deterministic fallback to always succeed (e.g., scanline placement) while still honoring R1–R3.
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT 6 -->
+    <div class="student-section" id="student6">
+        <div class="student-header">
+            <h2>Student #6</h2>
+            <div class="score-badge">Score: 27/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> No input handling, no generator (hard-coded levels only)
+        </div>
+
+        <div class="tips">
+            <strong>Note:</strong> This student only plays prebuilt levels and doesn't implement input validation or random generation. Questions should focus on why these are important and how to implement them.
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 1: Input Requirements</div>
+            <div class="question-text">
+                The rubric requires reading and validating W, H, K from user input. How would you add this to your current implementation? What validation checks would you include?
+            </div>
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 2: Random Generation vs. Hard-Coded Levels</div>
+            <div class="question-text">
+                Explain why the assignment requires random board generation in addition to preset levels. What rules (R1, R2, R3) would need to be enforced during generation?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 3: Wall Capacity in Generation</div>
+            <div class="question-text">
+                Your R3 implementation works for validating existing levels. How would you adapt it to guide box placement during random generation?
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT 7 -->
+    <div class="student-section" id="student7">
+        <div class="student-header">
+            <h2>Student #7</h2>
+            <div class="score-badge">Score: 18/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Multiple bugs (getPointAt, initial counter, R1 violation, parser validation)
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 1: API Correctness</div>
+            <div class="question-text">
+                Why does getPointAt return the first element on a miss? Show how this can enable illegal border moves and propose a fix.
+            </div>
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 2: Spec Adherence (R1)</div>
+            <div class="question-text">
+                Your initialization allows placing boxes on targets. How would you modify canPlaceBox to forbid this while still allowing corner targets per R2?
+            </div>
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 3: Initial State Correctness</div>
+            <div class="question-text">
+                Where would you compute the initial boxesOnTargets after placeBoxes so the win condition is correct from the start?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: Parser Validation</div>
+            <div class="question-text">
+                Derive the correct boolean condition(s) for w, h, k validation and explain why the current && logic is wrong.
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Clean Structure</div>
+            <div class="question-text">
+                Identify two concrete refactors to improve cleanliness (e.g., extract BoxRules, remove debug/placeholder code, replace recursive input with loop). Where exactly would you place them?
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT 8 -->
+    <div class="student-section" id="student8">
+        <div class="student-header">
+            <h2>Student #8</h2>
+            <div class="score-badge">Score: 24/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Input validation issues (W/H not enforced at input, capacity check too strict)
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 1: Placement Rules Mapping</div>
+            <div class="question-text">
+                Point to the exact checks in placeBoxes() that implement R1, R2, R3. What edge case could still pass these checks accidentally?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 2: Push Correctness</div>
+            <div class="question-text">
+                How does move(...) ensure a push is legal, and how do you keep boxesOnTargets consistent when a box moves on/off a target?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 3: Undo Design</div>
+            <div class="question-text">
+                Why full snapshots instead of deltas? How would you extend this to multi-step undo without excessive copying?
+            </div>
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 4: Input Validation Upgrade</div>
+            <div class="question-text">
+                Show how you'd modify the main loop to re-prompt only the invalid field(s) and to accept K at the maximum bound (not just strictly less than).
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Deadlock Prevention (Bonus)</div>
+            <div class="question-text">
+                Describe an algorithm to detect 2×2 solid blocks and a corner-adjacency trap, and where you'd call it (placement vs. after each push).
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT 9 -->
+    <div class="student-section" id="student9">
+        <div class="student-header">
+            <h2>Student #9</h2>
+            <div class="score-badge">Score: 28/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Input validation unclear, R1 partially violated (box on corner target allowed)
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 1: R1 vs R2 Correctness</div>
+            <div class="question-text">
+                Your box-placement allows a box on a corner target during initialization. LW03 forbids initial placement on any target (corner or not). Explain your intent and how you would adjust the condition to satisfy R1 while keeping R2.
+            </div>
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 2: Input Validation</div>
+            <div class="question-text">
+                Walk me through how you validate W, H, and K against LW03 limits (min sizes and maximum K). If not implemented, outline the exact checks and re-ask loop you would add.
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 3: Wall Capacity (R3)</div>
+            <div class="question-text">
+                Describe how your targetsOnWall / boxesOnWall logic ensures the constraint. What edge cases could still slip through and how would you test them?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: Undo Design</div>
+            <div class="question-text">
+                Why snapshot boxes with a 2D array copy before each move? Discuss memory vs. performance trade-offs and an alternative (e.g., inverse-move log).
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Parser & Levels</div>
+            <div class="question-text">
+                Given the external level files, how do you handle malformed rows (short/long lines, stray symbols)? Show how you would extend the parser to throw/handle specific exceptions and to support arbitrary file paths.
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT 10 -->
+    <div class="student-section" id="student10">
+        <div class="student-header">
+            <h2>Student #10</h2>
+            <div class="score-badge">Score: 24/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Input validation boundary issue (>= vs >), recursive pushing
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 1: Boundary Logic</div>
+            <div class="question-text">
+                Why did you choose >= for the max-boxes check, and how would changing it to > align with the rubric? Walk me through an example.
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 2: Recursive Pushing</div>
+            <div class="question-text">
+                Explain how tryMoveBox guarantees correctness when multiple boxes are in a line. What happens if a wall stops the chain mid-recursion?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 3: Deadlock Detection</div>
+            <div class="question-text">
+                Compare your single-corner and 2×2 solid-block checks. Which unsolvable states remain undetected, and how would you implement the corner-adjacency trap?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: Wall Capacity Constraint</div>
+            <div class="question-text">
+                Justify your row/column scans for wall capacity. Are there cases near corners where targets/boxes could miscount? How would you test them?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Undo Design</div>
+            <div class="question-text">
+                Why limit undos to three? How do you ensure GameState copies are deep enough to prevent mutation bugs?
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT 11 -->
+    <div class="student-section" id="student11">
+        <div class="student-header">
+            <h2>Student #11</h2>
+            <div class="score-badge">Score: 30/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Strong implementation with custom exceptions, slightly stricter formula
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 1: Movement Engine</div>
+            <div class="question-text">
+                Walk me through movePlayer → moveBox for the case "push a box off a target onto empty". How do you ensure boxesOnTargets stays accurate?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 2: Deadlock Prevention</div>
+            <div class="question-text">
+                Show how your generation code prevents a 2×2 block and a corner-adjacent trap. Why do your specific neighbor checks suffice?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 3: Wall Capacity Logic</div>
+            <div class="question-text">
+                Explain how you guarantee that wall-adjacent boxes don't exceed targets on that wall, and why this satisfies the assignment's R3 and the R5 bonus.
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: Input Validation</div>
+            <div class="question-text">
+                Your box limit uses …-4)/2. What scenarios does this exclude compared to the spec …-2)/2, and would you adjust it if strict conformance was required?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Exceptions as Control Flow</div>
+            <div class="question-text">
+                Why did you choose custom exceptions for invalid moves and generation timeout, and how would you structure an undo feature around your current design?
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT 13 -->
+    <div class="student-section" id="student13">
+        <div class="student-header">
+            <h2>Student #13</h2>
+            <div class="score-badge">Score: 24/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Missing R3 implementation only
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 1: R3 Design</div>
+            <div class="question-text">
+                How would you count boxes vs. targets along each wall segment at placement time, and which check would you add to positionBox to enforce it? Be specific about indices and data structures.
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 2: Deadlock Checks</div>
+            <div class="question-text">
+                Explain your 2×2 solid detection and corner-adjacency trap detection. Why do they prevent typical Sokoban deadlocks? Any cases they might miss?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 3: Target Counting Correctness</div>
+            <div class="question-text">
+                Since move(...) doesn't manually update counters, why is updateDisplay() sufficient to keep boxesOnTargets correct for checkWin()? Walk through a push step-by-step.
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: Placement Rules</div>
+            <div class="question-text">
+                Show where R1 and R2 are enforced in code and justify each guard (player, target, box, interior corner).
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Testing Strategy</div>
+            <div class="question-text">
+                What invariants would you assert after each move (e.g., no overlapping entities, borders remain walls), and how would you unit-test them?
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT 14 -->
+    <div class="student-section" id="student14">
+        <div class="student-header">
+            <h2>Student #14</h2>
+            <div class="score-badge">Score: 28/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Over-strict R3 validation in parser, otherwise excellent
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 1: R3 Reasoning</div>
+            <div class="question-text">
+                In generation you prevent placing a box on a wall when current #B == #* to avoid exceeding after placement. Walk me through that condition and why equality is the right pre-check. How would you rewrite the parser validation to match the spec? (Point to the exact line you'd change.)
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 2: Chained Pushes</div>
+            <div class="question-text">
+                Your moveBox can recursively push multiple boxes. Explain how termination and correctness are ensured when two boxes line up in front of a target vs. a wall. What happens if the chain includes an O?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 3: Undo Design</div>
+            <div class="question-text">
+                Describe the invariants maintained by playerMoveLog, boxesMoveLog, and boxesMovedOnTurn. How do you guarantee boxesOnTarget stays correct after multiple undos?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: Placement Rules</div>
+            <div class="question-text">
+                Show where you enforce R1 and R2 in random generation and argue that a box can never start on a target or in a forbidden corner. What would you add to catch 2×2 dead blocks (intermediate bonus)?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Level Parsing</div>
+            <div class="question-text">
+                Explain how GridReader detects level boundaries. What edge cases (e.g., ragged lines, trailing spaces) would break it, and how would you harden it?
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT 17 -->
+    <div class="student-section" id="student17">
+        <div class="student-header">
+            <h2>Student #17</h2>
+            <div class="score-badge">Score: 17/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Missing R2 and R3, broken undo implementation
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 1: R2 Corners</div>
+            <div class="question-text">
+                How would you extend place_boxes() to forbid placing boxes in the four interior non-target corners? Outline the check you'd add.
+            </div>
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 2: R3 Wall Capacity</div>
+            <div class="question-text">
+                Describe a data pass that counts boxes vs. targets along each interior wall segment and rejects placements that would violate the constraint. Where would you integrate it?
+            </div>
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 3: Undo Correctness</div>
+            <div class="question-text">
+                Why does your current undo lose effect after the next update_display()? Which state arrays must be saved/restored to make undo reliable, and how would you copy them efficiently?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: Target Counter Integrity</div>
+            <div class="question-text">
+                Walk through the code path that updates boxes_on_targets when pushing a box from a target to a non-target and vice versa. Are there any edge cases you would guard against?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Initialization Choices</div>
+            <div class="question-text">
+                Explain your placement order (player → targets → boxes). What invariants does this guarantee, and how is it reflected in update_display()?
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT 18 -->
+    <div class="student-section" id="student18">
+        <div class="student-header">
+            <h2>Student #18</h2>
+            <div class="score-badge">Score: 28/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Undo incomplete (state desync), otherwise excellent with deadlock detection
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 1: Undo Integrity</div>
+            <div class="question-text">
+                How would you redesign undo() so it restores all game state (boxes, targets, player, counters) consistently? Which data structures would you snapshot and why?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 2: Deadlock Detection</div>
+            <div class="question-text">
+                Walk me through createsDeadlock()—what patterns does it detect, and can it produce false positives/negatives? How would you extend it to ignore boxes that are already on targets?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 3: R3 Implementation</div>
+            <div class="question-text">
+                Justify your wall-capacity checks. Are there scenarios where counting only the outermost interior row/column near walls is insufficient? How would you generalize to longer wall runs?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: Initialization Robustness</div>
+            <div class="question-text">
+                Your generator retries until a valid board or throws. What termination guarantees do you have? How would you seed Random for reproducible tests?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: State Rendering</div>
+            <div class="question-text">
+                Explain why updateDisplay() writes targets first, then boxes, then the player. What bugs could occur if this order changes?
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT 19 -->
+    <div class="student-section" id="student19">
+        <div class="student-header">
+            <h2>Student #19</h2>
+            <div class="score-badge">Score: 33/40 (Excellent)</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Excellent implementation - test depth of understanding
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 1: Undo Design</div>
+            <div class="question-text">
+                How do you snapshot and restore state for undo()? What are the edge cases you considered (e.g., box on target count resync)?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 2: R3 Logic</div>
+            <div class="question-text">
+                Explain how your wall capacity check works for top/bottom vs. left/right walls. Would it still hold if targets move or levels are loaded from file?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 3: 2×2 Solid Block Detection</div>
+            <div class="question-text">
+                Walk through a concrete placement that your creates2x2SolidBlock rejects. Why is it a useful deadlock heuristic?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: Parser Validation</div>
+            <div class="question-text">
+                In stringToStateMapper, why must the number of boxes equal the number of targets, and how do you guard against malformed rows?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Move/Push Correctness</div>
+            <div class="question-text">
+                When pushing a box off a target onto a non-target, how do you ensure boxesOnTargets stays consistent and the display reflects the correct cell states?
+            </div>
+        </div>
+
+        <div class="tips">
+            <strong>Tip:</strong> This is one of the top students. Use questions to explore design decisions and trade-offs.
+        </div>
+    </div>
+
+    <!-- STUDENT 20 -->
+    <div class="student-section" id="student20">
+        <div class="student-header">
+            <h2>Student #20</h2>
+            <div class="score-badge">Score: 25/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Perfect base, good exception handling, minor UI mismatch
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 1: R3 Design</div>
+            <div class="question-text">
+                Walk me through your wall-capacity check. Why do you increment boxesOnWall once more after scanning the wall, and what case does that cover?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 2: Targets & Counting</div>
+            <div class="question-text">
+                In your push logic, explain how boxesOnTargets stays correct when a box moves off a target to a non-target (and vice versa). What invariants are you relying on?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 3: Undo State</div>
+            <div class="question-text">
+                What parts of the game state must be saved to guarantee a perfect undo? Is your current GameState sufficient if you later add new features (e.g., multiple players or advanced deadlock rules)?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: Input Ergonomics</div>
+            <div class="question-text">
+                Your UI lists "up/down/left/right" but the code accepts only w/a/s/d. How would you extend move(...) to support both sets cleanly without duplicating logic?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Next Steps (Deadlocks)</div>
+            <div class="question-text">
+                How would you detect and forbid creating a 2×2 solid block (intermediate bonus) during placement or movement? Sketch the checks you'd add and where. (Reference your existing corner rule for inspiration.)
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT 21 -->
+    <div class="student-section" id="student21">
+        <div class="student-header">
+            <h2>Student #21</h2>
+            <div class="score-badge">Score: 36/40 (HIGHEST)</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Excellent implementation, only minor validation issue
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 1: Input Limit</div>
+            <div class="question-text">
+                The rubric allows K ≤ max, your loop enforces K &lt; max. Why did you choose strict &lt; and how would you adjust to meet the spec exactly? Show the precise line to change.
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 2: Deadlock Logic</div>
+            <div class="question-text">
+                Walk me through a concrete board where isPossible(...) returns false. Which pattern is it preventing? Could any solvable state be rejected by this guard?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 3: Corner Traps</div>
+            <div class="question-text">
+                Explain how cornerStuck(...) differs from the simple R2 "no interior corners" rule. Give a scenario it catches that plain R2 would miss.
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: Wall Capacity Algorithm</div>
+            <div class="question-text">
+                In prioritiseWalls(...), how do you avoid over-allocating boxes along a wall with fewer targets (edge/corner corrections)? What happens if targets are moved later?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Undo Design</div>
+            <div class="question-text">
+                Your GameState stores only box layers and player/moves. Why is that sufficient? Any edge cases where restoring only those arrays would desync the rendered board?
+            </div>
+        </div>
+
+        <div class="tips">
+            <strong>Tip:</strong> This is the top student. Focus on deepening understanding and discussing design trade-offs.
+        </div>
+    </div>
+
+    <!-- STUDENT 22 -->
+    <div class="student-section" id="student22">
+        <div class="student-header">
+            <h2>Student #22</h2>
+            <div class="score-badge">Score: 22/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Perfect base, package-private classes, could improve with bonuses
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 1: Entry Point & Build</div>
+            <div class="question-text">
+                Why did you keep classes package-private? How would running change if Main were public and the file were renamed?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 2: Undo Design</div>
+            <div class="question-text">
+                You snapshot the whole hasBox grid each move—how would you make this O(1) space per move?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 3: R3 Reasoning</div>
+            <div class="question-text">
+                Demonstrate a configuration your checkWallCapacity() rejects and explain why.
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: Corner Rule (R2)</div>
+            <div class="question-text">
+                How does your placement avoid non-target interior corners, and how would you extend it to catch corner deadlocks formed during play?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Collision Branches</div>
+            <div class="question-text">
+                Point to the exact checks that prevent pushing a box into a wall or another box and describe the control flow.
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT 23 -->
+    <div class="student-section" id="student23">
+        <div class="student-header">
+            <h2>Student #23</h2>
+            <div class="score-badge">Score: 24/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Counter bug, R2 over-restrictive, incomplete undo
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 1: Counter Logic</div>
+            <div class="question-text">
+                Why did you set boxesOnTargets to 1 initially? How would you recompute it from the board to avoid inconsistencies?
+            </div>
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 2: Corner Rule</div>
+            <div class="question-text">
+                Your third() forbids all four interior corners. How would you modify it so a corner that is a target can accept a box (especially when pushed)?
+            </div>
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 3: Undo Design</div>
+            <div class="question-text">
+                Your undo restores only the displayBoard. What additional state must be saved/restored to make undo logically correct, and where would you integrate that?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: Wall Capacity (R3)</div>
+            <div class="question-text">
+                Explain how your second() method enforces wall capacity and discuss edge cases (e.g., mixed row/column checks). Would you change the scanning strategy?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: 2×2 Deadlock Check</div>
+            <div class="question-text">
+                You added a check command to detect 2×2 blocks. How would you convert that into prevention during placement/moves (and when would you call it)?
+            </div>
+        </div>
+    </div>
+
+    <!-- STUDENT 24 -->
+    <div class="student-section" id="student24">
+        <div class="student-header">
+            <h2>Student #24</h2>
+            <div class="score-badge">Score: 21/40</div>
+        </div>
+
+        <div class="focus-area">
+            <strong>Primary Focus:</strong> Formula wrong, prompts swapped, structure issues
+        </div>
+
+        <div class="question priority-high">
+            <div class="question-number">Question 1: Validation Logic</div>
+            <div class="question-text">
+                Why did you choose ((W-2)*(H-2)-4)/2? How would you adjust it to match the spec and where would you place that constant so it's not duplicated?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 2: R3 Design</div>
+            <div class="question-text">
+                You satisfy wall capacity by adding targets along walls. Explain how your method guarantees "boxes on a wall ≤ targets on that wall" for all four sides, and how you'd prove or test it.
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 3: Corner/Deadlock Prevention</div>
+            <div class="question-text">
+                Walk me through one of your corner-adjacency checks. Which positions are considered and why does that prevent the deadlock? Could this miss other deadlocks (e.g., 2×2 blocks)?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 4: Push Transitions</div>
+            <div class="question-text">
+                Describe how you update tiles when pushing BOX into TARGET and when the player steps off a TARGET. Where do you ensure BOX_ON_TARGET and target restoration are correct?
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="question-number">Question 5: Refactoring</div>
+            <div class="question-text">
+                If you separated input, placement, movement, and rendering into cohesive methods/classes, what interfaces would you define? How would you add an undo feature (state snapshot vs. command stack)?
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

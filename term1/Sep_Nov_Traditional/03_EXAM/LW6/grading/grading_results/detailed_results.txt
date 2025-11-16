@@ -1,0 +1,706 @@
+DETAILED GRADING RESULTS
+========================
+
+STUDENT: S0008
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         8/8
+Part B:         6/6
+Part C:         9/9
+Part D:         4/4
+Main Demo:      2/2
+──────────────────────────────────────────────────
+BASE TOTAL:     33/33
+FINAL TOTAL:    33/33
+
+Feedback:
+✓ Code compiles successfully
+✓ LibraryItem is abstract
+✓ Has private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors
+✓ Book has author field
+✓ Member has required fields
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has static final constants
+✓ Has static method
+✓ SimpleDateUtils has method overloading
+✓ BorrowingSystem uses arrays
+✓ BorrowingSystem has required methods
+✓ LibraryException extends RuntimeException
+✓ Integration assumed from structure
+✓ Custom exception implemented
+✓ Code structure suggests error handling
+✓ Main.java exists
+
+==================================================
+
+STUDENT: S0001
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         0/8
+Part B:         0/6
+Part C:         0/9
+Part D:         0/4
+Main Demo:      2/2
+──────────────────────────────────────────────────
+BASE TOTAL:     6/33
+FINAL TOTAL:    6/33
+
+Feedback:
+✓ Code compiles successfully
+✗ Cannot test Part A - compilation failed
+✗ Cannot test Part B - compilation failed
+✗ Cannot test Part C - compilation failed
+✗ Cannot test Part D - compilation failed
+✓ Main.java exists
+
+==================================================
+
+STUDENT: S0006
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         7/8
+Part B:         5/6
+Part C:         9/9
+Part D:         4/4
+Main Demo:      2/2
+──────────────────────────────────────────────────
+BASE TOTAL:     31/33
+FINAL TOTAL:    31/33
+
+Feedback:
+✓ Code compiles successfully
+✓ LibraryItem is abstract
+✓ Has private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors
+✓ Book has author field
+✓ Member has required fields
+✗ Member missing canBorrow()
+✓ LibrarySettings has private constructor
+✗ Missing static final constants
+✓ Has static method
+✓ SimpleDateUtils has method overloading
+✓ BorrowingSystem uses arrays
+✓ BorrowingSystem has required methods
+✓ LibraryException extends RuntimeException
+✓ Integration assumed from structure
+✓ Custom exception implemented
+✓ Code structure suggests error handling
+✓ Main.java exists
+
+==================================================
+
+STUDENT: S0007
+──────────────────────────────────────────────────
+Compilation:    0/4
+Part A:         8/8
+Part B:         6/6
+Part C:         9/9
+Part D:         4/4
+Main Demo:      2/2
+──────────────────────────────────────────────────
+BASE TOTAL:     29/33
+FINAL TOTAL:    29/33
+
+Feedback:
+Compilation failed: /Users/kangelov/Library/Mobile Documents/com~apple~CloudDocs/03_Professional/03_Jobs/04_TUES_Teaching/2025-2026/OOP_TUES/term1/03_EXAM/LW6/Submissions/grading/submissions/S0007/src/library/Main.java:49: error: name has private access in Member
+✓ LibraryItem is abstract
+✓ Has private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors
+✓ Book has author field
+✓ Member has required fields
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has static final constants
+✓ Has static method
+✓ SimpleDateUtils has method overloading
+✓ BorrowingSystem uses arrays
+✓ BorrowingSystem has required methods
+✓ LibraryException extends RuntimeException
+✓ Integration assumed from structure
+✓ Custom exception implemented
+✓ Code structure suggests error handling
+✓ Main.java exists
+
+==================================================
+
+STUDENT: S0009
+──────────────────────────────────────────────────
+Compilation:    0/4
+Part A:         0/8
+Part B:         0/6
+Part C:         0/9
+Part D:         0/4
+Main Demo:      2/2
+──────────────────────────────────────────────────
+BASE TOTAL:     2/33
+FINAL TOTAL:    2/33
+
+Feedback:
+Compilation failed: /Users/kangelov/Library/Mobile Documents/com~apple~CloudDocs/03_Professional/03_Jobs/04_TUES_Teaching/2025-2026/OOP_TUES/term1/03_EXAM/LW6/Submissions/grading/submissions/S0009/src/library/core/LibraryItem.java:9: error: not a statement
+✗ Cannot test Part A - compilation failed
+✗ Cannot test Part B - compilation failed
+✗ Cannot test Part C - compilation failed
+✗ Cannot test Part D - compilation failed
+✓ Main.java exists
+
+==================================================
+
+STUDENT: S0013
+──────────────────────────────────────────────────
+Compilation:    0/4
+Part A:         0/8
+Part B:         0/6
+Part C:         0/9
+Part D:         0/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     0/33
+FINAL TOTAL:    0/33
+
+Feedback:
+Compilation failed: /Users/kangelov/Library/Mobile Documents/com~apple~CloudDocs/03_Professional/03_Jobs/04_TUES_Teaching/2025-2026/OOP_TUES/term1/03_EXAM/LW6/Submissions/grading/submissions/S0013/src/library/transactions/BorrowingSystem.java:4: error: cannot find symbol
+✗ Cannot test Part A - compilation failed
+✗ Cannot test Part B - compilation failed
+✗ Cannot test Part C - compilation failed
+✗ Cannot test Part D - compilation failed
+✗ Main.java not found
+
+==================================================
+
+STUDENT: S0014
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         8/8
+Part B:         6/6
+Part C:         7/9
+Part D:         4/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     29/33
+FINAL TOTAL:    29/33
+
+Feedback:
+✓ Code compiles successfully
+✓ LibraryItem is abstract
+✓ Has private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors
+✓ Book has author field
+✓ Member has required fields
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has static final constants
+✓ Has static method
+✓ SimpleDateUtils has method overloading
+✗ BorrowingSystem should use arrays
+✓ BorrowingSystem has required methods
+✓ LibraryException extends RuntimeException
+✓ Integration assumed from structure
+✓ Custom exception implemented
+✓ Code structure suggests error handling
+✗ Main.java not found
+
+==================================================
+
+STUDENT: S0022
+──────────────────────────────────────────────────
+Compilation:    0/4
+Part A:         0/8
+Part B:         0/6
+Part C:         0/9
+Part D:         0/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     0/33
+FINAL TOTAL:    0/33
+
+Feedback:
+Compilation failed: /Users/kangelov/Library/Mobile Documents/com~apple~CloudDocs/03_Professional/03_Jobs/04_TUES_Teaching/2025-2026/OOP_TUES/term1/03_EXAM/LW6/Submissions/grading/submissions/S0022/src/library/util/SimpleDateUtils.java:10: error: reached end of file while parsing
+✗ Cannot test Part A - compilation failed
+✗ Cannot test Part B - compilation failed
+✗ Cannot test Part C - compilation failed
+✗ Cannot test Part D - compilation failed
+✗ Main.java not found
+
+==================================================
+
+STUDENT: S0023
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         8/8
+Part B:         5/6
+Part C:         9/9
+Part D:         4/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     30/33
+FINAL TOTAL:    30/33
+
+Feedback:
+✓ Code compiles successfully
+✓ LibraryItem is abstract
+✓ Has private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors
+✓ Book has author field
+✓ Member has required fields
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✗ Missing static final constants
+✓ Has static method
+✓ SimpleDateUtils has method overloading
+✓ BorrowingSystem uses arrays
+✓ BorrowingSystem has required methods
+✓ LibraryException extends RuntimeException
+✓ Integration assumed from structure
+✓ Custom exception implemented
+✓ Code structure suggests error handling
+✗ Main.java not found
+
+==================================================
+
+STUDENT: S0015
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         8/8
+Part B:         6/6
+Part C:         9/9
+Part D:         4/4
+Main Demo:      2/2
+──────────────────────────────────────────────────
+BASE TOTAL:     33/33
+BONUS:          +4
+FINAL TOTAL:    37/37
+
+Feedback:
+✓ Code compiles successfully
+✓ LibraryItem is abstract
+✓ Has private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors
+✓ Book has author field
+✓ Member has required fields
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has static final constants
+✓ Has static method
+✓ SimpleDateUtils has method overloading
+✓ BorrowingSystem uses arrays
+✓ BorrowingSystem has required methods
+✓ LibraryException extends RuntimeException
+✓ Integration assumed from structure
+✓ Custom exception implemented
+✓ Code structure suggests error handling
+✓ Main.java exists
+✓ BONUS: Search capability
+✓ BONUS: Statistics
+
+==================================================
+
+STUDENT: S0005
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         8/8
+Part B:         6/6
+Part C:         9/9
+Part D:         4/4
+Main Demo:      2/2
+──────────────────────────────────────────────────
+BASE TOTAL:     33/33
+FINAL TOTAL:    33/33
+
+Feedback:
+✓ Code compiles successfully
+✓ LibraryItem is abstract
+✓ Has private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors
+✓ Book has author field
+✓ Member has required fields
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has static final constants
+✓ Has static method
+✓ SimpleDateUtils has method overloading
+✓ BorrowingSystem uses arrays
+✓ BorrowingSystem has required methods
+✓ LibraryException extends RuntimeException
+✓ Integration assumed from structure
+✓ Custom exception implemented
+✓ Code structure suggests error handling
+✓ Main.java exists
+
+==================================================
+
+STUDENT: S0002
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         8/8
+Part B:         6/6
+Part C:         9/9
+Part D:         4/4
+Main Demo:      2/2
+──────────────────────────────────────────────────
+BASE TOTAL:     33/33
+FINAL TOTAL:    33/33
+
+Feedback:
+✓ Code compiles successfully
+✓ LibraryItem is abstract
+✓ Has private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors
+✓ Book has author field
+✓ Member has required fields
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has static final constants
+✓ Has static method
+✓ SimpleDateUtils has method overloading
+✓ BorrowingSystem uses arrays
+✓ BorrowingSystem has required methods
+✓ LibraryException extends RuntimeException
+✓ Integration assumed from structure
+✓ Custom exception implemented
+✓ Code structure suggests error handling
+✓ Main.java exists
+
+==================================================
+
+STUDENT: S0003
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         8/8
+Part B:         4/6
+Part C:         4/9
+Part D:         2/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     22/33
+FINAL TOTAL:    22/33
+
+Feedback:
+✓ Code compiles successfully
+✓ LibraryItem is abstract
+✓ Has private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors
+✓ Book has author field
+✓ Member has required fields
+✓ Member has canBorrow() method
+✗ LibrarySettings needs private constructor
+✗ Missing static final constants
+✓ Has static method
+✓ SimpleDateUtils has method overloading
+✓ BorrowingSystem uses arrays
+✗ BorrowingSystem missing methods
+✗ LibraryException class not found
+✓ Integration assumed from structure
+✓ Code structure suggests error handling
+✗ Main.java not found
+
+==================================================
+
+STUDENT: S0004
+──────────────────────────────────────────────────
+Compilation:    0/4
+Part A:         0/8
+Part B:         0/6
+Part C:         0/9
+Part D:         0/4
+Main Demo:      2/2
+──────────────────────────────────────────────────
+BASE TOTAL:     2/33
+FINAL TOTAL:    2/33
+
+Feedback:
+Compilation failed: /Users/kangelov/Library/Mobile Documents/com~apple~CloudDocs/03_Professional/03_Jobs/04_TUES_Teaching/2025-2026/OOP_TUES/term1/03_EXAM/LW6/Submissions/grading/submissions/S0004/src/library/core/LibraryItem.java:3: error: class, interface, enum, or record expected
+✗ Cannot test Part A - compilation failed
+✗ Cannot test Part B - compilation failed
+✗ Cannot test Part C - compilation failed
+✗ Cannot test Part D - compilation failed
+✓ Main.java exists
+
+==================================================
+
+STUDENT: S0017
+──────────────────────────────────────────────────
+Compilation:    0/4
+Part A:         0/8
+Part B:         0/6
+Part C:         0/9
+Part D:         0/4
+Main Demo:      2/2
+──────────────────────────────────────────────────
+BASE TOTAL:     2/33
+FINAL TOTAL:    2/33
+
+Feedback:
+Compilation failed: /Users/kangelov/Library/Mobile Documents/com~apple~CloudDocs/03_Professional/03_Jobs/04_TUES_Teaching/2025-2026/OOP_TUES/term1/03_EXAM/LW6/Submissions/grading/submissions/S0017/src/library/materials/Book.java:14: error: invalid method declaration; return type required
+✗ Cannot test Part A - compilation failed
+✗ Cannot test Part B - compilation failed
+✗ Cannot test Part C - compilation failed
+✗ Cannot test Part D - compilation failed
+✓ Main.java exists
+
+==================================================
+
+STUDENT: S0010
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         8/8
+Part B:         6/6
+Part C:         9/9
+Part D:         4/4
+Main Demo:      2/2
+──────────────────────────────────────────────────
+BASE TOTAL:     33/33
+FINAL TOTAL:    33/33
+
+Feedback:
+✓ Code compiles successfully
+✓ LibraryItem is abstract
+✓ Has private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors
+✓ Book has author field
+✓ Member has required fields
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has static final constants
+✓ Has static method
+✓ SimpleDateUtils has method overloading
+✓ BorrowingSystem uses arrays
+✓ BorrowingSystem has required methods
+✓ LibraryException extends RuntimeException
+✓ Integration assumed from structure
+✓ Custom exception implemented
+✓ Code structure suggests error handling
+✓ Main.java exists
+
+==================================================
+
+STUDENT: S0019
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         8/8
+Part B:         0/6
+Part C:         7/9
+Part D:         2/4
+Main Demo:      2/2
+──────────────────────────────────────────────────
+BASE TOTAL:     23/33
+FINAL TOTAL:    23/33
+
+Feedback:
+✓ Code compiles successfully
+✓ LibraryItem is abstract
+✓ Has private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors
+✓ Book has author field
+✓ Member has required fields
+✓ Member has canBorrow() method
+✗ LibrarySettings class not found
+✗ SimpleDateUtils class not found
+✓ BorrowingSystem uses arrays
+✓ BorrowingSystem has required methods
+✗ LibraryException class not found
+✓ Integration assumed from structure
+✓ Code structure suggests error handling
+✓ Main.java exists
+
+==================================================
+
+STUDENT: S0021
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         8/8
+Part B:         6/6
+Part C:         9/9
+Part D:         4/4
+Main Demo:      2/2
+──────────────────────────────────────────────────
+BASE TOTAL:     33/33
+FINAL TOTAL:    33/33
+
+Feedback:
+✓ Code compiles successfully
+✓ LibraryItem is abstract
+✓ Has private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors
+✓ Book has author field
+✓ Member has required fields
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has static final constants
+✓ Has static method
+✓ SimpleDateUtils has method overloading
+✓ BorrowingSystem uses arrays
+✓ BorrowingSystem has required methods
+✓ LibraryException extends RuntimeException
+✓ Integration assumed from structure
+✓ Custom exception implemented
+✓ Code structure suggests error handling
+✓ Main.java exists
+
+==================================================
+
+STUDENT: S0020
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         7/8
+Part B:         6/6
+Part C:         7/9
+Part D:         2/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     26/33
+FINAL TOTAL:    26/33
+
+Feedback:
+✓ Code compiles successfully
+✓ LibraryItem is abstract
+✓ Has private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors
+✓ Book has author field
+✓ Member has required fields
+✗ Member missing canBorrow()
+✓ LibrarySettings has private constructor
+✓ Has static final constants
+✓ Has static method
+✓ SimpleDateUtils has method overloading
+✓ BorrowingSystem uses arrays
+✓ BorrowingSystem has required methods
+✗ LibraryException class not found
+✓ Integration assumed from structure
+✓ Code structure suggests error handling
+✗ Main.java not found
+
+==================================================
+
+STUDENT: S0018
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         8/8
+Part B:         6/6
+Part C:         9/9
+Part D:         4/4
+Main Demo:      2/2
+──────────────────────────────────────────────────
+BASE TOTAL:     33/33
+FINAL TOTAL:    33/33
+
+Feedback:
+✓ Code compiles successfully
+✓ LibraryItem is abstract
+✓ Has private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors
+✓ Book has author field
+✓ Member has required fields
+✓ Member has canBorrow() method
+✓ LibrarySettings has private constructor
+✓ Has static final constants
+✓ Has static method
+✓ SimpleDateUtils has method overloading
+✓ BorrowingSystem uses arrays
+✓ BorrowingSystem has required methods
+✓ LibraryException extends RuntimeException
+✓ Integration assumed from structure
+✓ Custom exception implemented
+✓ Code structure suggests error handling
+✓ Main.java exists
+
+==================================================
+
+STUDENT: S0011
+──────────────────────────────────────────────────
+Compilation:    4/4
+Part A:         7/8
+Part B:         6/6
+Part C:         9/9
+Part D:         4/4
+Main Demo:      2/2
+──────────────────────────────────────────────────
+BASE TOTAL:     32/33
+FINAL TOTAL:    32/33
+
+Feedback:
+✓ Code compiles successfully
+✓ LibraryItem is abstract
+✓ Has private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✓ Book has multiple constructors
+✓ Book has author field
+✓ Member has required fields
+✗ Member missing canBorrow()
+✓ LibrarySettings has private constructor
+✓ Has static final constants
+✓ Has static method
+✓ SimpleDateUtils has method overloading
+✓ BorrowingSystem uses arrays
+✓ BorrowingSystem has required methods
+✓ LibraryException extends RuntimeException
+✓ Integration assumed from structure
+✓ Custom exception implemented
+✓ Code structure suggests error handling
+✓ Main.java exists
+
+==================================================
+
+STUDENT: S0016
+──────────────────────────────────────────────────
+Compilation:    0/4
+Part A:         5/8
+Part B:         4/6
+Part C:         2/9
+Part D:         2/4
+Main Demo:      0/2
+──────────────────────────────────────────────────
+BASE TOTAL:     13/33
+FINAL TOTAL:    13/33
+
+Feedback:
+Compilation failed: /Users/kangelov/Library/Mobile Documents/com~apple~CloudDocs/03_Professional/03_Jobs/04_TUES_Teaching/2025-2026/OOP_TUES/term1/03_EXAM/LW6/Submissions/grading/submissions/S0016/src/library/transactions/BorrowingSystem.java:18: error: cannot find symbol
+✓ LibraryItem is abstract
+✓ Has private fields
+✓ Has abstract getItemType()
+✓ Book extends LibraryItem
+✗ Book needs constructor overloading
+✓ Book has author field
+✗ Member class not found
+✗ LibrarySettings needs private constructor
+✗ Missing static final constants
+✓ Has static method
+✓ SimpleDateUtils has method overloading
+✗ BorrowingSystem class not found
+✗ LibraryException class not found
+✓ Integration assumed from structure
+✓ Code structure suggests error handling
+✗ Main.java not found
+
+==================================================
+

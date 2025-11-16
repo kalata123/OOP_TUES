@@ -1,0 +1,7 @@
+The levels are inside a folder named Levels
+Structure:
+
+src
+  .java
+  Levels
+     layouts

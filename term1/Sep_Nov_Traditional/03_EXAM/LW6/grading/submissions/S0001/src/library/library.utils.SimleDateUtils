@@ -1,0 +1,9 @@
+package library.utils;
+
+public class SimpleDateUtils {
+
+    private SimpleDateUtils() {
+        throw new UnsupportedOperationException("SimpleDateUtils is a utility class and cannot be instantiated.");
+    }
+
+}

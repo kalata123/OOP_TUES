@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html><head><meta charset='UTF-8'>
+<title>Grading Dashboard</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+h1 { color: #333; }
+table { border-collapse: collapse; width: 100%; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+th:first-child, td:first-child { text-align: center; width: 50px; color: #999; font-weight: normal; }
+th { background: #4CAF50; color: white; cursor: pointer; user-select: none; position: relative; }
+th:first-child { cursor: default; }
+th:hover { background: #45a049; }
+th:first-child:hover { background: #4CAF50; }
+th.sortable:after { content: ' ⇅'; opacity: 0.3; }
+th.asc:after { content: ' ↑'; opacity: 1; }
+th.desc:after { content: ' ↓'; opacity: 1; }
+tr:hover { background: #f5f5f5; }
+.score { font-weight: bold; }
+.high { color: #4CAF50; }
+.medium { color: #FF9800; }
+.low { color: #f44336; }
+.stats { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; gap: 30px; align-items: flex-start; }
+.stats-text { flex: 1; }
+.stats-chart { flex: 0 0 450px; }
+#gradeChart { border: 1px solid #ddd; border-radius: 4px; }
+@media (max-width: 900px) { .stats { flex-direction: column; } .stats-chart { flex: 1; width: 100%; } #gradeChart { width: 100%; } }
+</style>
+<script>
+function sortTable(columnIndex, isNumeric) {
+  const table = document.querySelector('table');
+  const tbody = table.querySelector('tbody');
+  const rows = Array.from(tbody.querySelectorAll('tr'));
+  const headers = table.querySelectorAll('th');
+  const currentHeader = headers[columnIndex];
+  const isAsc = currentHeader.classList.contains('asc');
+  headers.forEach(h => h.classList.remove('asc', 'desc'));
+  currentHeader.classList.add(isAsc ? 'desc' : 'asc');
+  rows.sort((a, b) => {
+    let aVal = a.cells[columnIndex].textContent.trim();
+    let bVal = b.cells[columnIndex].textContent.trim();
+    if (isNumeric) {
+      if (aVal === '-') aVal = '0';
+      if (bVal === '-') bVal = '0';
+      aVal = parseFloat(aVal.replace(/[^0-9.-]/g, '')) || 0;
+      bVal = parseFloat(bVal.replace(/[^0-9.-]/g, '')) || 0;
+    }
+    if (aVal < bVal) return isAsc ? 1 : -1;
+    if (aVal > bVal) return isAsc ? -1 : 1;
+    return 0;
+  });
+  rows.forEach(row => tbody.appendChild(row));
+  renumberRows();
+}
+function renumberRows() {
+  const rows = document.querySelectorAll('tbody tr');
+  rows.forEach((row, index) => { row.cells[0].textContent = index + 1; });
+}
+function drawGradeDistribution() {
+  const canvas = document.getElementById('gradeChart');
+  const ctx = canvas.getContext('2d');
+  const width = canvas.width;
+  const height = canvas.height;
+  const padding = { top: 40, right: 30, bottom: 60, left: 60 };
+  const chartWidth = width - padding.left - padding.right;
+  const chartHeight = height - padding.top - padding.bottom;
+  const rows = document.querySelectorAll('tbody tr');
+  const grades = Array.from(rows).map(row => parseInt(row.cells[10].textContent));
+  const bins = [
+    { label: '0-10', min: 0, max: 10, count: 0, color: '#f44336' },
+    { label: '10-20', min: 10, max: 20, count: 0, color: '#FF9800' },
+    { label: '20-25', min: 20, max: 25, count: 0, color: '#FFC107' },
+    { label: '25-30', min: 25, max: 30, count: 0, color: '#8BC34A' },
+    { label: '30-33', min: 30, max: 33, count: 0, color: '#4CAF50' },
+    { label: '33+', min: 33, max: 100, count: 0, color: '#2196F3' }
+  ];
+  grades.forEach(grade => {
+    for (let bin of bins) {
+      if (grade >= bin.min && (grade < bin.max || (bin.max === 100 && grade >= bin.min))) {
+        bin.count++; break;
+      }
+    }
+  });
+  ctx.clearRect(0, 0, width, height);
+  const actualMaxCount = Math.max(...bins.map(b => b.count), 1);
+  const maxCount = actualMaxCount + 3;
+  const barWidth = chartWidth / bins.length;
+  ctx.fillStyle = '#333';
+  ctx.font = 'bold 14px Arial';
+  ctx.textAlign = 'left';
+  ctx.fillText('Grade Distribution', padding.left, 25);
+  ctx.fillStyle = '#fafafa';
+  ctx.fillRect(padding.left, padding.top, chartWidth, chartHeight);
+  ctx.strokeStyle = '#e0e0e0';
+  ctx.lineWidth = 1;
+  for (let i = 0; i <= 5; i++) {
+    const y = padding.top + (chartHeight / 5) * i;
+    ctx.beginPath();
+    ctx.moveTo(padding.left, y);
+    ctx.lineTo(padding.left + chartWidth, y);
+    ctx.stroke();
+    const value = Math.round(maxCount - (maxCount / 5) * i);
+    ctx.fillStyle = '#666';
+    ctx.font = '11px Arial';
+    ctx.textAlign = 'right';
+    ctx.fillText(value, padding.left - 10, y + 4);
+  }
+  const barCenters = [];
+  bins.forEach((bin, i) => {
+    const barHeight = (bin.count / maxCount) * chartHeight;
+    const x = padding.left + i * barWidth;
+    const y = padding.top + chartHeight - barHeight;
+    const actualBarWidth = barWidth * 0.8;
+    const barX = x + (barWidth - actualBarWidth) / 2;
+    barCenters.push({ x: barX + actualBarWidth / 2, y: y, count: bin.count });
+    ctx.fillStyle = bin.color;
+    ctx.fillRect(barX, y, actualBarWidth, barHeight);
+    if (bin.count > 0) {
+      ctx.fillStyle = '#333';
+      ctx.font = 'bold 13px Arial';
+      ctx.textAlign = 'center';
+      ctx.fillText(bin.count, barX + actualBarWidth / 2, y - 8);
+    }
+    ctx.fillStyle = '#666';
+    ctx.font = '11px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText(bin.label, barX + actualBarWidth / 2, padding.top + chartHeight + 20);
+  });
+  if (barCenters.length > 1) {
+    ctx.strokeStyle = '#1976D2';
+    ctx.lineWidth = 2.5;
+    ctx.setLineDash([]);
+    ctx.beginPath();
+    barCenters.forEach((point, i) => {
+      if (i === 0) {
+        ctx.moveTo(point.x, point.y);
+      } else {
+        const prevPoint = barCenters[i - 1];
+        const cp1x = prevPoint.x + (point.x - prevPoint.x) / 3;
+        const cp1y = prevPoint.y;
+        const cp2x = prevPoint.x + 2 * (point.x - prevPoint.x) / 3;
+        const cp2y = point.y;
+        ctx.bezierCurveTo(cp1x, cp1y, cp2x, cp2y, point.x, point.y);
+      }
+    });
+    ctx.stroke();
+    ctx.fillStyle = '#1976D2';
+    ctx.font = '11px Arial';
+    ctx.textAlign = 'right';
+    ctx.fillText('— Distribution', width - padding.right, 25);
+  }
+  ctx.strokeStyle = '#999';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(padding.left, padding.top);
+  ctx.lineTo(padding.left, padding.top + chartHeight);
+  ctx.lineTo(padding.left + chartWidth, padding.top + chartHeight);
+  ctx.stroke();
+  ctx.fillStyle = '#666';
+  ctx.font = '12px Arial';
+  ctx.textAlign = 'center';
+  ctx.save();
+  ctx.translate(15, padding.top + chartHeight / 2);
+  ctx.rotate(-Math.PI / 2);
+  ctx.fillText('Number of Students', 0, 0);
+  ctx.restore();
+  ctx.fillText('Score Range', padding.left + chartWidth / 2, height - 15);
+}
+window.onload = function() { drawGradeDistribution(); renumberRows(); };
+</script></head><body>
+<h1>📊 Library Exam Grading Dashboard</h1>
+<div class='stats'>
+<div class='stats-text'>
+<h2>Class Statistics</h2>
+<p>Base Average: <strong>17.96/33</strong> (54.4%) | Total Average: <strong>18.12/37</strong></p>
+<p>Highest: <strong>31</strong> | Lowest: <strong>0</strong></p>
+<p>Total Students: <strong>25</strong></p>
+<p style='color: #666; font-size: 0.9em;'>💡 Click any column header to sort (except #) | # shows current display order | Percentage = (Total/33)×100, can exceed 100% with bonus</p>
+</div>
+<div class='stats-chart'>
+<canvas id='gradeChart' width='450' height='300'></canvas>
+</div>
+</div>
+<table><thead><tr>
+<th>#</th>
+<th class='sortable' onclick='sortTable(1, false)'>Student</th>
+<th class='sortable' onclick='sortTable(2, true)'>Comp</th>
+<th class='sortable' onclick='sortTable(3, true)'>Part A</th>
+<th class='sortable' onclick='sortTable(4, true)'>Part B</th>
+<th class='sortable' onclick='sortTable(5, true)'>Part C</th>
+<th class='sortable' onclick='sortTable(6, true)'>Part D</th>
+<th class='sortable' onclick='sortTable(7, true)'>Main</th>
+<th class='sortable' onclick='sortTable(8, true)'>Base</th>
+<th class='sortable' onclick='sortTable(9, true)'>Bonus</th>
+<th class='sortable' onclick='sortTable(10, true)'>Total</th>
+<th class='sortable' onclick='sortTable(11, true)'>%</th>
+</tr></thead><tbody>
+<tr>
+<td>1</td><td>S_09</td><td>0/4</td><td>0/8</td><td>0/6</td><td>2/9</td><td>3/4</td><td>0/2</td><td>5/33</td><td>-</td><td class='score'>5</td><td class='low'>15.2%</td>
+</tr>
+<tr>
+<td>2</td><td>S_07</td><td>3/4</td><td>8/8</td><td>6/6</td><td>9/9</td><td>4/4</td><td>0/2</td><td>30/33</td><td>-</td><td class='score'>30</td><td class='high'>90.9%</td>
+</tr>
+<tr>
+<td>3</td><td>S_06</td><td>4/4</td><td>7/8</td><td>5/6</td><td>7/9</td><td>4/4</td><td>1/2</td><td>28/33</td><td>-</td><td class='score'>28</td><td class='high'>84.8%</td>
+</tr>
+<tr>
+<td>4</td><td>S_01</td><td>0/4</td><td>0/8</td><td>0/6</td><td>0/9</td><td>0/4</td><td>0/2</td><td>0/33</td><td>-</td><td class='score'>0</td><td class='low'>0.0%</td>
+</tr>
+<tr>
+<td>5</td><td>S_08</td><td>3/4</td><td>8/8</td><td>3/6</td><td>7/9</td><td>4/4</td><td>0/2</td><td>25/33</td><td>-</td><td class='score'>25</td><td class='medium'>75.8%</td>
+</tr>
+<tr>
+<td>6</td><td>S_12</td><td>0/4</td><td>0/8</td><td>0/6</td><td>0/9</td><td>0/4</td><td>0/2</td><td>0/33</td><td>-</td><td class='score'>0</td><td class='low'>0.0%</td>
+</tr>
+<tr>
+<td>7</td><td>S_15</td><td>3/4</td><td>8/8</td><td>3/6</td><td>9/9</td><td>4/4</td><td>0/2</td><td>27/33</td><td>+4</td><td class='score'>31</td><td class='high'>93.9%</td>
+</tr>
+<tr>
+<td>8</td><td>S_23</td><td>4/4</td><td>8/8</td><td>5/6</td><td>9/9</td><td>4/4</td><td>0/2</td><td>30/33</td><td>-</td><td class='score'>30</td><td class='high'>90.9%</td>
+</tr>
+<tr>
+<td>9</td><td>S_24</td><td>1/4</td><td>2/8</td><td>1/6</td><td>2/9</td><td>4/4</td><td>0/2</td><td>10/33</td><td>-</td><td class='score'>10</td><td class='low'>30.3%</td>
+</tr>
+<tr>
+<td>10</td><td>S_25</td><td>0/4</td><td>0/8</td><td>0/6</td><td>0/9</td><td>0/4</td><td>0/2</td><td>0/33</td><td>-</td><td class='score'>0</td><td class='low'>0.0%</td>
+</tr>
+<tr>
+<td>11</td><td>S_22</td><td>1/4</td><td>3/8</td><td>3/6</td><td>2/9</td><td>4/4</td><td>0/2</td><td>13/33</td><td>-</td><td class='score'>13</td><td class='low'>39.4%</td>
+</tr>
+<tr>
+<td>12</td><td>S_14</td><td>4/4</td><td>8/8</td><td>4/6</td><td>7/9</td><td>4/4</td><td>0/2</td><td>27/33</td><td>-</td><td class='score'>27</td><td class='high'>81.8%</td>
+</tr>
+<tr>
+<td>13</td><td>S_13</td><td>3/4</td><td>1/8</td><td>0/6</td><td>2/9</td><td>4/4</td><td>1/2</td><td>11/33</td><td>-</td><td class='score'>11</td><td class='low'>33.3%</td>
+</tr>
+<tr>
+<td>14</td><td>S_04</td><td>0/4</td><td>0/8</td><td>0/6</td><td>0/9</td><td>0/4</td><td>0/2</td><td>0/33</td><td>-</td><td class='score'>0</td><td class='low'>0.0%</td>
+</tr>
+<tr>
+<td>15</td><td>S_03</td><td>4/4</td><td>8/8</td><td>0/6</td><td>2/9</td><td>0/4</td><td>0/2</td><td>14/33</td><td>-</td><td class='score'>14</td><td class='low'>42.4%</td>
+</tr>
+<tr>
+<td>16</td><td>S_02</td><td>3/4</td><td>8/8</td><td>6/6</td><td>9/9</td><td>4/4</td><td>0/2</td><td>30/33</td><td>-</td><td class='score'>30</td><td class='high'>90.9%</td>
+</tr>
+<tr>
+<td>17</td><td>S_05</td><td>3/4</td><td>8/8</td><td>6/6</td><td>9/9</td><td>4/4</td><td>0/2</td><td>30/33</td><td>-</td><td class='score'>30</td><td class='high'>90.9%</td>
+</tr>
+<tr>
+<td>18</td><td>S_16</td><td>2/4</td><td>5/8</td><td>3/6</td><td>2/9</td><td>4/4</td><td>0/2</td><td>16/33</td><td>-</td><td class='score'>16</td><td class='low'>48.5%</td>
+</tr>
+<tr>
+<td>19</td><td>S_11</td><td>3/4</td><td>7/8</td><td>6/6</td><td>7/9</td><td>4/4</td><td>0/2</td><td>27/33</td><td>-</td><td class='score'>27</td><td class='high'>81.8%</td>
+</tr>
+<tr>
+<td>20</td><td>S_18</td><td>3/4</td><td>8/8</td><td>5/6</td><td>8/9</td><td>4/4</td><td>0/2</td><td>28/33</td><td>-</td><td class='score'>28</td><td class='high'>84.8%</td>
+</tr>
+<tr>
+<td>21</td><td>S_20</td><td>4/4</td><td>7/8</td><td>6/6</td><td>7/9</td><td>0/4</td><td>0/2</td><td>24/33</td><td>-</td><td class='score'>24</td><td class='medium'>72.7%</td>
+</tr>
+<tr>
+<td>22</td><td>S_21</td><td>3/4</td><td>8/8</td><td>4/6</td><td>9/9</td><td>3/4</td><td>0/2</td><td>27/33</td><td>-</td><td class='score'>27</td><td class='high'>81.8%</td>
+</tr>
+<tr>
+<td>23</td><td>S_19</td><td>3/4</td><td>8/8</td><td>0/6</td><td>7/9</td><td>0/4</td><td>0/2</td><td>18/33</td><td>-</td><td class='score'>18</td><td class='low'>54.5%</td>
+</tr>
+<tr>
+<td>24</td><td>S_10</td><td>3/4</td><td>8/8</td><td>6/6</td><td>8/9</td><td>4/4</td><td>0/2</td><td>29/33</td><td>-</td><td class='score'>29</td><td class='high'>87.9%</td>
+</tr>
+<tr>
+<td>25</td><td>S_17</td><td>0/4</td><td>0/8</td><td>0/6</td><td>0/9</td><td>0/4</td><td>0/2</td><td>0/33</td><td>-</td><td class='score'>0</td><td class='low'>0.0%</td>
+</tr>
+</tbody></table></body></html>

@@ -1,0 +1,27 @@
+package library.materials;
+extends library.core.LibraryItem;
+
+public class Book {
+    private string title;
+}
+
+public Book(String title, String author) {
+    this.title = title;
+    this.author = author;
+}
+public Book(String title, String author, String itemId){
+    this.title = title;
+    this.author = author;
+    this.itemId = itemId;
+}
+
+String getItemType() {
+    return "Book";
+}
+     
+protected void validateNotBlank(string author, "author");
+{
+    if (author == null || author.trim().isEmpty()) {
+        throw new IllegalArgumentException("author cant be blank");
+    }
+}
